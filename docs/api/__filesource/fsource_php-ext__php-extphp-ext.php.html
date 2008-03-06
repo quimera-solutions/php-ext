@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>File Source for php-ext.php</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+											</head>
+		<body>
+						<h1>Source for file php-ext.php</h1>
+<p>Documentation is available at <a href="../php-ext/_php-ext---php-ext.php.html">php-ext.php</a></p>
+<div class="src-code">
+<div class="src-code"><ol><li><div class="src-line"><a name="a1"></a><span class="src-php">&lt;?php</span></div></li>
+<li><div class="src-line"><a name="a2"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a3"></a><span class="src-doc">&nbsp;*&nbsp;PHP-Ext&nbsp;Library</span></div></li>
+<li><div class="src-line"><a name="a4"></a><span class="src-doc">&nbsp;*&nbsp;http://php-ext.googlecode.com</span></div></li>
+<li><div class="src-line"><a name="a5"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@author</span><span class="src-doc">&nbsp;Sergei&nbsp;Walter&nbsp;&lt;sergeiw[at]gmail[dot]com&gt;</span></div></li>
+<li><div class="src-line"><a name="a6"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@copyright</span><span class="src-doc">&nbsp;2008&nbsp;Sergei&nbsp;Walter</span></div></li>
+<li><div class="src-line"><a name="a7"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@license</span><span class="src-doc">&nbsp;http://www.gnu.org/licenses/lgpl.html</span></div></li>
+<li><div class="src-line"><a name="a8"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@link</span><span class="src-doc">&nbsp;http://php-ext.googlecode.com</span></div></li>
+<li><div class="src-line"><a name="a9"></a><span class="src-doc">&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a10"></a><span class="src-doc">&nbsp;*&nbsp;&nbsp;Reference&nbsp;for&nbsp;Ext&nbsp;JS:&nbsp;http://extjs.com</span></div></li>
+<li><div class="src-line"><a name="a11"></a><span class="src-doc">&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a12"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a13"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a14"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a15"></a><span class="src-doc">&nbsp;*&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a16"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a17"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;PHP_EXTJS_DOC_ROOT&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-id">realpath</span><span class="src-sym">(</span><span class="src-id">dirname</span><span class="src-sym">(</span>__FILE__<span class="src-sym">)))</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a18"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a19"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;NS_PHP_EXTJS_CORE&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-id">PHP_EXTJS_DOC_ROOT&nbsp;</span>.&nbsp;<span class="src-str">&quot;/ns.inc.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a20"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;NS_PHP_EXTJS_CONFIG&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-id">PHP_EXTJS_DOC_ROOT&nbsp;</span>.&nbsp;<span class="src-str">&quot;/config/ns.inc.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a21"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;NS_PHP_EXTJS_PANELS&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-id">PHP_EXTJS_DOC_ROOT&nbsp;</span>.&nbsp;<span class="src-str">&quot;/panels/ns.inc.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a22"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;NS_PHP_EXTJS_FORM&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-id">PHP_EXTJS_DOC_ROOT&nbsp;</span>.&nbsp;<span class="src-str">&quot;/form/ns.inc.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a23"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;NS_PHP_EXTJS_GRID&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-id">PHP_EXTJS_DOC_ROOT&nbsp;</span>.&nbsp;<span class="src-str">&quot;/grid/ns.inc.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a24"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;NS_PHP_EXTJS_MENU&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-id">PHP_EXTJS_DOC_ROOT&nbsp;</span>.&nbsp;<span class="src-str">&quot;/menu/ns.inc.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a25"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;NS_PHP_EXTJS_TOOLBAR&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-id">PHP_EXTJS_DOC_ROOT&nbsp;</span>.&nbsp;<span class="src-str">&quot;/toolbar/ns.inc.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a26"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;NS_PHP_EXTJS_DATA&quot;</span><span class="src-sym">,&nbsp;</span><span class="src-id">PHP_EXTJS_DOC_ROOT&nbsp;</span>.&nbsp;<span class="src-str">&quot;/data/ns.inc.php&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a27"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a28"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a29"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;EXT_ELEMENT_ANCHOR_TOP_LEFT&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;tl&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a30"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;EXT_ELEMENT_ANCHOR_TOP_CENTER&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;t&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a31"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;EXT_ELEMENT_ANCHOR_TOP_RIGHT&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;tr&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a32"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;EXT_ELEMENT_ANCHOR_CENTER_LEFT&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;l&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a33"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;EXT_ELEMENT_ANCHOR_CENTER&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;c&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a34"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;EXT_ELEMENT_ANCHOR_CENTER_RIGHT&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;r&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a35"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;EXT_ELEMENT_ANCHOR_BOTTOM_LEFT&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;bl&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a36"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;EXT_ELEMENT_ANCHOR_BOTTOM_CENTER&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;b&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a37"></a><a href="http://www.php.net/define">define</a><span class="src-sym">(</span><span class="src-str">&quot;EXT_ELEMENT_ANCHOR_BOTTOM_RIGHT&quot;</span><span class="src-sym">,</span><span class="src-str">&quot;br&quot;</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a38"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a39"></a><span class="src-doc">/**</span></div></li>
+<li><div class="src-line"><a name="a40"></a><span class="src-doc">&nbsp;*&nbsp;</span><span class="src-doc-coretag">@package</span><span class="src-doc">&nbsp;php-ext</span></div></li>
+<li><div class="src-line"><a name="a41"></a><span class="src-doc">&nbsp;*/</span></div></li>
+<li><div class="src-line"><a name="a42"></a><span class="src-key">class&nbsp;</span><a href="../php-ext/Ext.html">Ext</a>&nbsp;<span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a43"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a44"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">var&nbsp;</span><a href="../php-ext/Ext.html#var$Callstack">$Callstack</a>&nbsp;=&nbsp;<span class="src-key">array</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a45"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a46"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../php-ext/Ext.html#methodExt">Ext</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a47"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a48"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a49"></a>&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a50"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../php-ext/Ext.html#methodonReady">onReady</a><span class="src-sym">(</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a51"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$statements&nbsp;</span>=&nbsp;<a href="http://www.php.net/func_get_args">func_get_args</a><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a52"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$js&nbsp;&nbsp;</span>=&nbsp;<span class="src-str">&quot;Ext.onReady(function(){\n&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a53"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">foreach</span><span class="src-sym">(</span><span class="src-var">$statements&nbsp;</span><span class="src-key">as&nbsp;</span><span class="src-var">$stm</span><span class="src-sym">)&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a54"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$js&nbsp;</span>.=&nbsp;<span class="src-id"><a href="../php-ext/Javascript.html">Javascript</a></span><span class="src-sym">::</span><a href="../php-ext/Javascript.html#methodoutput">output</a><span class="src-sym">(</span><span class="src-var">$stm</span><span class="src-sym">)</span>.<span class="src-str">&quot;\n&quot;</span><span class="src-sym">;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></div></li>
+<li><div class="src-line"><a name="a55"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-var">$js&nbsp;</span>.=&nbsp;<span class="src-str">&quot;});&quot;</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a56"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a57"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$js</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a58"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a59"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a60"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">function&nbsp;</span><a href="../php-ext/Ext.html#methodcombineAnchors">combineAnchors</a><span class="src-sym">(</span><span class="src-var">$elementAnchor</span><span class="src-sym">,&nbsp;</span><span class="src-var">$targetAnchor</span><span class="src-sym">)&nbsp;</span><span class="src-sym">{</span></div></li>
+<li><div class="src-line"><a name="a61"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-key">return&nbsp;</span><span class="src-var">$elementAnchor</span>.<span class="src-str">&quot;-&quot;</span>.<span class="src-var">$targetAnchor</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line"><a name="a62"></a>&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a63"></a>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div></li>
+<li><div class="src-line"><a name="a64"></a><span class="src-sym">}</span></div></li>
+<li><div class="src-line"><a name="a65"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a66"></a>&nbsp;</div></li>
+<li><div class="src-line"><a name="a67"></a><span class="src-php">?&gt;</span></div></li>
+</ol></div>
+</div>
+	<p class="notes" id="credit">
+		Documentation generated on Mon, 03 Mar 2008 17:21:28 -0600 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</body>
+</html>
