@@ -1,0 +1,1138 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_ToolConfigObject</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PhpExt_ToolConfigObject</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---ToolConfigObject.php.html">/PhpExt/ToolConfigObject.php</a> (line <span class="field"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a23">23</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a>
+   |
+   --<a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a>
+      |
+      --PhpExt_ToolConfigObject</pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-vars">Vars</a>
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_CLOSE" title="details" class="const-name">ID_CLOSE</a> = 					<span class="var-type"> 'close'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_DOWN" title="details" class="const-name">ID_DOWN</a> = 					<span class="var-type"> 'down'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_GEAR" title="details" class="const-name">ID_GEAR</a> = 					<span class="var-type"> 'gear'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_HELP" title="details" class="const-name">ID_HELP</a> = 					<span class="var-type"> 'help'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_LEFT" title="details" class="const-name">ID_LEFT</a> = 					<span class="var-type"> 'left'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_MAXIMIZE" title="details" class="const-name">ID_MAXIMIZE</a> = 					<span class="var-type"> 'maximize'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_MINIMIZE" title="details" class="const-name">ID_MINIMIZE</a> = 					<span class="var-type"> 'minimize'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_MINUS" title="details" class="const-name">ID_MINUS</a> = 					<span class="var-type"> 'minus'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_PIN" title="details" class="const-name">ID_PIN</a> = 					<span class="var-type"> 'pin'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_PLUS" title="details" class="const-name">ID_PLUS</a> = 					<span class="var-type"> 'plus'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_REFRESH" title="details" class="const-name">ID_REFRESH</a> = 					<span class="var-type"> 'refresh'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_RESTORE" title="details" class="const-name">ID_RESTORE</a> = 					<span class="var-type"> 'restore'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_RIGHT" title="details" class="const-name">ID_RIGHT</a> = 					<span class="var-type"> 'right'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_SAVE" title="details" class="const-name">ID_SAVE</a> = 					<span class="var-type"> 'save'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_SEARCH" title="details" class="const-name">ID_SEARCH</a> = 					<span class="var-type"> 'search'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_TOOGLE" title="details" class="const-name">ID_TOOGLE</a> = 					<span class="var-type"> 'toogle'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_UNPIN" title="details" class="const-name">ID_UNPIN</a> = 					<span class="var-type"> 'unpin'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#ID_UP" title="details" class="const-name">ID_UP</a> = 					<span class="var-type"> 'up'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+										<a href="#getHandler" title="details" class="method-name">getHandler</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getHidden" title="details" class="method-name">getHidden</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getId" title="details" class="method-name">getId</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>
+										<a href="#getOn" title="details" class="method-name">getOn</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getQtip" title="details" class="method-name">getQtip</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">JavascriptStm</span>
+										<a href="#getScope" title="details" class="method-name">getScope</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PhpExt_ToolConfigObject</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$handler</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$scope</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$qtip</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$hidden</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>&nbsp;<span class="var-name">$on</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+										<a href="#setHandler" title="details" class="method-name">setHandler</a>
+											(<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+										<a href="#setHidden" title="details" class="method-name">setHidden</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+										<a href="#setId" title="details" class="method-name">setId</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+										<a href="#setOn" title="details" class="method-name">setOn</a>
+											(<span class="var-type"><a href="../../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+										<a href="#setQtip" title="details" class="method-name">setQtip</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+										<a href="#setScope" title="details" class="method-name">setScope</a>
+											(<span class="var-type">JavascriptStm</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html#var$_options">PhpExt_Config_ConfigObject::$_options</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extClassName">PhpExt_Object::$_extClassName</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extConfigProperties">PhpExt_Object::$_extConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_validExtConfigProperties">PhpExt_Object::$_validExtConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_varName">PhpExt_Object::$_varName</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetHandler" id="getHandler"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getHandler</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a134">134</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The function to call when clicked. Arguments passed are:</p>
+<p class="description"><p>&lt;dl&gt;  	&lt;dt&gt;event : Ext.EventObject&lt;/dt&gt;   	&lt;dd&gt;The click event.&lt;/dd&gt;   &lt;dt&gt;toolEl : Ext.Element&lt;/dt&gt;       &lt;dd&gt;The tool Element.&lt;/dd&gt;   &lt;dt&gt;Panel : Ext.Panel&lt;dt&gt;       &lt;dd&gt;The host Panel&lt;/dd&gt;  &lt;/dl&gt;</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+		<span class="method-name">
+			getHandler
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHidden" id="getHidden"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getHidden</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a188">188</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to initially render hidden.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getHidden
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetId" id="getId"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getId</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a98">98</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The type of tool to create. Values may be</p>
+<p class="description"><p><ul><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_TOOGLE">ID_TOOGLE</a> (Created by default when collapsible is true)</li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_CLOSE">ID_CLOSE</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_MINIMIZE">ID_MINIMIZE</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_MAXIMIZE">ID_MAXIMIZE</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_RESTORE">ID_RESTORE</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_GEAR">ID_GEAR</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_PIN">ID_PIN</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_UNPIN">ID_UNPIN</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_RIGHT">ID_RIGHT</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_LEFT">ID_LEFT</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_UP">ID_UP</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_DOWN">ID_DOWN</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_REFRESH">ID_REFRESH</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_MINUS">ID_MINUS</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_PLUS">ID_PLUS</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_HELP">ID_HELP</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_SEARCH">ID_SEARCH</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_SAVE">ID_SAVE</a></li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getId
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetOn" id="getOn"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getOn</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a206">206</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A <a href="../../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>
+		<span class="method-name">
+			getOn
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetQtip" id="getQtip"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getQtip</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a170">170</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A tip string, or a config argument to Ext.QuickTip.register</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getQtip
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetScope" id="getScope"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getScope</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a152">152</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The scope in which to call the handler.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">JavascriptStm</span>
+		<span class="method-name">
+			getScope
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a219">219</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PhpExt_ToolConfigObject</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$handler</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$scope</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$qtip</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$hidden</span> = <span class="var-default">null</span>], [<span class="var-type"><a href="../../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>&nbsp;<span class="var-name">$on</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The type of tool to create. For a list of possible values see PhpExt_Tool::setId().</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$handler</span><span class="var-description">: The function to call when clicked.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$scope</span><span class="var-description">: The scope in which to call the handler.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$qtip</span><span class="var-description">: A tip string, or a config argument to Ext.QuickTip.register</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$hidden</span><span class="var-description">: True to initially render hidden.</span>			</li>
+					<li>
+				<span class="var-type"><a href="../../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>
+				<span class="var-name">$on</span><span class="var-description">: A <a href="../../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html#method__construct">PhpExt_Config_ConfigObject::__construct()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodsetHandler" id="setHandler"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setHandler</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a117">117</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The function to call when clicked. Arguments passed are:</p>
+<p class="description"><p>&lt;dl&gt;  	&lt;dt&gt;event : Ext.EventObject&lt;/dt&gt;   	&lt;dd&gt;The click event.&lt;/dd&gt;   &lt;dt&gt;toolEl : Ext.Element&lt;/dt&gt;       &lt;dd&gt;The tool Element.&lt;/dd&gt;   &lt;dt&gt;Panel : Ext.Panel&lt;dt&gt;       &lt;dd&gt;The host Panel&lt;/dd&gt;  &lt;/dl&gt;</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+		<span class="method-name">
+			setHandler
+		</span>
+					(<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetHidden" id="setHidden"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setHidden</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a180">180</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to initially render hidden.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+		<span class="method-name">
+			setHidden
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetId" id="setId"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setId</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a71">71</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The type of tool to create. Values may be</p>
+<p class="description"><p><ul><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_TOOGLE">ID_TOOGLE</a> (Created by default when collapsible is true)</li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_CLOSE">ID_CLOSE</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_MINIMIZE">ID_MINIMIZE</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_MAXIMIZE">ID_MAXIMIZE</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_RESTORE">ID_RESTORE</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_GEAR">ID_GEAR</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_PIN">ID_PIN</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_UNPIN">ID_UNPIN</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_RIGHT">ID_RIGHT</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_LEFT">ID_LEFT</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_UP">ID_UP</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_DOWN">ID_DOWN</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_REFRESH">ID_REFRESH</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_MINUS">ID_MINUS</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_PLUS">ID_PLUS</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_HELP">ID_HELP</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_SEARCH">ID_SEARCH</a></li><li><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html#constID_SAVE">ID_SAVE</a></li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+		<span class="method-name">
+			setId
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetOn" id="setOn"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setOn</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a198">198</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A <a href="../../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+		<span class="method-name">
+			setOn
+		</span>
+					(<span class="var-type"><a href="../../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetQtip" id="setQtip"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setQtip</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a162">162</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A tip string, or a config argument to Ext.QuickTip.register</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+		<span class="method-name">
+			setQtip
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetScope" id="setScope"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setScope</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a144">144</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The scope in which to call the handler.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a></span>
+		<span class="method-name">
+			setScope
+		</span>
+					(<span class="var-type">JavascriptStm</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">JavascriptStm</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html#method__construct">PhpExt_Config_ConfigObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html#methodgetJavascript">PhpExt_Config_ConfigObject::getJavascript()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodaddValidConfigProperties">PhpExt_Object::addValidConfigProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodcreateMethodSignature">PhpExt_Object::createMethodSignature()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetConfigParams">PhpExt_Object::getConfigParams()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetExtConfigProperty">PhpExt_Object::getExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetJavascript">PhpExt_Object::getJavascript()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetMethodInvokeStm">PhpExt_Object::getMethodInvokeStm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodisExtObject">PhpExt_Object::isExtObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodparamToString">PhpExt_Object::paramToString()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtClassInfo">PhpExt_Object::setExtClassInfo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtConfigProperty">PhpExt_Object::setExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__get">PhpExt_Object::__get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__set">PhpExt_Object::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-vars">Vars</a>
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constID_CLOSE" id="ID_CLOSE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_CLOSE</span>
+			 = <span class="const-default"> 'close'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a26">26</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_DOWN" id="ID_DOWN"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_DOWN</span>
+			 = <span class="const-default"> 'down'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_GEAR" id="ID_GEAR"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_GEAR</span>
+			 = <span class="const-default"> 'gear'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_HELP" id="ID_HELP"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_HELP</span>
+			 = <span class="const-default"> 'help'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_LEFT" id="ID_LEFT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_LEFT</span>
+			 = <span class="const-default"> 'left'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_MAXIMIZE" id="ID_MAXIMIZE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_MAXIMIZE</span>
+			 = <span class="const-default"> 'maximize'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a28">28</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_MINIMIZE" id="ID_MINIMIZE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_MINIMIZE</span>
+			 = <span class="const-default"> 'minimize'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_MINUS" id="ID_MINUS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_MINUS</span>
+			 = <span class="const-default"> 'minus'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_PIN" id="ID_PIN"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_PIN</span>
+			 = <span class="const-default"> 'pin'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_PLUS" id="ID_PLUS"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_PLUS</span>
+			 = <span class="const-default"> 'plus'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_REFRESH" id="ID_REFRESH"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_REFRESH</span>
+			 = <span class="const-default"> 'refresh'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_RESTORE" id="ID_RESTORE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_RESTORE</span>
+			 = <span class="const-default"> 'restore'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_RIGHT" id="ID_RIGHT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_RIGHT</span>
+			 = <span class="const-default"> 'right'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_SAVE" id="ID_SAVE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_SAVE</span>
+			 = <span class="const-default"> 'save'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a42">42</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_SEARCH" id="ID_SEARCH"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_SEARCH</span>
+			 = <span class="const-default"> 'search'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a41">41</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_TOOGLE" id="ID_TOOGLE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_TOOGLE</span>
+			 = <span class="const-default"> 'toogle'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a25">25</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_UNPIN" id="ID_UNPIN"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_UNPIN</span>
+			 = <span class="const-default"> 'unpin'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constID_UP" id="ID_UP"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ID_UP</span>
+			 = <span class="const-default"> 'up'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtToolConfigObject.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:06:18 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

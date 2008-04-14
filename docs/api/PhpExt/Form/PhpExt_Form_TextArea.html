@@ -1,0 +1,985 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_Form_TextArea</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PhpExt_Form_TextArea</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-consts">Constants</a>
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Multiline text field. Can be used as a direct replacement for traditional textarea fields, plus adds support for auto-sizing.</p>
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---Form---TextArea.php.html">/PhpExt/Form/TextArea.php</a> (line <span class="field"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormTextArea.php.html#a24">24</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a>
+   |
+   --<a href="../../PhpExt/PhpExt_Observable.html">PhpExt_Observable</a>
+      |
+      --<a href="../../PhpExt/PhpExt_Component.html">PhpExt_Component</a>
+         |
+         --<a href="../../PhpExt/PhpExt_BoxComponent.html">PhpExt_BoxComponent</a>
+            |
+            --<a href="../../PhpExt/Form/PhpExt_Form_Field.html">PhpExt_Form_Field</a>
+               |
+               --<a href="../../PhpExt/Form/PhpExt_Form_TextField.html">PhpExt_Form_TextField</a>
+                  |
+                  --PhpExt_Form_TextArea</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-consts">Constants</a>
+							
+															<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_TextArea.html">PhpExt_Form_TextArea</a></span>
+										<a href="#createTextArea" title="details" class="method-name">createTextArea</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+									</div>
+																																																																																			
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PhpExt_Form_TextArea</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a></span>
+										<a href="#getAutoCreate" title="details" class="method-name">getAutoCreate</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getGrowMax" title="details" class="method-name">getGrowMax</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getGrowMin" title="details" class="method-name">getGrowMin</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getPreventScrollbars" title="details" class="method-name">getPreventScrollbars</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_TextArea.html">PhpExt_Form_TextArea</a></span>
+										<a href="#setAutoCreate" title="details" class="method-name">setAutoCreate</a>
+											(<span class="var-type"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_TextArea.html">PhpExt_Form_TextArea</a></span>
+										<a href="#setGrowMax" title="details" class="method-name">setGrowMax</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_TextArea.html">PhpExt_Form_TextArea</a></span>
+										<a href="#setGrowMin" title="details" class="method-name">setGrowMin</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_TextArea.html">PhpExt_Form_TextArea</a></span>
+										<a href="#setPreventScrollbars" title="details" class="method-name">setPreventScrollbars</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-consts">Constants</a>
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html">PhpExt_Form_TextField</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#var$IsPassword">PhpExt_Form_TextField::$IsPassword</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/PhpExt_Component.html">PhpExt_Component</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Component.html#var$_layoutData">PhpExt_Component::$_layoutData</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Component.html#var$_ownerCollection">PhpExt_Component::$_ownerCollection</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Component.html#var$_plugins">PhpExt_Component::$_plugins</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Component.html#var$_xType">PhpExt_Component::$_xType</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/PhpExt_Observable.html">PhpExt_Observable</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Observable.html#var$_listeners">PhpExt_Observable::$_listeners</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extClassName">PhpExt_Object::$_extClassName</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extConfigProperties">PhpExt_Object::$_extConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_validExtConfigProperties">PhpExt_Object::$_validExtConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_varName">PhpExt_Object::$_varName</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																			<a href="#sec-consts">Constants</a>
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcreateTextArea" id="createTextArea"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static createTextArea</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormTextArea.php.html#a117">117</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Helper function to create a TextArea.  Useful for quick adding it to a ComponentCollection</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_TextArea.html">PhpExt_Form_TextArea</a></span>
+		<span class="method-name">
+			createTextArea
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$label</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$id</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: The field's HTML name attribute.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$label</span><span class="var-description">: The label text to display next to this field (defaults to '')</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$id</span><span class="var-description">: The unique id of this component (defaults to an auto-assigned id).</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormTextArea.php.html#a96">96</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PhpExt_Form_TextArea</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#method__construct">PhpExt_Form_TextField::__construct()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetAutoCreate" id="getAutoCreate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getAutoCreate</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormTextArea.php.html#a39">39</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A DomHelper element spec, or true for a default element spec (defaults to {tag: &quot;textarea&quot;, style: &quot;width:100px;height:60px;&quot;, autocomplete: &quot;off&quot;})</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a></span>
+		<span class="method-name">
+			getAutoCreate
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetAutoCreate">PhpExt_Form_Field::getAutoCreate()</a></dt>
+						<dd>A DomHelper element spec, or true for a default element spec (defaults to {tag: &quot;input&quot;, type: &quot;text&quot;, size: &quot;20&quot;, autocomplete: &quot;off&quot;})</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetGrowMax" id="getGrowMax"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getGrowMax</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormTextArea.php.html#a56">56</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The maximum height to allow when grow = true (defaults to 1000)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getGrowMax
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetGrowMax">PhpExt_Form_TextField::getGrowMax()</a></dt>
+						<dd>The maximum width to allow when grow = true (defaults to 800)</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetGrowMin" id="getGrowMin"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getGrowMin</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormTextArea.php.html#a73">73</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The minimum height to allow when grow = true (defaults to 60)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getGrowMin
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetGrowMin">PhpExt_Form_TextField::getGrowMin()</a></dt>
+						<dd>The minimum width to allow when grow = true (defaults to 30)</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetPreventScrollbars" id="getPreventScrollbars"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getPreventScrollbars</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormTextArea.php.html#a91">91</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to prevent scrollbars from appearing regardless of how much text is in the field (equivalent to setting overflow: hidden, defaults to false)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getPreventScrollbars
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetAutoCreate" id="setAutoCreate"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setAutoCreate</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormTextArea.php.html#a32">32</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A DomHelper element spec, or true for a default element spec (defaults to {tag: &quot;textarea&quot;, style: &quot;width:100px;height:60px;&quot;, autocomplete: &quot;off&quot;})</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_TextArea.html">PhpExt_Form_TextArea</a></span>
+		<span class="method-name">
+			setAutoCreate
+		</span>
+					(<span class="var-type"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetAutoCreate">PhpExt_Form_Field::setAutoCreate()</a></dt>
+						<dd>A DomHelper element spec, or true for a default element spec (defaults to {tag: &quot;input&quot;, type: &quot;text&quot;, size: &quot;20&quot;, autocomplete: &quot;off&quot;})</dd>
+					</dl>
+			
+	</div>
+<a name="methodsetGrowMax" id="setGrowMax"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setGrowMax</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormTextArea.php.html#a49">49</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The maximum height to allow when grow = true (defaults to 1000)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_TextArea.html">PhpExt_Form_TextArea</a></span>
+		<span class="method-name">
+			setGrowMax
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetGrowMax">PhpExt_Form_TextField::setGrowMax()</a></dt>
+						<dd>The maximum width to allow when grow = true (defaults to 800)</dd>
+					</dl>
+			
+	</div>
+<a name="methodsetGrowMin" id="setGrowMin"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setGrowMin</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormTextArea.php.html#a66">66</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The minimum height to allow when grow = true (defaults to 60)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_TextArea.html">PhpExt_Form_TextArea</a></span>
+		<span class="method-name">
+			setGrowMin
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetGrowMin">PhpExt_Form_TextField::setGrowMin()</a></dt>
+						<dd>The minimum width to allow when grow = true (defaults to 30)</dd>
+					</dl>
+			
+	</div>
+<a name="methodsetPreventScrollbars" id="setPreventScrollbars"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setPreventScrollbars</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormTextArea.php.html#a83">83</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to prevent scrollbars from appearing regardless of how much text is in the field (equivalent to setting overflow: hidden, defaults to false)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_TextArea.html">PhpExt_Form_TextArea</a></span>
+		<span class="method-name">
+			setPreventScrollbars
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html">PhpExt_Form_TextField</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#method__construct">PhpExt_Form_TextField::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodcreateTextField">PhpExt_Form_TextField::createTextField()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetAllowBlank">PhpExt_Form_TextField::getAllowBlank()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetBlankText">PhpExt_Form_TextField::getBlankText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetDisableKeyFilter">PhpExt_Form_TextField::getDisableKeyFilter()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetEmptyCssClass">PhpExt_Form_TextField::getEmptyCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetEmptyText">PhpExt_Form_TextField::getEmptyText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetGrow">PhpExt_Form_TextField::getGrow()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetGrowMax">PhpExt_Form_TextField::getGrowMax()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetGrowMin">PhpExt_Form_TextField::getGrowMin()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetMaskRegEx">PhpExt_Form_TextField::getMaskRegEx()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetMaxLength">PhpExt_Form_TextField::getMaxLength()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetMaxLengthText">PhpExt_Form_TextField::getMaxLengthText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetMinLength">PhpExt_Form_TextField::getMinLength()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetMinLengthText">PhpExt_Form_TextField::getMinLengthText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetRegEx">PhpExt_Form_TextField::getRegEx()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetRegExText">PhpExt_Form_TextField::getRegExText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetSelectOnFocus">PhpExt_Form_TextField::getSelectOnFocus()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetValidator">PhpExt_Form_TextField::getValidator()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetVType">PhpExt_Form_TextField::getVType()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodgetVTypeText">PhpExt_Form_TextField::getVTypeText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetAllowBlank">PhpExt_Form_TextField::setAllowBlank()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetBlankText">PhpExt_Form_TextField::setBlankText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetDisableKeyFilter">PhpExt_Form_TextField::setDisableKeyFilter()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetEmptyCssClass">PhpExt_Form_TextField::setEmptyCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetEmptyText">PhpExt_Form_TextField::setEmptyText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetGrow">PhpExt_Form_TextField::setGrow()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetGrowMax">PhpExt_Form_TextField::setGrowMax()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetGrowMin">PhpExt_Form_TextField::setGrowMin()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetMaskRegEx">PhpExt_Form_TextField::setMaskRegEx()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetMaxLength">PhpExt_Form_TextField::setMaxLength()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetMaxLengthText">PhpExt_Form_TextField::setMaxLengthText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetMinLength">PhpExt_Form_TextField::setMinLength()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetMinLengthText">PhpExt_Form_TextField::setMinLengthText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetRegEx">PhpExt_Form_TextField::setRegEx()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetRegExText">PhpExt_Form_TextField::setRegExText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetSelectOnFocus">PhpExt_Form_TextField::setSelectOnFocus()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetValidator">PhpExt_Form_TextField::setValidator()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetVType">PhpExt_Form_TextField::setVType()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_TextField.html#methodsetVTypeText">PhpExt_Form_TextField::setVTypeText()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/Form/PhpExt_Form_Field.html">PhpExt_Form_Field</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#method__construct">PhpExt_Form_Field::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetAutoCreate">PhpExt_Form_Field::getAutoCreate()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetClearCssClass">PhpExt_Form_Field::getClearCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetCssClass">PhpExt_Form_Field::getCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetDisabled">PhpExt_Form_Field::getDisabled()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetFieldCssClass">PhpExt_Form_Field::getFieldCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetFieldLabel">PhpExt_Form_Field::getFieldLabel()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetFocusCssClass">PhpExt_Form_Field::getFocusCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetHideLabel">PhpExt_Form_Field::getHideLabel()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetInputType">PhpExt_Form_Field::getInputType()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetInvalidCssClass">PhpExt_Form_Field::getInvalidCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetInvalidText">PhpExt_Form_Field::getInvalidText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetItemCssClass">PhpExt_Form_Field::getItemCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetLabelCssStyle">PhpExt_Form_Field::getLabelCssStyle()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetLabelSeparator">PhpExt_Form_Field::getLabelSeparator()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetMsgFx">PhpExt_Form_Field::getMsgFx()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetMsgTarget">PhpExt_Form_Field::getMsgTarget()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetName">PhpExt_Form_Field::getName()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetReadOnly">PhpExt_Form_Field::getReadOnly()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetTabIndex">PhpExt_Form_Field::getTabIndex()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetValidateOnBlur">PhpExt_Form_Field::getValidateOnBlur()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetValidationDelay">PhpExt_Form_Field::getValidationDelay()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetValidationEvent">PhpExt_Form_Field::getValidationEvent()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodgetValue">PhpExt_Form_Field::getValue()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetAutoCreate">PhpExt_Form_Field::setAutoCreate()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetClearCssClass">PhpExt_Form_Field::setClearCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetCssClass">PhpExt_Form_Field::setCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetDisabled">PhpExt_Form_Field::setDisabled()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetFieldCssClass">PhpExt_Form_Field::setFieldCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetFieldLabel">PhpExt_Form_Field::setFieldLabel()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetFocusCssClass">PhpExt_Form_Field::setFocusCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetHideLabel">PhpExt_Form_Field::setHideLabel()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetInputType">PhpExt_Form_Field::setInputType()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetInvalidCssClass">PhpExt_Form_Field::setInvalidCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetInvalidText">PhpExt_Form_Field::setInvalidText()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetItemCssClass">PhpExt_Form_Field::setItemCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetLabelCssStyle">PhpExt_Form_Field::setLabelCssStyle()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetLabelSeparator">PhpExt_Form_Field::setLabelSeparator()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetMsgFx">PhpExt_Form_Field::setMsgFx()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetMsgTarget">PhpExt_Form_Field::setMsgTarget()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetName">PhpExt_Form_Field::setName()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetReadOnly">PhpExt_Form_Field::setReadOnly()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetTabIndex">PhpExt_Form_Field::setTabIndex()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetValidateOnBlur">PhpExt_Form_Field::setValidateOnBlur()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetValidationDelay">PhpExt_Form_Field::setValidationDelay()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetValidationEvent">PhpExt_Form_Field::setValidationEvent()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Form/PhpExt_Form_Field.html#methodsetValue">PhpExt_Form_Field::setValue()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/PhpExt_BoxComponent.html">PhpExt_BoxComponent</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_BoxComponent.html#method__construct">PhpExt_BoxComponent::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_BoxComponent.html#methodgetAutoHeight">PhpExt_BoxComponent::getAutoHeight()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_BoxComponent.html#methodgetAutoWidth">PhpExt_BoxComponent::getAutoWidth()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_BoxComponent.html#methodgetHeight">PhpExt_BoxComponent::getHeight()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_BoxComponent.html#methodgetWidth">PhpExt_BoxComponent::getWidth()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_BoxComponent.html#methodsetAutoHeight">PhpExt_BoxComponent::setAutoHeight()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_BoxComponent.html#methodsetAutoWidth">PhpExt_BoxComponent::setAutoWidth()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_BoxComponent.html#methodsetHeight">PhpExt_BoxComponent::setHeight()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_BoxComponent.html#methodsetWidth">PhpExt_BoxComponent::setWidth()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/PhpExt_Component.html">PhpExt_Component</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#method__construct">PhpExt_Component::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetAllowDomMove">PhpExt_Component::getAllowDomMove()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetApplyTo">PhpExt_Component::getApplyTo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetAutoShow">PhpExt_Component::getAutoShow()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetConfigParams">PhpExt_Component::getConfigParams()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetContainerCssClass">PhpExt_Component::getContainerCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetCssClass">PhpExt_Component::getCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetCssStyle">PhpExt_Component::getCssStyle()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetDisabledCssClass">PhpExt_Component::getDisabledCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetHideMode">PhpExt_Component::getHideMode()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetHideParent">PhpExt_Component::getHideParent()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetId">PhpExt_Component::getId()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetLayoutData">PhpExt_Component::getLayoutData()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetOwnerCollection">PhpExt_Component::getOwnerCollection()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetPlugins">PhpExt_Component::getPlugins()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodgetRenderTo">PhpExt_Component::getRenderTo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodrender">PhpExt_Component::render()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetAllowDomMove">PhpExt_Component::setAllowDomMove()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetApplyTo">PhpExt_Component::setApplyTo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetAutoShow">PhpExt_Component::setAutoShow()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetContainerCssClass">PhpExt_Component::setContainerCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetCssClass">PhpExt_Component::setCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetCssStyle">PhpExt_Component::setCssStyle()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetDisabledCssClass">PhpExt_Component::setDisabledCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetExtClassInfo">PhpExt_Component::setExtClassInfo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetHideMode">PhpExt_Component::setHideMode()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetHideParent">PhpExt_Component::setHideParent()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetId">PhpExt_Component::setId()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetLayoutData">PhpExt_Component::setLayoutData()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetOwnerCollection">PhpExt_Component::setOwnerCollection()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Component.html#methodsetRenderTo">PhpExt_Component::setRenderTo()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/PhpExt_Observable.html">PhpExt_Observable</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Observable.html#method__construct">PhpExt_Observable::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Observable.html#methodattachListener">PhpExt_Observable::attachListener()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Observable.html#methodgetConfigParams">PhpExt_Observable::getConfigParams()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Observable.html#methodgetListeners">PhpExt_Observable::getListeners()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodaddValidConfigProperties">PhpExt_Object::addValidConfigProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodcreateMethodSignature">PhpExt_Object::createMethodSignature()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetConfigParams">PhpExt_Object::getConfigParams()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetExtConfigProperty">PhpExt_Object::getExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetJavascript">PhpExt_Object::getJavascript()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetMethodInvokeStm">PhpExt_Object::getMethodInvokeStm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodisExtObject">PhpExt_Object::isExtObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodparamToString">PhpExt_Object::paramToString()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtClassInfo">PhpExt_Object::setExtClassInfo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtConfigProperty">PhpExt_Object::setExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__get">PhpExt_Object::__get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__set">PhpExt_Object::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-vars">Vars</a>
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Constants</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/PhpExt_Component.html">PhpExt_Component</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/PhpExt_Component.html#constHIDE_MODE_DISPLAY">PhpExt_Component::HIDE_MODE_DISPLAY</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/PhpExt_Component.html#constHIDE_MODE_OFFSETS">PhpExt_Component::HIDE_MODE_OFFSETS</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/PhpExt_Component.html#constHIDE_MODE_VISIBILITY">PhpExt_Component::HIDE_MODE_VISIBILITY</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:06:01 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

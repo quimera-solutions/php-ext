@@ -112,6 +112,12 @@ if (document.getElementById) {
 		var parent_node;
 
 		
+					var tree_classe = new WebFXTreeItem('Interface(s)', '');
+			tree_classe.openIcon = 'media/images/class_folder.png';
+			tree_classe.icon = 'media/images/class_folder.png';
+			
+						    						    				
+			tree.add(tree_classe);
 		
 					var tree_classe = new WebFXTreeItem('Class(es)', '');
 			tree_classe.openIcon = 'media/images/class_folder.png';
@@ -133,7 +139,7 @@ if (document.getElementById) {
 			tree_file.openIcon = 'media/images/folder.png';
 			tree_file.icon = 'media/images/folder.png';
 	
-							var file = new WebFXTreeItem('json.php', 'Services_JSON/_php-ext---lib---json.php.html');
+							var file = new WebFXTreeItem('json.php', 'Services_JSON/_PhpExt---Lib---json.php.html');
 				file.openIcon = 'media/images/Page.png';
 				file.icon = 'media/images/Page.png';
 				tree_file.add(file);

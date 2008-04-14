@@ -1,10 +1,15 @@
 <?php
-header("Content-type:text/javascript");
-include_once("../../php-ext/php-ext.php");
+set_include_path(get_include_path().';'.realpath('../../library'));
+include_once 'PhpExt/Javascript.php';
+PhpExt_Javascript::sendContentType();
 
-include_once(NS_PHP_EXTJS_CORE);
-include_once(NS_PHP_EXTJS_DATA);
-include_once(NS_PHP_EXTJS_GRID);
+include_once 'PhpExt/Ext.php';
+include_once 'PhpExt/Data/SimpleStore.php';
+include_once 'PhpExt/Data/ArrayReader.php';
+include_once 'PhpExt/Data/FieldConfigObject.php';
+include_once 'PhpExt/Grid/ColumnModel.php';
+include_once 'PhpExt/Grid/ColumnConfigObject.php';
+include_once 'PhpExt/Grid/GridPanel.php';
 
 
 // Sample Data
@@ -41,51 +46,52 @@ $myData = array(
     );
     
     
-$changeRenderer = Javascript::functionDef("change","if(val > 0){
+$changeRenderer = PhpExt_Javascript::functionDef("change","if(val > 0){
             return '<span style=\"color:green;\">' + val + '</span>';
         }else if(val < 0){
             return '<span style=\"color:red;\">' + val + '</span>';
         }
         return val;",array("val"));
-$pctChangeRenderer = Javascript::functionDef("pctChange","if(val > 0){
+$pctChangeRenderer = PhpExt_Javascript::functionDef("pctChange","if(val > 0){
             return '<span style=\"color:green;\">' + val + '%</span>';
         }else if(val < 0){
             return '<span style=\"color:red;\">' + val + '%</span>';
         }
         return val;",array("val"));
 // Store
-$store = new ExtSimpleStore();
-$store->addField(new ExtFieldConfigObject("company"));
-$store->addField(new ExtFieldConfigObject("price",null,"float"));
-$store->addField(new ExtFieldConfigObject("change",null,"float"));
-$store->addField(new ExtFieldConfigObject("pctChange",null,"float"));
-$store->addField(new ExtFieldConfigObject("lastChange",null,"date",null,null,null,"n/j h:ia"));
+$store = new PhpExt_Data_SimpleStore();
+$store->addField(new PhpExt_Data_FieldConfigObject("company"));
+$store->addField(new PhpExt_Data_FieldConfigObject("price",null,"float"));
+$store->addField(new PhpExt_Data_FieldConfigObject("change",null,"float"));
+$store->addField(new PhpExt_Data_FieldConfigObject("pctChange",null,"float"));
+$store->addField(new PhpExt_Data_FieldConfigObject("lastChange",null,"date","n/j h:ia"));
 
 // ColumnModel
-$colModel = new ExtColumnModel();
-$colModel->addColumn(new ExtColumnConfigObject("Company","company","company",null, true, 160, false));
-$colModel->addColumn(new ExtColumnConfigObject("Price","price",null,Javascript::variable("Ext.util.Format.usMoney"), true, 75));
-$colModel->addColumn(new ExtColumnConfigObject("Change","change",null,Javascript::variable(change), true, 75));
-$colModel->addColumn(new ExtColumnConfigObject("% Change","pctChange",null,Javascript::variable(pctChange), true, 75));
-$colModel->addColumn(new ExtColumnConfigObject("Last Updated","lastChange",null,Javascript::variable("Ext.util.Format.dateRenderer('m/d/Y')"), true, 85));
+$colModel = new PhpExt_Grid_ColumnModel();
+$colModel->addColumn(PhpExt_Grid_ColumnConfigObject::createColumn("Company","company","company",160, null, null, true, false))
+         ->addColumn(PhpExt_Grid_ColumnConfigObject::createColumn("Price","price",null,75,null,PhpExt_Javascript::variable("Ext.util.Format.usMoney"), null, true))
+         ->addColumn(PhpExt_Grid_ColumnConfigObject::createColumn("Change","change",null,75,null,PhpExt_Javascript::variable('change'), null, true))
+         ->addColumn(PhpExt_Grid_ColumnConfigObject::createColumn("% Change","pctChange",null,75,null,PhpExt_Javascript::variable('pctChange'), null, true))
+         ->addColumn(PhpExt_Grid_ColumnConfigObject::createColumn("Last Updated","lastChange",null,85,null,PhpExt_Javascript::variable("Ext.util.Format.dateRenderer('m/d/Y')"), null, true));
+
 
 // Grid
-$grid = new ExtGridPanel();
-$grid->Store =& $store;
-$grid->ColumnModel =& $colModel;
-$grid->StripeRows = true;
-$grid->AutoExpandColumn = "company";
-$grid->Height = 350;
-$grid->Width = 600;
-$grid->Title = "Array Grid";
+$grid = new PhpExt_Grid_GridPanel();
+$grid->setStore($store)
+     ->setColumnModel($colModel)
+     ->setStripeRows(true)
+     ->setAutoExpandColumn("company")
+     ->setHeight(350)
+     ->setWidth(600)
+     ->setTitle("Array Grid");
 
 // Ext.OnReady -----------------------
-echo Ext::onReady(
-	Javascript::assignNew("myData",Javascript::valueToJavascript($myData)),
+echo PhpExt_Ext::onReady(
+	PhpExt_Javascript::assignNew("myData",PhpExt_Javascript::valueToJavascript($myData)),
 	$changeRenderer,
 	$pctChangeRenderer,
 	$store->getJavascript(false, "store"),
-	$store->loadData(Javascript::variable("myData")),
+	$store->loadData(PhpExt_Javascript::variable("myData")),
 	$grid->getJavascript(false, "grid"),
 	$grid->render("grid-example")
 );

@@ -1,0 +1,598 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_Javascript</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PhpExt_Javascript</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---Javascript.php.html">/PhpExt/Javascript.php</a> (line <span class="field"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a17">17</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+												<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">JavascriptStm</span>
+										<a href="#assign" title="details" class="method-name">assign</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$varName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$statement</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">JavascriptStm</span>
+										<a href="#assignNew" title="details" class="method-name">assignNew</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$varName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$statement</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">JavascriptStm</span>
+										<a href="#functionDef" title="details" class="method-name">functionDef</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$functionName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$functionBody</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$functionParams</span> = <span class="var-default">array()</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">JavascriptStm</span>
+										<a href="#inlineStm" title="details" class="method-name">inlineStm</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$statement</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#isJavascript" title="details" class="method-name">isJavascript</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#isJavascriptStm" title="details" class="method-name">isJavascriptStm</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#jsonEncode" title="details" class="method-name">jsonEncode</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#output" title="details" class="method-name">output</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">0</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#sendContentType" title="details" class="method-name">sendContentType</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">JavascriptStm</span>
+										<a href="#stm" title="details" class="method-name">stm</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$statement</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#valueToJavascript" title="details" class="method-name">valueToJavascript</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$lazy</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">JavascriptStm</span>
+										<a href="#variable" title="details" class="method-name">variable</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$varName</span>)
+									</div>
+																																																																																																															</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodassign" id="assign"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static assign</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a50">50</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates an assignment statement for an existing variable</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">JavascriptStm</span>
+		<span class="method-name">
+			assign
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$varName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$statement</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$varName</span><span class="var-description">: The name of the assigned variable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$statement</span><span class="var-description">: Javascript statement code to asign</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodassignNew" id="assignNew"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static assignNew</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a59">59</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates an assignment statement for an new variable (in the form 'var foo = 1;')</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">JavascriptStm</span>
+		<span class="method-name">
+			assignNew
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$varName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$statement</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$varName</span><span class="var-description">: The name of the assigned variable</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$statement</span><span class="var-description">: Javascript statement code to asign</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodfunctionDef" id="functionDef"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static functionDef</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a28">28</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a variable name</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">JavascriptStm</span>
+		<span class="method-name">
+			functionDef
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$functionName</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$functionBody</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$functionParams</span> = <span class="var-default">array()</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$functionName</span><span class="var-description">: The name of the function to create</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$functionBody</span><span class="var-description">: A string with the javascript code for the body of the function</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$functionParams</span><span class="var-description">: Optional list of parameter names for the function definition</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinlineStm" id="inlineStm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static inlineStm</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a82">82</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a javascript statement without a semicolon at the end.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">JavascriptStm</span>
+		<span class="method-name">
+			inlineStm
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$statement</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$statement</span><span class="var-description">: Javascript statement code</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisJavascript" id="isJavascript"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static isJavascript</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a146">146</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			isJavascript
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodisJavascriptStm" id="isJavascriptStm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static isJavascriptStm</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a153">153</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			isJavascriptStm
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodjsonEncode" id="jsonEncode"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static jsonEncode</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a133">133</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			jsonEncode
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodoutput" id="output"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static output</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a92">92</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			output
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">0</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">0</span><span class="var-description">: Receives indefinite parameters. Each paramenters refers to a string or a <div class="src-code"><ol><li><div class="src-line"><span class="src-id">JavascriptStm</span></div></li>
+</ol></div></span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsendContentType" id="sendContentType"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static sendContentType</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a160">160</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			sendContentType
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodstm" id="stm"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static stm</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a72">72</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Creates a javascript statement with a semicolon at the end.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">JavascriptStm</span>
+		<span class="method-name">
+			stm
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$statement</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$statement</span><span class="var-description">: Javascript statement code</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvalueToJavascript" id="valueToJavascript"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static valueToJavascript</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a107">107</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			valueToJavascript
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$value</span>, [<span class="var-type"></span>&nbsp;<span class="var-name">$lazy</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$value</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$lazy</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodvariable" id="variable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static variable</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtJavascript.php.html#a41">41</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns a variable name</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">JavascriptStm</span>
+		<span class="method-name">
+			variable
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$varName</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$varName</span><span class="var-description">: The name of the variable to retrieve</span>			</li>
+				</ul>
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:04:57 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

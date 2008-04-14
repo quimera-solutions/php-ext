@@ -1,0 +1,797 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_Template</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PhpExt_Template</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Represents an HTML fragment template. Templates can be precompiled for greater performance. For a list of available format functions, see Ext.util.Format.</p>
+<p class="description"><p>Usage:  <div class="src-code"><ol><li><div class="src-line">&nbsp;<span class="src-var">$t&nbsp;</span>=&nbsp;<span class="src-key">new&nbsp;</span><span class="src-id"><a href="../PhpExt/PhpExt_Template.html">PhpExt_Template</a></span><span class="src-sym">(</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-str">'&lt;div&nbsp;name=&quot;{id}&quot;&gt;'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="src-str">'&lt;span&nbsp;class=&quot;{cls}&quot;&gt;{name:trim}&nbsp;{value:ellipsis(10)}&lt;/span&gt;'</span><span class="src-sym">,</span></div></li>
+<li><div class="src-line">&nbsp;&nbsp;<span class="src-str">'&lt;/div&gt;'</span></div></li>
+<li><div class="src-line">&nbsp;<span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;echo&nbsp;<span class="src-var">$t</span><span class="src-sym">-&gt;</span><a href="../PhpExt/PhpExt_Template.html#methodgetJavascript">getJavascript</a><span class="src-sym">(</span><span class="src-id">false</span><span class="src-sym">,&nbsp;</span><span class="src-str">'t'</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+<li><div class="src-line">&nbsp;echo&nbsp;<span class="src-var">$t</span><span class="src-sym">-&gt;</span><a href="../PhpExt/PhpExt_Template.html#methodappend">append</a><span class="src-sym">(</span><span class="src-str">'some-element'</span><span class="src-sym">,&nbsp;</span><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'id'</span>=&gt;<span class="src-str">'myid'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'cls'</span>=&gt;<span class="src-str">'myclass'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'name'</span>=&gt;<span class="src-str">'foo'</span><span class="src-sym">,&nbsp;</span><span class="src-str">'value'</span>=&gt;<span class="src-str">'bar'</span><span class="src-sym">))</span><span class="src-sym">-&gt;</span><span class="src-id">output</span><span class="src-sym">(</span><span class="src-sym">)</span><span class="src-sym">;</span></div></li>
+</ol></div></p><p>For more information see this blog post with examples: @link http://php-ext.quimera-solutions.com/examples/?id=/core/templates</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---Template.php.html">/PhpExt/Template.php</a> (line <span class="field"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a35">35</a></span>)
+		</p>
+		
+				
+		<pre><a href="../PhpExt/PhpExt_Object.html">PhpExt_Object</a>
+   |
+   --PhpExt_Template</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/PhpExt_XTemplate.html">PhpExt_XTemplate</a>
+					</td>
+					<td>
+											A template class that supports advanced functionality like autofilling arrays, conditional processing with basic comparison operators, sub-templates, basic math function support, special built-in template variables, inline code execution and more. XTemplate also provides the templating mechanism built into Ext.DataView.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$_html" title="details" class="var-name">$_html</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																			
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#from" title="details" class="method-name">from</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$element</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$config</span>)
+									</div>
+																																																																			
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PhpExt_Template</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#append" title="details" class="method-name">append</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$returnElement</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#apply" title="details" class="method-name">apply</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#applyTemplate" title="details" class="method-name">applyTemplate</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#compile" title="details" class="method-name">compile</a>
+										()
+									</div>
+																							
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getJavascript" title="details" class="method-name">getJavascript</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$lazy</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$varName</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#insertAfter" title="details" class="method-name">insertAfter</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$returnElement</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#insertBefore" title="details" class="method-name">insertBefore</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$returnElement</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#insertFirst" title="details" class="method-name">insertFirst</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$returnElement</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#overwrite" title="details" class="method-name">overwrite</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$returnElement</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#set" title="details" class="method-name">set</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$html</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$compile</span> = <span class="var-default">false</span>])
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$_html" id="$_html"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_html</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a74">74</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to disable format functions (defaults to false)</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> True to disable format functions (defaults to false)</li>
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_extClassName">PhpExt_Object::$_extClassName</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_extConfigProperties">PhpExt_Object::$_extConfigProperties</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_validExtConfigProperties">PhpExt_Object::$_validExtConfigProperties</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_varName">PhpExt_Object::$_varName</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodfrom" id="from"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static from</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a87">87</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			from
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$element</span>, <span class="var-type"></span>&nbsp;<span class="var-name">$config</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$element</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$config</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a76">76</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PhpExt_Template</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/PhpExt_XTemplate.html#method__construct">PhpExt_XTemplate::__construct()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodappend" id="append"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">append</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a99">99</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Applies the supplied values to the template and appends the new node(s) to el.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			append
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$returnElement</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: The context element</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: The template values. Can be an array if your params are numeric (i.e. {0}) or an object (i.e. {'foo'=&gt; 'bar'})</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$returnElement</span><span class="var-description">: (optional) true to return a Ext.Element (defaults to false)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodapply" id="apply"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">apply</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a108">108</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Alias for applyTemplate</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			apply
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodapplyTemplate" id="applyTemplate"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">applyTemplate</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a118">118</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns an HTML fragment of this template with the specified values applied.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			applyTemplate
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: The template values. Can be an array if your params are numeric (i.e. {0}) or an object (i.e. {'foo'=&gt; 'bar'})</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodcompile" id="compile"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">compile</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a127">127</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Compiles the template into an internal function, eliminating the RegEx overhead.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			compile
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetJavascript" id="getJavascript"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getJavascript</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a192">192</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getJavascript
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$lazy</span> = <span class="var-default">false</span>], [<span class="var-type"></span>&nbsp;<span class="var-name">$varName</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$lazy</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$varName</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../PhpExt/PhpExt_Object.html#methodgetJavascript">PhpExt_Object::getJavascript()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodinsertAfter" id="insertAfter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">insertAfter</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a139">139</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Applies the supplied values to the template and inserts the new node(s) after el.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			insertAfter
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$returnElement</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: The context element</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: The template values. Can be an array if your params are numeric (i.e. {0}) or an object (i.e. {'foo'=&gt; 'bar'})</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$returnElement</span><span class="var-description">: (optional) true to return a Ext.Element (defaults to false)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinsertBefore" id="insertBefore"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">insertBefore</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a151">151</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Applies the supplied values to the template and inserts the new node(s) before el.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			insertBefore
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$returnElement</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: The context element</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: The template values. Can be an array if your params are numeric (i.e. {0}) or an object (i.e. {'foo'=&gt; 'bar'})</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$returnElement</span><span class="var-description">: (optional) true to return a Ext.Element (defaults to false)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodinsertFirst" id="insertFirst"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">insertFirst</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a163">163</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Applies the supplied values to the template and inserts the new node(s) as the first child of el.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			insertFirst
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$returnElement</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: The context element</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: The template values. Can be an array if your params are numeric (i.e. {0}) or an object (i.e. {'foo'=&gt; 'bar'})</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$returnElement</span><span class="var-description">: (optional) true to return a Ext.Element (defaults to false)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodoverwrite" id="overwrite"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">overwrite</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a175">175</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Applies the supplied values to the template and overwrites the content of el with the new node(s).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			overwrite
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$element</span>, <span class="var-type">array</span>&nbsp;<span class="var-name">$values</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$returnElement</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$element</span><span class="var-description">: The context element</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$values</span><span class="var-description">: The template values. Can be an array if your params are numeric (i.e. {0}) or an object (i.e. {'foo'=&gt; 'bar'})</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$returnElement</span><span class="var-description">: (optional) true to return a Ext.Element (defaults to false)</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodset" id="set"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">set</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtTemplate.php.html#a186">186</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Sets the HTML used as the template and optionally compiles it.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			set
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$html</span>, [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$compile</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$html</span><span class="var-description">: The HTML template</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$compile</span><span class="var-description">: (optional) True to compile the template (defaults to false)</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodaddValidConfigProperties">PhpExt_Object::addValidConfigProperties()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodcreateMethodSignature">PhpExt_Object::createMethodSignature()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetConfigParams">PhpExt_Object::getConfigParams()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetExtConfigProperty">PhpExt_Object::getExtConfigProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetJavascript">PhpExt_Object::getJavascript()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetMethodInvokeStm">PhpExt_Object::getMethodInvokeStm()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodisExtObject">PhpExt_Object::isExtObject()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodparamToString">PhpExt_Object::paramToString()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodsetExtClassInfo">PhpExt_Object::setExtClassInfo()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodsetExtConfigProperty">PhpExt_Object::setExtConfigProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#method__get">PhpExt_Object::__get()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#method__set">PhpExt_Object::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:06:00 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

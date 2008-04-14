@@ -1,0 +1,374 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_Grid_RowNumberer</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PhpExt_Grid_RowNumberer</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This is a utility class that can be passed into a <a href="../../PhpExt/Grid/PhpExt_Grid_ColumnModel.html">PhpExt_Grid_ColumnModel</a> as a column config that provides an automatic row numbering column.</p>
+<p class="description"><p>Usually it is used as the first column added to the collection</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---Grid---RowNumberer.php.html">/PhpExt/Grid/RowNumberer.php</a> (line <span class="field"><a href="../../__filesource/fsource_PhpExt_Grid_PhpExtGridRowNumberer.php.html#a24">24</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a>
+   |
+   --<a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a>
+      |
+      --<a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html">PhpExt_Grid_ColumnConfigObject</a>
+         |
+         --PhpExt_Grid_RowNumberer</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																			
+				<div class="method-definition">
+					<img src="../../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#getInstance" title="details" class="method-name">getInstance</a>
+										()
+									</div>
+																			
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PhpExt_Grid_RowNumberer</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+																			</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html#var$_options">PhpExt_Config_ConfigObject::$_options</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extClassName">PhpExt_Object::$_extClassName</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extConfigProperties">PhpExt_Object::$_extConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_validExtConfigProperties">PhpExt_Object::$_validExtConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_varName">PhpExt_Object::$_varName</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodgetInstance" id="getInstance"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/StaticMethod.png" />
+		<span class="method-title">static getInstance</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Grid_PhpExtGridRowNumberer.php.html#a32">32</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			getInstance
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Grid_PhpExtGridRowNumberer.php.html#a27">27</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PhpExt_Grid_RowNumberer</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#method__construct">PhpExt_Grid_ColumnConfigObject::__construct()</a></dt>
+					</dl>
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html">PhpExt_Grid_ColumnConfigObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#method__construct">PhpExt_Grid_ColumnConfigObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodcreateColumn">PhpExt_Grid_ColumnConfigObject::createColumn()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetAlign">PhpExt_Grid_ColumnConfigObject::getAlign()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetDataIndex">PhpExt_Grid_ColumnConfigObject::getDataIndex()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetEditor">PhpExt_Grid_ColumnConfigObject::getEditor()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetFixed">PhpExt_Grid_ColumnConfigObject::getFixed()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetHeader">PhpExt_Grid_ColumnConfigObject::getHeader()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetHidden">PhpExt_Grid_ColumnConfigObject::getHidden()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetHideable">PhpExt_Grid_ColumnConfigObject::getHideable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetId">PhpExt_Grid_ColumnConfigObject::getId()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetLocked">PhpExt_Grid_ColumnConfigObject::getLocked()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetRenderer">PhpExt_Grid_ColumnConfigObject::getRenderer()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetResizable">PhpExt_Grid_ColumnConfigObject::getResizable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetSortable">PhpExt_Grid_ColumnConfigObject::getSortable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodgetWidth">PhpExt_Grid_ColumnConfigObject::getWidth()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetAlign">PhpExt_Grid_ColumnConfigObject::setAlign()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetDataIndex">PhpExt_Grid_ColumnConfigObject::setDataIndex()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetEditor">PhpExt_Grid_ColumnConfigObject::setEditor()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetFixed">PhpExt_Grid_ColumnConfigObject::setFixed()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetHeader">PhpExt_Grid_ColumnConfigObject::setHeader()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetHidden">PhpExt_Grid_ColumnConfigObject::setHidden()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetHideable">PhpExt_Grid_ColumnConfigObject::setHideable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetId">PhpExt_Grid_ColumnConfigObject::setId()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetLocked">PhpExt_Grid_ColumnConfigObject::setLocked()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetRenderer">PhpExt_Grid_ColumnConfigObject::setRenderer()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetResizable">PhpExt_Grid_ColumnConfigObject::setResizable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetSortable">PhpExt_Grid_ColumnConfigObject::setSortable()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Grid/PhpExt_Grid_ColumnConfigObject.html#methodsetWidth">PhpExt_Grid_ColumnConfigObject::setWidth()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html#method__construct">PhpExt_Config_ConfigObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html#methodgetJavascript">PhpExt_Config_ConfigObject::getJavascript()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodaddValidConfigProperties">PhpExt_Object::addValidConfigProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodcreateMethodSignature">PhpExt_Object::createMethodSignature()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetConfigParams">PhpExt_Object::getConfigParams()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetExtConfigProperty">PhpExt_Object::getExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetJavascript">PhpExt_Object::getJavascript()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetMethodInvokeStm">PhpExt_Object::getMethodInvokeStm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodisExtObject">PhpExt_Object::isExtObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodparamToString">PhpExt_Object::paramToString()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtClassInfo">PhpExt_Object::setExtClassInfo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtConfigProperty">PhpExt_Object::setExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__get">PhpExt_Object::__get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__set">PhpExt_Object::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:05:34 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

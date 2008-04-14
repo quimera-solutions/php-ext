@@ -1,0 +1,977 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_Layout_FormLayout</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PhpExt_Layout_FormLayout</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-consts">Constants</a>
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">This is a layout specifically designed for creating forms. However, when used in an application, it will usually be preferrable to use a <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html">PhpExt_Form_FormPanel</a> (which automatically uses FormLayout as its layout class) since it also provides built-in functionality for loading, validating and submitting the form.</p>
+<p class="description"><p>Note that when creating a layout via config, the layout-specific config properties will be passed in via the Ext.Container.layoutConfig object which will then be applied internally to the layout. The container using the FormLayout can also supply the following form-specific config properties which will be applied by the layout:</p><p><ul><li><strong>hideLabels:</strong> (Boolean) True to hide field labels by default (defaults to false)</li><li><strong>itemCls:</strong> (String) A CSS class to add to the div wrapper that contains each field label and field element (the default class is 'x-form-item' and itemCls will be added to that)</li><li><strong>labelAlign:</strong> (String) The default label alignment. The default value is empty string '' for left alignment, but specifying 'top' will align the labels above the fields.</li><li><strong>labelPad:</strong> (Number) The default padding in pixels for field labels (defaults to 5). labelPad only applies if labelWidth is also specified, otherwise it will be ignored.</li><li><strong>labelWidth:</strong> (Number) The default width in pixels of field labels (defaults to 100)</li></ul>  Any type of components can be added to a FormLayout, but items that inherit from Ext.form.Field can also supply the following field-specific config properties:</p><p><ul><li><strong>clearCls:</strong> (String) The CSS class to apply to the special clearing div rendered directly after each form field wrapper (defaults to 'x-form-clear-left')</li><li><strong>fieldLabel:</strong> (String) The text to display as the label for this field (defaults to '')</li><li><strong>hideLabel:</strong> (Boolean) True to hide the label and separator for this field (defaults to false).</li><li><strong>itemCls:</strong> (String) A CSS class to add to the div wrapper that contains this field label and field element (the default class is 'x-form-item' and itemCls will be added to that). If supplied, itemCls at the field level will override the default itemCls supplied at the container level.</li><li><strong>labelSeparator:</strong> (String) The separator to display after the text of the label for this field (defaults to a colon ':' or the layout's value for labelSeparator). To hide the separator use empty string ''.</li><li><strong>labelStyle:</strong> (String) A CSS style specification string to add to the field label for this field (defaults to '' or the layout's value for labelStyle).</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">see:</span> <a href="../../PhpExt/Layout/PhpExt_Layout_FormLayoutData.html">PhpExt_Layout_FormLayoutData</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---Layout---FormLayout.php.html">/PhpExt/Layout/FormLayout.php</a> (line <span class="field"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a43">43</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a>
+   |
+   --<a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html">PhpExt_Layout_ContainerLayout</a>
+      |
+      --<a href="../../PhpExt/Layout/PhpExt_Layout_AnchorLayout.html">PhpExt_Layout_AnchorLayout</a>
+         |
+         --PhpExt_Layout_FormLayout</pre>
+	
+			</div>
+</div>
+
+
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-consts">Constants</a>
+							
+															<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PhpExt_Layout_FormLayout</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getElementCssStyle" title="details" class="method-name">getElementCssStyle</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getHideLabels" title="details" class="method-name">getHideLabels</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getItemCssClass" title="details" class="method-name">getItemCssClass</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLabelAlign" title="details" class="method-name">getLabelAlign</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getLabelCssStyle" title="details" class="method-name">getLabelCssStyle</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getLabelPad" title="details" class="method-name">getLabelPad</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLabelSeparator" title="details" class="method-name">getLabelSeparator</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getLabelWidth" title="details" class="method-name">getLabelWidth</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLayoutKey" title="details" class="method-name">getLayoutKey</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+										<a href="#setElementCssStyle" title="details" class="method-name">setElementCssStyle</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+										<a href="#setHideLabels" title="details" class="method-name">setHideLabels</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+										<a href="#setItemCssClass" title="details" class="method-name">setItemCssClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+										<a href="#setLabelAlign" title="details" class="method-name">setLabelAlign</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+										<a href="#setLabelCssStyle" title="details" class="method-name">setLabelCssStyle</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">PhpExt_Layout_FormLayot</span>
+										<a href="#setLabelPad" title="details" class="method-name">setLabelPad</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+										<a href="#setLabelSeparator" title="details" class="method-name">setLabelSeparator</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+										<a href="#setLabelWidth" title="details" class="method-name">setLabelWidth</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-consts">Constants</a>
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html">PhpExt_Layout_ContainerLayout</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#var$_validLayoutDataClassNames">PhpExt_Layout_ContainerLayout::$_validLayoutDataClassNames</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extClassName">PhpExt_Object::$_extClassName</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extConfigProperties">PhpExt_Object::$_extConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_validExtConfigProperties">PhpExt_Object::$_validExtConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_varName">PhpExt_Object::$_varName</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																			<a href="#sec-consts">Constants</a>
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a205">205</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PhpExt_Layout_FormLayout</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Layout/PhpExt_Layout_AnchorLayout.html#method__construct">PhpExt_Layout_AnchorLayout::__construct()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetElementCssStyle" id="getElementCssStyle"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getElementCssStyle</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a155">155</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A CSS style specification string to add to each field element in this layout (defaults to '').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getElementCssStyle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHideLabels" id="getHideLabels"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getHideLabels</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a59">59</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to hide field labels by default (defaults to false)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getHideLabels
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetItemCssClass" id="getItemCssClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getItemCssClass</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a77">77</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A CSS class to add to the div wrapper that contains each field label and field element (the default class is 'x-form-item' and itemCls will be added to that)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getItemCssClass
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLabelAlign" id="getLabelAlign"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLabelAlign</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a101">101</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The default label alignment. The default value is empty string '' or <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constLABEL_ALIGN_LEFT">PhpExt_Form_FormPanel::LABEL_ALIGN_LEFT</a> for left alignment, but specifying <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constLABEL_ALIGN_TOP">PhpExt_Form_FormPanel::LABEL_ALIGN_TOP</a> will align the labels above the fields.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constLABEL_ALIGN_TOP">PhpExt_Form_FormPanel::LABEL_ALIGN_TOP</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constLABEL_ALIGN_RIGHT">PhpExt_Form_FormPanel::LABEL_ALIGN_RIGHT</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constLABEL_ALIGN_LEFT">PhpExt_Form_FormPanel::LABEL_ALIGN_LEFT</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLabelAlign
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLabelCssStyle" id="getLabelCssStyle"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLabelCssStyle</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a191">191</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A CSS style specification string to add to each field label in this layout (defaults to '').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getLabelCssStyle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLabelPad" id="getLabelPad"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLabelPad</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a119">119</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The default padding in pixels for field labels (defaults to 5). labelPad only applies if labelWidth is also specified, otherwise it will be ignored.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getLabelPad
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLabelSeparator" id="getLabelSeparator"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLabelSeparator</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a173">173</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The standard separator to display after the text of each form label (defaults to a colon ':'). To turn off separators for all fields in this layout by default specify empty string '' (if the labelSeparator value is explicitly set at the field level, those will still be displayed).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLabelSeparator
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLabelWidth" id="getLabelWidth"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLabelWidth</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a137">137</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The default width in pixels of field labels (defaults to 100)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getLabelWidth
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLayoutKey" id="getLayoutKey"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLayoutKey</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a201">201</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the internal config string for the layout.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> PhpExt_Layout_ContainerLayout::LAYOUT_FORM;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLayoutKey
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Layout/PhpExt_Layout_AnchorLayout.html#methodgetLayoutKey">PhpExt_Layout_AnchorLayout::getLayoutKey()</a></dt>
+						<dd>Returns the internal config string for the layout.</dd>
+					</dl>
+			
+	</div>
+<a name="methodsetElementCssStyle" id="setElementCssStyle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setElementCssStyle</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a147">147</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A CSS style specification string to add to each field element in this layout (defaults to '').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+		<span class="method-name">
+			setElementCssStyle
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetHideLabels" id="setHideLabels"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setHideLabels</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a51">51</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to hide field labels by default (defaults to false)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+		<span class="method-name">
+			setHideLabels
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetItemCssClass" id="setItemCssClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setItemCssClass</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a69">69</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A CSS class to add to the div wrapper that contains each field label and field element (the default class is 'x-form-item' and itemCls will be added to that)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+		<span class="method-name">
+			setItemCssClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLabelAlign" id="setLabelAlign"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLabelAlign</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a90">90</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The default label alignment. The default value is empty string '' or <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constLABEL_ALIGN_LEFT">PhpExt_Form_FormPanel::LABEL_ALIGN_LEFT</a> for left alignment, but specifying <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constLABEL_ALIGN_TOP">PhpExt_Form_FormPanel::LABEL_ALIGN_TOP</a> will align the labels above the fields.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constLABEL_ALIGN_TOP">PhpExt_Form_FormPanel::LABEL_ALIGN_TOP</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constLABEL_ALIGN_RIGHT">PhpExt_Form_FormPanel::LABEL_ALIGN_RIGHT</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constLABEL_ALIGN_LEFT">PhpExt_Form_FormPanel::LABEL_ALIGN_LEFT</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+		<span class="method-name">
+			setLabelAlign
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLabelCssStyle" id="setLabelCssStyle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLabelCssStyle</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a183">183</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A CSS style specification string to add to each field label in this layout (defaults to '').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+		<span class="method-name">
+			setLabelCssStyle
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLabelPad" id="setLabelPad"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLabelPad</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a111">111</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The default padding in pixels for field labels (defaults to 5). labelPad only applies if labelWidth is also specified, otherwise it will be ignored.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PhpExt_Layout_FormLayot</span>
+		<span class="method-name">
+			setLabelPad
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLabelSeparator" id="setLabelSeparator"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLabelSeparator</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a165">165</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The standard separator to display after the text of each form label (defaults to a colon ':'). To turn off separators for all fields in this layout by default specify empty string '' (if the labelSeparator value is explicitly set at the field level, those will still be displayed).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+		<span class="method-name">
+			setLabelSeparator
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLabelWidth" id="setLabelWidth"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setLabelWidth</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutFormLayout.php.html#a129">129</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The default width in pixels of field labels (defaults to 100)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html">PhpExt_Layout_FormLayout</a></span>
+		<span class="method-name">
+			setLabelWidth
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/Layout/PhpExt_Layout_AnchorLayout.html">PhpExt_Layout_AnchorLayout</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_AnchorLayout.html#method__construct">PhpExt_Layout_AnchorLayout::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_AnchorLayout.html#methodgetLayoutKey">PhpExt_Layout_AnchorLayout::getLayoutKey()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html">PhpExt_Layout_ContainerLayout</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#method__construct">PhpExt_Layout_ContainerLayout::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#methodaddValidLayoutDataClassName">PhpExt_Layout_ContainerLayout::addValidLayoutDataClassName()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#methodaddValidLayoutProperties">PhpExt_Layout_ContainerLayout::addValidLayoutProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#methodgetExtraCssClass">PhpExt_Layout_ContainerLayout::getExtraCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#methodgetLayoutKey">PhpExt_Layout_ContainerLayout::getLayoutKey()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#methodgetRenderHidden">PhpExt_Layout_ContainerLayout::getRenderHidden()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#methodgetValidLayoutDataClassNames">PhpExt_Layout_ContainerLayout::getValidLayoutDataClassNames()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#methodgetValidLayoutProperties">PhpExt_Layout_ContainerLayout::getValidLayoutProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#methodsetExtraCssClass">PhpExt_Layout_ContainerLayout::setExtraCssClass()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#methodsetRenderHidden">PhpExt_Layout_ContainerLayout::setRenderHidden()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodaddValidConfigProperties">PhpExt_Object::addValidConfigProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodcreateMethodSignature">PhpExt_Object::createMethodSignature()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetConfigParams">PhpExt_Object::getConfigParams()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetExtConfigProperty">PhpExt_Object::getExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetJavascript">PhpExt_Object::getJavascript()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetMethodInvokeStm">PhpExt_Object::getMethodInvokeStm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodisExtObject">PhpExt_Object::isExtObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodparamToString">PhpExt_Object::paramToString()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtClassInfo">PhpExt_Object::setExtClassInfo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtConfigProperty">PhpExt_Object::setExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__get">PhpExt_Object::__get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__set">PhpExt_Object::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-vars">Vars</a>
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Constants</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html">PhpExt_Layout_ContainerLayout</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#constLAYOUT_ABSOLUTE">PhpExt_Layout_ContainerLayout::LAYOUT_ABSOLUTE</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#constLAYOUT_ACCORDION">PhpExt_Layout_ContainerLayout::LAYOUT_ACCORDION</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#constLAYOUT_ANCHOR">PhpExt_Layout_ContainerLayout::LAYOUT_ANCHOR</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#constLAYOUT_BORDER">PhpExt_Layout_ContainerLayout::LAYOUT_BORDER</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#constLAYOUT_CARD">PhpExt_Layout_ContainerLayout::LAYOUT_CARD</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#constLAYOUT_COLUMN">PhpExt_Layout_ContainerLayout::LAYOUT_COLUMN</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#constLAYOUT_DEFAULT">PhpExt_Layout_ContainerLayout::LAYOUT_DEFAULT</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#constLAYOUT_FIT">PhpExt_Layout_ContainerLayout::LAYOUT_FIT</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#constLAYOUT_FORM">PhpExt_Layout_ContainerLayout::LAYOUT_FORM</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html#constLAYOUT_TABLE">PhpExt_Layout_ContainerLayout::LAYOUT_TABLE</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:04:29 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

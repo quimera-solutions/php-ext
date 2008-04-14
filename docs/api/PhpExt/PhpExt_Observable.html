@@ -1,0 +1,729 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_Observable</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/AbstractClass_logo.png"
+														alt="Abstract Class"
+														title="Abstract Class"
+														style="vertical-align: middle"> PhpExt_Observable</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+					</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">abstract:</span> </li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---Observable.php.html">/PhpExt/Observable.php</a> (line <span class="field"><a href="../__filesource/fsource_PhpExt__PhpExtObservable.php.html#a26">26</a></span>)
+		</p>
+		
+				
+		<pre><a href="../PhpExt/PhpExt_Object.html">PhpExt_Object</a>
+   |
+   --PhpExt_Observable</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/PhpExt_Component.html">PhpExt_Component</a>
+					</td>
+					<td>
+											Base class for all Ext components.  All subclasses of Component can automatically participate in the standard  Ext component lifecycle of creation, rendering and destruction.  They also have automatic support for basic hide/show  and enable/disable behavior.   All visual widgets that require rendering into a layout should subclass <a href="../PhpExt/PhpExt_Component.html">PhpExt_Component</a> (or  BoxComponent if managed box model handling is required).
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/Data/PhpExt_Data_DataProxy.html">PhpExt_Data_DataProxy</a>
+					</td>
+					<td>
+											This class is an abstract base class for implementations which provide retrieval of unformatted data objects.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/Data/PhpExt_Data_Store.html">PhpExt_Data_Store</a>
+					</td>
+					<td>
+											The Store class encapsulates a client side cache of <a href="../PhpExt/Data/PhpExt_Data_Record.html">Record</a> objects which provide input data for Components such as the <a href="../PhpExt/Grid/PhpExt_Grid_GridPanel.html">GridPanel</a>, the <a href="../PhpExt/Form/PhpExt_Form_ComboBox.html">ComboBox</a>, or the <a href="../PhpExt/PhpExt_DataView.html">DataView</a>
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/AbstractClass.png"
+								 alt="Abstract class"
+								 title="Abstract class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/Grid/PhpExt_Grid_AbstractSelectionModel.html">PhpExt_Grid_AbstractSelectionModel</a>
+					</td>
+					<td>
+											Abstract base class for grid SelectionModels. It provides the interface that should be implemented by descendant classes. This class should not be directly instantiated.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/Grid/PhpExt_Grid_ColumnModel.html">PhpExt_Grid_ColumnModel</a>
+					</td>
+					<td>
+											This is the default implementation of a ColumnModel used by the Grid. This class is initialized with an Array of column config objects.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/Grid/PhpExt_Grid_GridView.html">PhpExt_Grid_GridView</a>
+					</td>
+					<td>
+											This class encapsulates the user interface of an <a href="../PhpExt/Grid/PhpExt_Grid_GridPanel.html">PhpExt_Grid_GridPanel</a>. Methods of this class may be used to access user interface elements to enable special display effects. Do not change the DOM structure of the user interface.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/Menu/PhpExt_Menu_Menu.html">PhpExt_Menu_Menu</a>
+					</td>
+					<td>
+											A menu object. This is the container to which you add all other menu items. Menu can also serve a as a base class when you want a specialzed menu based off of another component (like <a href="../PhpExt/Menu/PhpExt_Menu_DateMenu.html">for example</a>).
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+								</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>
+					<a href="#$_listeners" title="details" class="var-name">$_listeners</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+																		<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																															
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PhpExt_Observable</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Observable.html">PhpExt_Observable</a></span>
+										<a href="#attachListener" title="details" class="method-name">attachListener</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$eventName</span>, <span class="var-type"><a href="../PhpExt/Config/PhpExt_Listener.html">PhpExt_Listener</a>|<a href="../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>&nbsp;<span class="var-name">$listener</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getConfigParams" title="details" class="method-name">getConfigParams</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$lazy</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>
+										<a href="#getListeners" title="details" class="method-name">getListeners</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$_listeners" id="$_listeners"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>
+			<span class="var-name">$_listeners</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtObservable.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">PhpExt_ListenerCollection</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_extClassName">PhpExt_Object::$_extClassName</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_extConfigProperties">PhpExt_Object::$_extConfigProperties</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_validExtConfigProperties">PhpExt_Object::$_validExtConfigProperties</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_varName">PhpExt_Object::$_varName</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																	<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtObservable.php.html#a44">44</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PhpExt_Observable</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/PhpExt_Component.html#method__construct">PhpExt_Component::__construct()</a>
+								: ** Overrides ***
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_BoxComponent.html#method__construct">PhpExt_BoxComponent::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_Container.html#method__construct">PhpExt_Container::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_Panel.html#method__construct">PhpExt_Panel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_FieldSet.html#method__construct">PhpExt_Form_FieldSet::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_FormPanel.html#method__construct">PhpExt_Form_FormPanel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_GridPanel.html#method__construct">PhpExt_Grid_GridPanel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_EditorGridPanel.html#method__construct">PhpExt_Grid_EditorGridPanel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_TabPanel.html#method__construct">PhpExt_TabPanel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_Window.html#method__construct">PhpExt_Window::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_DataView.html#method__construct">PhpExt_DataView::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_Field.html#method__construct">PhpExt_Form_Field::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_Checkbox.html#method__construct">PhpExt_Form_Checkbox::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_Radio.html#method__construct">PhpExt_Form_Radio::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_Hidden.html#method__construct">PhpExt_Form_Hidden::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_HtmlEditor.html#method__construct">PhpExt_Form_HtmlEditor::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_NumberField.html#method__construct">PhpExt_Form_NumberField::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_TextField.html#method__construct">PhpExt_Form_TextField::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_PassworField.html#method__construct">PhpExt_Form_PassworField::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_TextArea.html#method__construct">PhpExt_Form_TextArea::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_TriggerField.html#method__construct">PhpExt_Form_TriggerField::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_ComboBox.html#method__construct">PhpExt_Form_ComboBox::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_TimeField.html#method__construct">PhpExt_Form_TimeField::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_DateField.html#method__construct">PhpExt_Form_DateField::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExtUx/App/PhpExtUx_App_SearchField.html#method__construct">PhpExtUx_App_SearchField::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html#method__construct">PhpExt_Toolbar_Toolbar::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Toolbar/PhpExt_Toolbar_PagingToolbar.html#method__construct">PhpExt_Toolbar_PagingToolbar::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_Button.html#method__construct">PhpExt_Button::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_SplitButton.html#method__construct">PhpExt_SplitButton::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Toolbar/PhpExt_Toolbar_SplitButton.html#method__construct">PhpExt_Toolbar_SplitButton::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Toolbar/PhpExt_Toolbar_Button.html#method__construct">PhpExt_Toolbar_Button::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_BaseItem.html#method__construct">PhpExt_Menu_BaseItem::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_Adapter.html#method__construct">PhpExt_Menu_Adapter::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_ColorItem.html#method__construct">PhpExt_Menu_ColorItem::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_DateItem.html#method__construct">PhpExt_Menu_DateItem::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_Item.html#method__construct">PhpExt_Menu_Item::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_CheckItem.html#method__construct">PhpExt_Menu_CheckItem::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_Separator.html#method__construct">PhpExt_Menu_Separator::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_TextItem.html#method__construct">PhpExt_Menu_TextItem::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Data/PhpExt_Data_DataProxy.html#method__construct">PhpExt_Data_DataProxy::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Data/PhpExt_Data_HttpProxy.html#method__construct">PhpExt_Data_HttpProxy::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Data/PhpExt_Data_MemoryProxy.html#method__construct">PhpExt_Data_MemoryProxy::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Data/PhpExt_Data_ScriptTagProxy.html#method__construct">PhpExt_Data_ScriptTagProxy::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Data/PhpExt_Data_Store.html#method__construct">PhpExt_Data_Store::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Data/PhpExt_Data_GroupingStore.html#method__construct">PhpExt_Data_GroupingStore::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Data/PhpExt_Data_JsonStore.html#method__construct">PhpExt_Data_JsonStore::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Data/PhpExt_Data_SimpleStore.html#method__construct">PhpExt_Data_SimpleStore::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_AbstractSelectionModel.html#method__construct">PhpExt_Grid_AbstractSelectionModel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_CellSelectionModel.html#method__construct">PhpExt_Grid_CellSelectionModel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_RowSelectionModel.html#method__construct">PhpExt_Grid_RowSelectionModel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_CheckboxSelectionModel.html#method__construct">PhpExt_Grid_CheckboxSelectionModel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_ColumnModel.html#method__construct">PhpExt_Grid_ColumnModel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_GridView.html#method__construct">PhpExt_Grid_GridView::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_GroupingView.html#method__construct">PhpExt_Grid_GroupingView::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_Menu.html#method__construct">PhpExt_Menu_Menu::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_ColorMenu.html#method__construct">PhpExt_Menu_ColorMenu::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_DateMenu.html#method__construct">PhpExt_Menu_DateMenu::__construct()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodattachListener" id="attachListener"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">attachListener</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtObservable.php.html#a62">62</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a <a href="../PhpExt/Config/PhpExt_Listener.html">PhpExt_Listener</a> to the specified $eventName.  This lintener will execute when the Javascript object fires that event.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Observable.html">PhpExt_Observable</a></span>
+		<span class="method-name">
+			attachListener
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$eventName</span>, <span class="var-type"><a href="../PhpExt/Config/PhpExt_Listener.html">PhpExt_Listener</a>|<a href="../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>&nbsp;<span class="var-name">$listener</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$eventName</span><span class="var-description">: The name of the event</span>			</li>
+					<li>
+				<span class="var-type"><a href="../PhpExt/Config/PhpExt_Listener.html">PhpExt_Listener</a>|<a href="../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>
+				<span class="var-name">$listener</span><span class="var-description">: A <a href="../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a> with the corresponding name of the javascript function previously defined of a <a href="../PhpExt/Config/PhpExt_Listener.html">PhpExt_Listener</a> to create an anonymous function</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetConfigParams" id="getConfigParams"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getConfigParams</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtObservable.php.html#a71">71</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getConfigParams
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$lazy</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$lazy</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../PhpExt/PhpExt_Object.html#methodgetConfigParams">PhpExt_Object::getConfigParams()</a></dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/PhpExt_Component.html#methodgetConfigParams">PhpExt_Component::getConfigParams()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_Container.html#methodgetConfigParams">PhpExt_Container::getConfigParams()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_Panel.html#methodgetConfigParams">PhpExt_Panel::getConfigParams()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Toolbar/PhpExt_Toolbar_Button.html#methodgetConfigParams">PhpExt_Toolbar_Button::getConfigParams()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Menu/PhpExt_Menu_BaseItem.html#methodgetConfigParams">PhpExt_Menu_BaseItem::getConfigParams()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_CheckboxSelectionModel.html#methodgetConfigParams">PhpExt_Grid_CheckboxSelectionModel::getConfigParams()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_ColumnModel.html#methodgetConfigParams">PhpExt_Grid_ColumnModel::getConfigParams()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodgetListeners" id="getListeners"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getListeners</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtObservable.php.html#a39">39</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_ListenerCollection.html">PhpExt_ListenerCollection</a></span>
+		<span class="method-name">
+			getListeners
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodaddValidConfigProperties">PhpExt_Object::addValidConfigProperties()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodcreateMethodSignature">PhpExt_Object::createMethodSignature()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetConfigParams">PhpExt_Object::getConfigParams()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetExtConfigProperty">PhpExt_Object::getExtConfigProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetJavascript">PhpExt_Object::getJavascript()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetMethodInvokeStm">PhpExt_Object::getMethodInvokeStm()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodisExtObject">PhpExt_Object::isExtObject()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodparamToString">PhpExt_Object::paramToString()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodsetExtClassInfo">PhpExt_Object::setExtClassInfo()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodsetExtConfigProperty">PhpExt_Object::setExtConfigProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#method__get">PhpExt_Object::__get()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#method__set">PhpExt_Object::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:05:16 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

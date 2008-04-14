@@ -7,37 +7,49 @@ $baseUrl = str_replace($docRoot,$httpHost,$dir);
 $extjsCheck = realpath(dirname(__FILE__)."/../resources/ext-2.0.2/ext-core.js");
 
 if ($extjsCheck !== false) {
-	include_once '../php-ext/php-ext.php';
-	
-	include_once(NS_PHP_EXTJS_CORE);
-	include_once(NS_PHP_EXTJS_PANELS);
-	include_once(NS_PHP_EXTJS_FORM);
+	set_include_path(get_include_path().";".realpath("../library"));
+	include_once 'PhpExt/Ext.php';
+	include_once 'PhpExt/Window.php';	
+	include_once 'PhpExt/AutoLoadConfigObject.php';
+	include_once 'PhpExt/Layout/FitLayout.php';
+	include_once 'PhpExt/TabPanel.php';
+	include_once 'PhpExt/Panel.php';
 	
 	$example_id = $_GET['eid'];
 	$file = $example_id . ".php";
 	
-	$w = new ExtWindow();
-	$w->Title = "PHP Source: " . $file;
-	$w->Width = 500;
-	$w->Height = 500;
-	$w->Layout = EXT_CONTAINER_LAYOUTS_FIT;
-	$w->AutoLoad = new ExtAutoLoadConfigObject($baseUrl."/examples/viewsource.php",array("file"=>$file));
-	$w->AutoLoad->Scripts = true;
-	$w->AutoLoad->Method = EXT_FORM_METHOD_GET;
-	$w->Resizable = false;
-	$w->CloseAction = EXT_WINDOW_CLOSE_ACTION_HIDE;
+	$win = new PhpExt_Window();
+	$win->setTitle("Sample Source: " . $file)
+	   ->setWidth(500)
+	   ->setHeight(500)
+	   ->setLayout(new PhpExt_Layout_FitLayout())
+	   ->setResizable(false)
+	   ->setCloseAction(PhpExt_Window::CLOSE_ACTION_HIDE);
 	
-	$w2 = new ExtWindow();
-	$w2->Title = "Generated JavaScript: " . $file;
-	$w2->Width = 500;
-	$w2->Height = 500;
-	$w2->Layout = EXT_CONTAINER_LAYOUTS_FIT;
-	$w2->AutoLoad = new ExtAutoLoadConfigObject($baseUrl."/examples/viewjs.php",array("file"=>$file));
-	$w2->AutoLoad->Scripts = true;
-	$w2->AutoLoad->Method = EXT_FORM_METHOD_GET;
-	$w2->Resizable = false;
-	$w2->CloseAction = EXT_WINDOW_CLOSE_ACTION_HIDE;
-	
+	// PHP Source
+	$phpTab = new PhpExt_Panel();
+	$phpTab->setTitle("PHP Source")
+	      ->setLayout(new PhpExt_Layout_FitLayout())
+	      ->setAutoLoad(new PhpExt_AutoLoadConfigObject($baseUrl."/examples/viewsource.php",array("file"=>$file)))
+		  ->getAutoLoad()
+		      ->setScripts(true)
+		      ->setMethod(PhpExt_AutoLoadConfigObject::AUTO_LOAD_METHOD_GET);
+
+    // Generated JS
+	$jsTab = new PhpExt_Panel();
+	$jsTab->setTitle("Generated JS")
+	      ->setLayout(new PhpExt_Layout_FitLayout())
+	      ->setAutoLoad(new PhpExt_AutoLoadConfigObject($baseUrl."/examples/viewjs.php",array("file"=>$file)))
+		  ->getAutoLoad()
+		      ->setScripts(true)
+		      ->setMethod(PhpExt_AutoLoadConfigObject::AUTO_LOAD_METHOD_GET);
+		      
+    $tabs = new PhpExt_TabPanel();
+	$tabs->setActiveTab(0)
+	    ->addItem($phpTab)
+	    ->addItem($jsTab);
+	$win->addItem($tabs);    	      	   
+	      	
 	$customHeaders = '
 	    <link rel="stylesheet" type="text/css" href="resources/ext-2.0.2/resources/css/ext-all.css" />
 	
@@ -50,18 +62,25 @@ if ($extjsCheck !== false) {
 	    <script type="text/javascript" src="examples/examples.js"></script>
 	    
 	    <script type="text/javascript" src="resources/codepress/codepress.js"></script>
-	
+		
+		<script>'.
+		$win->getJavascript(false, "w").'			
+	    </script>
 	    <!-- Common Styles for the examples -->
 	    <link rel="stylesheet" type="text/css" href="examples/examples.css" />
-	    
-	    
+	    ';
+	    /*
 	    <script>'.
 		$w->getJavascript(false, "w").'
 		'.$w2->getJavascript(false, "w2").'
-	    </script>';
+	    </script>';*/
 }
 
+$example_id = isset($_GET['eid']) ? $_GET['eid'] : null;
 
+$PAGE_TITLE = '- Samples';
+if ($example_id != null)
+    $PAGE_TITLE .= ": $example_id";
 require_once '../header.php';
 
 if ($extjsCheck === false) {
@@ -70,9 +89,7 @@ Please see INSTALL.txt for information regarding proper installation.</p>";
 }
 
 
-$page = (isset($_GET['p'])?$_GET['p']:'intro');
-
-if (!isset($_GET['eid'])) {
+if ($example_id == null) {
 	require_once 'examples.php';
 }
 else {
@@ -81,8 +98,7 @@ else {
 	if (file_exists($file)) {
 
 		if ($extjsCheck !== false) {		
-			echo '<button onclick="w.show()" style="float:right">View PHP Source</button>
-<button onclick="w2.show()" style="float:right">View Generated JS</button>';
+			echo '<button onclick="w.show()" style="float:right">View Source</button>';
 		}
 		
 		require_once $file;

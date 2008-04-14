@@ -1,46 +1,54 @@
 <?php
-header("Content-type:text/javascript");
-include_once("../../php-ext/php-ext.php");
-include_once("../../php-ext-ux/app/ext-searchfield.inc.php");
+set_include_path(get_include_path().';'.realpath('../../library'));
+include_once 'PhpExt/Javascript.php';
+PhpExt_Javascript::sendContentType();
 
-include_once(NS_PHP_EXTJS_CORE);
-include_once(NS_PHP_EXTJS_DATA);
-include_once(NS_PHP_EXTJS_FORM);
-include_once(NS_PHP_EXTJS_TOOLBAR);
+include_once 'PhpExt/Ext.php';
+include_once 'PhpExt/Data/Store.php';
+include_once 'PhpExt/Data/ScriptTagProxy.php';
+include_once 'PhpExt/Data/JsonReader.php';
+include_once 'PhpExt/Data/FieldConfigObject.php';
+include_once 'PhpExt/Config/ConfigObject.php';
+include_once 'PhpExt/XTemplate.php';
+include_once 'PhpExt/Form/ComboBox.php';
+include_once 'PhpExt/Listener.php';
 
-$ds = new ExtStore();
-$ds->Proxy =& new ExtScriptTagProxy('http://extjs.com/forum/topics-remote.php');
-$ds->Reader =& new ExtJsonReader();
-$ds->Reader->Root = "topics";
-$ds->Reader->TotalProperty = "totalCount";
-$ds->Id = "post_id";
-$ds->Reader->addField(new ExtFieldConfigObject("postId","post_id"));
-$ds->Reader->addField(new ExtFieldConfigObject("title","topic_title"));
-$ds->Reader->addField(new ExtFieldConfigObject("topicId","topic_id"));
-$ds->Reader->addField(new ExtFieldConfigObject("author","author"));
-$ds->Reader->addField(new ExtFieldConfigObject("lastPost","post_time","date",null,null,null,"timestamp"));
-$ds->Reader->addField(new ExtFieldConfigObject("excerpt","post_text"));
-$ds->BaseParams = new ExtConfigObject(array("limit"=>20,"forumId"=>4));
 
-$resultTpl = new ExtXTemplate(
+$ds = new PhpExt_Data_Store();
+$ds->setProxy(new PhpExt_Data_ScriptTagProxy('http://extjs.com/forum/topics-remote.php'));
+
+$reader = new PhpExt_Data_JsonReader();
+$reader->setRoot("topics")
+       ->setTotalProperty("totalCount")
+       ->setId("post_id");
+$reader->addField(new PhpExt_Data_FieldConfigObject("postId","post_id"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("title","topic_title"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("topicId","topic_id"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("author","author"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("lastPost","post_time","date","timestamp"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("excerpt","post_text"));
+$ds->setReader($reader);
+$ds->setBaseParams(array("limit"=>20,"forumId"=>21));
+
+$resultTpl = new PhpExt_XTemplate(
 		'<tpl for="."><div class="search-item">',
             '<h3><span>{lastPost:date("M j, Y")}<br />by {author}</span>{title}</h3>',
             '{excerpt}',
         '</div></tpl>');
 
-$search = new ExtComboBox(null, "searchbox");
-$search->Store =& $ds;
-$search->DisplayField = "Title";
-$search->TypeAhead = false;
-$search->LoadingText = "Searching...";
-$search->Width = 570;
-$search->PageSize = 10;
-$search->HideTrigger = true;
-$search->Template =& $resultTpl;
-$search->ApplyTo = "search";
-$search->ItemCssSelector = "div.search-item";
-$search->addListener("onSelect", new ExtListener(
-		Javascript::functionDef(null,
+$search = new PhpExt_Form_ComboBox(null, "searchbox");
+$search->setStore($ds)
+       ->setDisplayField("title")
+       ->setTypeAhead(false)
+       ->setLoadingText("Searching...")
+       ->setWidth(570)
+       ->setPageSize(10)
+       ->setHideTrigger(true)
+       ->setTemplate($resultTpl)
+       ->setApplyTo("search")
+       ->setItemCssSelector("div.search-item")
+       ->attachListener("onSelect", new PhpExt_Listener(
+		PhpExt_Javascript::functionDef(null,
 			"window.location =
                 String.format('http://extjs.com/forum/showthread.php?t={0}&p={1}', record.data.topicId, record.id)",
 			array("record"))
@@ -48,7 +56,7 @@ $search->addListener("onSelect", new ExtListener(
 
 
 //------------ Ext.OnReady
-echo Ext::onReady(
+echo PhpExt_Ext::onReady(
 	$ds->getJavascript(false, "ds"),
 	$resultTpl->getJavascript(false, "resultTpl"),
 	$search->getJavascript(false, "search")		

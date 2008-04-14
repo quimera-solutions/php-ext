@@ -6,11 +6,11 @@
 	the whole library. 
 	</p>
 	<p class="justified">
-	<h4>PHP-Ext 0.8 API Documentation</h4>	
+	<h4>PHP-Ext 0.8.2 API Documentation</h4>	
 	<a href="docs/api" style="margin-left: 10px;">View Online</a><br>	
-	<a href="docs/PHP-Ext 0.8 API Documentation.chm" style="margin-left: 10px;">Download CHM File</a><br>
+	<a href="docs/PHP-Ext 0.8.2 API Documentation.chm" style="margin-left: 10px;">Download CHM File</a><br>
 	<br>
-	<h4>PHP-Ext 0.8 Programming Reference</h4>
+	<h4>PHP-Ext 0.8.2 Programming Reference</h4>
 	Comming soon...For now please check out the <a href="examples">Samples Page</a>.
 	</p>	
 	

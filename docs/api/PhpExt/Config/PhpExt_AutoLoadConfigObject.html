@@ -1,0 +1,1086 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_AutoLoadConfigObject</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PhpExt_AutoLoadConfigObject</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+													<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---AutoLoadConfigObject.php.html">/PhpExt/AutoLoadConfigObject.php</a> (line <span class="field"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a24">24</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a>
+   |
+   --<a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a>
+      |
+      --PhpExt_AutoLoadConfigObject</pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-vars">Vars</a>
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#AUTO_LOAD_METHOD_GET" title="details" class="const-name">AUTO_LOAD_METHOD_GET</a> = 					<span class="var-type"> 'GET'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#AUTO_LOAD_METHOD_POST" title="details" class="const-name">AUTO_LOAD_METHOD_POST</a> = 					<span class="var-type"> 'POST'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PhpExt_AutoLoadConfigObject</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$scripts</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+										<a href="#getCallback" title="details" class="method-name">getCallback</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getDiscardUrl" title="details" class="method-name">getDiscardUrl</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getMethod" title="details" class="method-name">getMethod</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getNoCache" title="details" class="method-name">getNoCache</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getParams" title="details" class="method-name">getParams</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>
+										<a href="#getScope" title="details" class="method-name">getScope</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getScripts" title="details" class="method-name">getScripts</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getText" title="details" class="method-name">getText</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getTimeout" title="details" class="method-name">getTimeout</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getUrl" title="details" class="method-name">getUrl</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+										<a href="#setCallback" title="details" class="method-name">setCallback</a>
+											(<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+										<a href="#setDiscardUrl" title="details" class="method-name">setDiscardUrl</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+										<a href="#setMethod" title="details" class="method-name">setMethod</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+										<a href="#setNoCache" title="details" class="method-name">setNoCache</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+										<a href="#setParams" title="details" class="method-name">setParams</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+										<a href="#setScope" title="details" class="method-name">setScope</a>
+											(<span class="var-type"><a href="../../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+										<a href="#setScripts" title="details" class="method-name">setScripts</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+										<a href="#setText" title="details" class="method-name">setText</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+										<a href="#setTimeout" title="details" class="method-name">setTimeout</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+										<a href="#setUrl" title="details" class="method-name">setUrl</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html#var$_options">PhpExt_Config_ConfigObject::$_options</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extClassName">PhpExt_Object::$_extClassName</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extConfigProperties">PhpExt_Object::$_extConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_validExtConfigProperties">PhpExt_Object::$_validExtConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_varName">PhpExt_Object::$_varName</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-vars">Vars</a>
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a231">231</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PhpExt_AutoLoadConfigObject</span>
+		<span class="method-name">
+			__construct
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$url</span>, [<span class="var-type">array</span>&nbsp;<span class="var-name">$params</span> = <span class="var-default">array()</span>], [<span class="var-type">boolean</span>&nbsp;<span class="var-name">$scripts</span> = <span class="var-default">null</span>], [<span class="var-type">string</span>&nbsp;<span class="var-name">$method</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$url</span><span class="var-description">: The URL to request.</span>			</li>
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$params</span><span class="var-description">: The parameters to pass to the server. These may be specified as a urlencoded string, or as an array containing properties which represent parameters.</span>			</li>
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$scripts</span><span class="var-description">: If true any &lt;script&gt; tags embedded in the response text will be extracted and executed. If this option is specified, the callback will be called after the execution of the scripts.</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$method</span><span class="var-description">: The HTTP method to use. Defaults to AUTO_LOAD_METHOD_POST if params are present, or AUTO_LOAD_METHOD_GET if not.</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html#method__construct">PhpExt_Config_ConfigObject::__construct()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetCallback" id="getCallback"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a131">131</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A function to be called when the response from the server arrives. The following parameters are passed: <ul><li>el : Ext.Element  - The Element being updated.</li></ul></p>
+<p class="description"><p><ul><li>success : Boolean - True for success, false for failure.</li><li>response : XMLHttpRequest - The XMLHttpRequest which processed the update.</li></ul> options : Object - The config object passed to the update call.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+		<span class="method-name">
+			getCallback
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDiscardUrl" id="getDiscardUrl"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getDiscardUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a167">167</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">If not passed as false the URL of this request becomes the default URL for this Updater object, and will be subsequently used in refresh calls.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getDiscardUrl
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMethod" id="getMethod"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMethod</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a65">65</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The HTTP method to use. Defaults to AUTO_LOAD_METHOD_POST if params are present, or AUTO_LOAD_METHOD_GET if not.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html#constAUTO_LOAD_METHOD_POST">PhpExt_AutoLoadConfigObject::AUTO_LOAD_METHOD_POST</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html#constAUTO_LOAD_METHOD_GET">PhpExt_AutoLoadConfigObject::AUTO_LOAD_METHOD_GET</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getMethod
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetNoCache" id="getNoCache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getNoCache</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a203">203</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Only needed for GET requests, this option causes an extra, generated parameter to be passed to defeat caching.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getNoCache
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetParams" id="getParams"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getParams</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a87">87</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The parameters to pass to the server. These may be specified as a urlencoded string, or as an array containing properties which represent parameters.</p>
+<p class="description"><p>Format:  <div class="src-code"><ol><li><div class="src-line"><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'param1'</span>=&gt;<span class="src-num">10</span><span class="src-sym">,</span><span class="src-str">'param2'</span>=&gt;<span class="src-str">'some&nbsp;value'</span><span class="src-sym">)</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getParams
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetScope" id="getScope"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getScope</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a149">149</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The scope in which to execute the callback (The callback's this reference.) If the params option is a function, this scope is used for that function also.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>
+		<span class="method-name">
+			getScope
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetScripts" id="getScripts"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getScripts</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a105">105</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">If true any &lt;script&gt; tags embedded in the response text will be extracted and executed. If this option is specified, the callback will be called after the execution of the scripts.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getScripts
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetText" id="getText"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getText</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a221">221</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The loading text displayed during request.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getText
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTimeout" id="getTimeout"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getTimeout</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a185">185</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The timeout to use when waiting for a response.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getTimeout
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetUrl" id="getUrl"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a43">43</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The URL to request or a function which returns the URL.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getUrl
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetCallback" id="setCallback"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a119">119</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A function to be called when the response from the server arrives. The following parameters are passed: <ul><li>el : Ext.Element  - The Element being updated.</li></ul></p>
+<p class="description"><p><ul><li>success : Boolean - True for success, false for failure.</li><li>response : XMLHttpRequest - The XMLHttpRequest which processed the update.</li></ul> options : Object - The config object passed to the update call.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+		<span class="method-name">
+			setCallback
+		</span>
+					(<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDiscardUrl" id="setDiscardUrl"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setDiscardUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a159">159</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">If not passed as false the URL of this request becomes the default URL for this Updater object, and will be subsequently used in refresh calls.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+		<span class="method-name">
+			setDiscardUrl
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMethod" id="setMethod"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setMethod</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a55">55</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The HTTP method to use. Defaults to AUTO_LOAD_METHOD_POST if params are present, or AUTO_LOAD_METHOD_GET if not.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html#constAUTO_LOAD_METHOD_POST">PhpExt_AutoLoadConfigObject::AUTO_LOAD_METHOD_POST</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html#constAUTO_LOAD_METHOD_GET">PhpExt_AutoLoadConfigObject::AUTO_LOAD_METHOD_GET</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+		<span class="method-name">
+			setMethod
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetNoCache" id="setNoCache"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setNoCache</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a195">195</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Only needed for GET requests, this option causes an extra, generated parameter to be passed to defeat caching.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+		<span class="method-name">
+			setNoCache
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetParams" id="setParams"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setParams</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a77">77</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The parameters to pass to the server. These may be specified as a urlencoded string, or as an array containing properties which represent parameters.</p>
+<p class="description"><p>Format:  <div class="src-code"><ol><li><div class="src-line"><span class="src-key">array</span><span class="src-sym">(</span><span class="src-str">'param1'</span>=&gt;<span class="src-num">10</span><span class="src-sym">,</span><span class="src-str">'param2'</span>=&gt;<span class="src-str">'some&nbsp;value'</span><span class="src-sym">)</span></div></li>
+</ol></div></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+		<span class="method-name">
+			setParams
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetScope" id="setScope"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setScope</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a141">141</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The scope in which to execute the callback (The callback's this reference.) If the params option is a function, this scope is used for that function also.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+		<span class="method-name">
+			setScope
+		</span>
+					(<span class="var-type"><a href="../../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetScripts" id="setScripts"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setScripts</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a97">97</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">If true any &lt;script&gt; tags embedded in the response text will be extracted and executed. If this option is specified, the callback will be called after the execution of the scripts.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+		<span class="method-name">
+			setScripts
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetText" id="setText"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setText</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a213">213</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The loading text displayed during request.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+		<span class="method-name">
+			setText
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTimeout" id="setTimeout"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setTimeout</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a177">177</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The timeout to use when waiting for a response.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+		<span class="method-name">
+			setTimeout
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetUrl" id="setUrl"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a35">35</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The URL to request.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+		<span class="method-name">
+			setUrl
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html">PhpExt_Config_ConfigObject</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html#method__construct">PhpExt_Config_ConfigObject::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/Config/PhpExt_Config_ConfigObject.html#methodgetJavascript">PhpExt_Config_ConfigObject::getJavascript()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodaddValidConfigProperties">PhpExt_Object::addValidConfigProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodcreateMethodSignature">PhpExt_Object::createMethodSignature()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetConfigParams">PhpExt_Object::getConfigParams()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetExtConfigProperty">PhpExt_Object::getExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetJavascript">PhpExt_Object::getJavascript()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetMethodInvokeStm">PhpExt_Object::getMethodInvokeStm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodisExtObject">PhpExt_Object::isExtObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodparamToString">PhpExt_Object::paramToString()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtClassInfo">PhpExt_Object::setExtClassInfo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtConfigProperty">PhpExt_Object::setExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__get">PhpExt_Object::__get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__set">PhpExt_Object::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-vars">Vars</a>
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constAUTO_LOAD_METHOD_GET" id="AUTO_LOAD_METHOD_GET"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">AUTO_LOAD_METHOD_GET</span>
+			 = <span class="const-default"> 'GET'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a26">26</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html#methodgetMethod">PhpExt_AutoLoadConfigObject::getMethod()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html#methodsetMethod">PhpExt_AutoLoadConfigObject::setMethod()</a></li>
+			</ul>
+	
+	
+</div>
+<a name="constAUTO_LOAD_METHOD_POST" id="AUTO_LOAD_METHOD_POST"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">AUTO_LOAD_METHOD_POST</span>
+			 = <span class="const-default"> 'POST'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Config_PhpExtAutoLoadConfigObject.php.html#a27">27</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html#methodgetMethod">PhpExt_AutoLoadConfigObject::getMethod()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Config/PhpExt_AutoLoadConfigObject.html#methodsetMethod">PhpExt_AutoLoadConfigObject::setMethod()</a></li>
+			</ul>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:02:43 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

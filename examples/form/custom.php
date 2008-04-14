@@ -1,27 +1,46 @@
 <?php
-header("Content-type:text/javascript");
-include_once("../../php-ext/php-ext.php");
-include_once("../../php-ext-ux/app/ext-searchfield.inc.php");
+set_include_path(get_include_path().';'.realpath('../../library'));
+include_once 'PhpExt/Javascript.php';
+PhpExt_Javascript::sendContentType();
 
-include_once(NS_PHP_EXTJS_CORE);
-include_once(NS_PHP_EXTJS_DATA);
-include_once(NS_PHP_EXTJS_TOOLBAR);
+include_once 'PhpExt/Ext.php';
+include_once 'PhpExt/Data/Store.php';
+include_once 'PhpExt/Data/ScriptTagProxy.php';
+include_once 'PhpExt/Data/JsonReader.php';
+include_once 'PhpExt/Data/FieldConfigObject.php';
+include_once 'PhpExt/Data/StoreLoadOptions.php';
+include_once 'PhpExt/Config/ConfigObject.php';
+include_once 'PhpExt/XTemplate.php';
+include_once 'PhpExt/Panel.php';
+include_once 'PhpExt/DataView.php';
+include_once 'PhpExt/Toolbar/Toolbar.php';
+include_once 'PhpExt/Toolbar/PagingToolbar.php';
 
-$ds = new ExtStore();
-$ds->Proxy =& new ExtScriptTagProxy('http://extjs.com/forum/topics-remote.php');
-$ds->Reader =& new ExtJsonReader();
-$ds->Reader->Root = "topics";
-$ds->Reader->TotalProperty = "totalCount";
-$ds->Id = "post_id";
-$ds->Reader->addField(new ExtFieldConfigObject("postId","post_id"));
-$ds->Reader->addField(new ExtFieldConfigObject("title","topic_title"));
-$ds->Reader->addField(new ExtFieldConfigObject("topicId","topic_id"));
-$ds->Reader->addField(new ExtFieldConfigObject("author","author"));
-$ds->Reader->addField(new ExtFieldConfigObject("lastPost","post_time","date",null,null,null,"timestamp"));
-$ds->Reader->addField(new ExtFieldConfigObject("excerpt","post_text"));
-$ds->BaseParams = new ExtConfigObject(array("limit"=>20,"forumId"=>4));
+// User Extension
+include_once("PhpExtUx/App/SearchField.php");
 
-$resultTpl = new ExtXTemplate(
+// Configure Reader and Store
+
+$reader = new PhpExt_Data_JsonReader();
+$reader->setRoot("topics")
+       ->setTotalProperty("totalCount")
+       ->setId("post_id");
+$reader->addField(new PhpExt_Data_FieldConfigObject("postId","post_id"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("title","topic_title"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("topicId","topic_id"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("author","author"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("lastPost","post_time","date","timestamp"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("excerpt","post_text"));
+
+$ds = new PhpExt_Data_Store();
+$ds->setProxy(new PhpExt_Data_ScriptTagProxy('http://extjs.com/forum/topics-remote.php'))
+   ->setReader($reader)   
+   ->setBaseParams(array("limit"=>20,"forumId"=>21));
+// ->setBaseParams(new PhpExt_Config_ConfigObject(array("limit"=>20,"forumId"=>21));
+
+
+// Configure Custom SearchField
+$resultTpl = new PhpExt_XTemplate(
 		'<tpl for=".">',
         '<div class="search-item">',
             '<h3><span>{lastPost:date("M j, Y")}<br />by {author}</span>',
@@ -29,41 +48,41 @@ $resultTpl = new ExtXTemplate(
             '<p>{excerpt}</p>',
         '</div></tpl>');
 
-$panel = new ExtPanel();
-$panel->ApplyTo = "search-panel";
-$panel->Title = "Forum Search";
-$panel->Height = 300;
-$panel->AutoScroll = true;
+$panel = new PhpExt_Panel();
+$panel->setApplyTo("search-panel")
+      ->setTitle("Forum Search")
+      ->setHeight(300)
+      ->setAutoScroll(true);
 
-$dv =& $panel->addItem(new ExtDataView("div.search-item"));
-$dv->Store =& $ds;
-$dv->Template =& $resultTpl;
+      
+$dv = new PhpExt_DataView("div.search-item");
+$dv->setStore($ds)
+   ->setTemplate($resultTpl);
+$panel->addItem($dv);   
 
-$tb =& new ExtToolbar();
-$tb->addText(1,"Search: ");
+$searchField = new PhpExtUx_App_SearchField();
+$searchField->setStore($ds)
+            ->setWidth(320);
+
+$tb = $panel->getTopToolbar();
+$tb->addTextItem(1,"Search: ");
 $tb->addSpacer(2);
-$searchField = new ExtSearchField();
-$searchField->Store =& $ds;
-$searchField->Width = 320;
-$tb->addItem(3, &$searchField);
-$panel->TopToolbar =& $tb;
+$tb->addItem(3, $searchField);
 
-$paging = new ExtPagingToolbar();
-$paging->Store =& $ds;
-$paging->PageSize = 20;
-$paging->DisplayInfo = "Topics {0} - {1} of {2}";
-$paging->EmptyMessage = "No topics to display";
-$panel->BottomToolbar =& $paging;
+$paging = new PhpExt_Toolbar_PagingToolbar();
+$paging->setStore($ds)
+       ->setPageSize(20)
+       ->setDisplayInfo("Topics {0} - {1} of {2}")
+       ->setEmptyMessage("No topics to display");
+$panel->setBottomToolbar($paging);
 
 //------------ Ext.OnReady
-echo Ext::onReady(
+echo PhpExt_Ext::onReady(
 	$ds->getJavascript(false, "ds"),
 	$resultTpl->getJavascript(false, "resultTpl"),
 	$panel->getJavascript(false, "panel"),
-	$ds->load(new ExtConfigObject(array(
-		"params"=>new ExtConfigObject(array(
-			"start"=>0,"limit"=>0,"forumId"=>4)))
-			)
+	$ds->load(new PhpExt_Data_StoreLoadOptions(array(
+			"start"=>0,"limit"=>0,"forumId"=>21,"query"=>"\"PHP-Ext 0.\""))	
 	)
 );
 

@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>The PHP-Ext Open Source Project</title>
+    <title>The PHP-Ext Open Source Project <?php echo $PAGE_TITLE; ?></title>
     <base href="<?php echo $baseUrl; ?>/" />
     
     <link rel="stylesheet" type="text/css" href="site.css" />
@@ -17,19 +17,23 @@ if (isset($customHeaders))
 <body>
 
 <div id="header">
-<h1>PHP-Ext</h1>
-The Web 2.0 PHP Widget Library using Ext JS
 
+<h1><img src="images/php-ext2.png" alt="PHP-Ext Logo" title="PHP-Ext" width="110" height="34" /></h1>
+<div>
+<div id="legend">The Web 2.0 PHP Widget Library using Ext JS</div>
 <ul id="menu">
 	<li><a href=".">Home</a></li>
 	<li><a href="?id=docs">Docs</a></li>
 	<li><a href="examples">Samples</a></li>
+	<li><a href="blog">Blog</a></li>
 	<li><a href="?id=download">Download</a></li>
 </ul>
+</div>
  
 </div>
 
+<div class="content">
 <?php
-require_once 'sidebar.php';
+require_once 'leftbar.php';
 ?>
-<div class="content-box" id="content-box">
+	<div id="centercolumn">

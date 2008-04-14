@@ -1,82 +1,95 @@
 <?php
-include_once("../../php-ext/php-ext.php");
-include_once("../../php-ext-ux/form/ext-xmlerrorreader.inc.php");
+set_include_path(get_include_path().';'.realpath('../../library'));
+include_once 'PhpExt/Javascript.php';
+PhpExt_Javascript::sendContentType();
 
-include_once(NS_PHP_EXTJS_CORE);
-include_once(NS_PHP_EXTJS_DATA);
-include_once(NS_PHP_EXTJS_FORM);
-include_once(NS_PHP_EXTJS_PANELS);
-include_once(NS_PHP_EXTJS_GRID);
+include_once 'PhpExt/Ext.php';
+include_once 'PhpExt/Form/FormPanel.php';
+include_once 'PhpExt/Data/XmlReader.php';
+include_once 'PhpExt/Data/FieldConfigObject.php';
+include_once 'PhpExt/Data/SimpleStore.php';
+include_once 'PhpExt/Form/FieldSet.php';
+include_once 'PhpExt/Form/TextField.php';
+include_once 'PhpExt/Form/DateField.php';
+include_once 'PhpExt/Form/ComboBox.php';
+include_once 'PhpExt/Config/ConfigObject.php';
+include_once 'PhpExt/Button.php';
+include_once 'PhpExt/Handler.php';
+include_once 'PhpExt/QuickTips.php';
 
-header("Content-type:text/javascript");
+include_once 'PhpExtUx/Form/XmlErrorReader.php';
 
-$fs = new ExtFormPanel();
-$fs->Frame = true;
-$fs->Title = "XML Form";
-$fs->LabelAlign = EXT_FORM_LABEL_ALIGN_RIGHT;
-$fs->LabelWidth = 85;
-$fs->Width = 340;
-$fs->WaitMsgTarget = true;
+
+
+$fs = new PhpExt_Form_FormPanel();
+$fs->setFrame(true)
+  ->setTitle("XML Form")
+  ->setLabelAlign(PhpExt_Form_FormPanel::LABEL_ALIGN_RIGHT)
+  ->setLabelWidth(85)
+  ->setWidth(340)  
+  ->setWaitMsgTarget(true);
 
 // configure how to read the XML Data
-$reader =& new ExtXmlReader();
-$reader->Record = "contact";
-$reader->Success = "@success";
-$reader->addField(new ExtFieldConfigObject("first","name/first")); // custom mapping
-$reader->addField(new ExtFieldConfigObject("last","name/last"));
-$reader->addField(new ExtFieldConfigObject("company","company"));
-$reader->addField(new ExtFieldConfigObject("email","email"));
-$reader->addField(new ExtFieldConfigObject("state","state"));
-$reader->addField(new ExtFieldConfigObject("dob",null,"date",null,null,null,"m/d/Y")); // custom data types
-$fs->Reader =& $reader;
+$reader = new PhpExt_Data_XmlReader();
+$reader->setRecord("contact")
+       ->setSuccess("@success");
+$reader->addField(new PhpExt_Data_FieldConfigObject("first","name/first")); // custom mapping
+$reader->addField(new PhpExt_Data_FieldConfigObject("last","name/last"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("company","company"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("email","email"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("state","state"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("dob","dob","date","m/d/Y")); // custom data types
+$fs->setReader($reader);
 
-$fs->ErrorReader = new ExtXmlErrorReader();
-$fset = new ExtFieldSet();
-$fset->Title = "Contact Information";
-$fset->AutoHeight = true;
-$fset->DefaultType = "textfield";
-$fset->Defaults = new ExtConfigObject(array("width"=>190));
-$fset->addItem(new ExtTextField(null,"first","First Name"));
-$fset->addItem(new ExtTextField(null,"last","Last Name"));
-$fset->addItem(new ExtTextField(null,"company","Company"));
-$fset->addItem(new ExtTextField(null,"email","Email",EXT_FORM_VTYPE_EMAIL));
+$fs->setErrorReader(new PhpExtUx_Form_XmlErrorReader());
+$fset = new PhpExt_Form_FieldSet();
+$fset->setTitle("Contact Information")
+     ->setAutoHeight(true)
+     ->setDefaultType("textfield")
+     ->setDefaults(new PhpExt_Config_ConfigObject(array("width"=>190)))
+     ->addItem(PhpExt_Form_TextField::createTextField("first","First Name"))
+     ->addItem(PhpExt_Form_TextField::createTextField("last","Last Name"))
+     ->addItem(PhpExt_Form_TextField::createTextField("company","Company"))
+     ->addItem(PhpExt_Form_TextField::createTextField("email","Email",null,PhpExt_Form_FormPanel::VTYPE_EMAIL));
+    
+$combo = PhpExt_Form_ComboBox::createComboBox("state","State")
+            ->setValueField("abbr")
+            ->setDisplayField("state")
+            ->setTypeAhead(true)
+            ->setMode(PhpExt_Form_ComboBox::MODE_LOCAL)
+            ->setTriggerAction(PhpExt_Form_ComboBox::TRIGGER_ACTION_ALL)
+            ->setEmptyText("Select a state...")
+            ->setSelectOnFocus(true);
 
-$combo =& $fset->addItem(new ExtComboBox(null,"state","State"));
-$combo->Store =& new ExtSimpleStore();
-$combo->Store->addField("abbr");
-$combo->Store->addField("state");
-$combo->Store->Data = Javascript::variable("Ext.exampledata.states");
-$combo->ValueField = "abbr";
-$combo->DisplayField = "state";
-$combo->TypeAhead = true;
-$combo->Mode = EXT_COMBOBOX_MODES_LOCAL;
-$combo->TriggerAction = EXT_COMBOBOX_TRIGGERACTION_ALL;
-$combo->EmptyText = "Select a state...";
-$combo->SelectOnFocus = true;
+$store = new PhpExt_Data_SimpleStore();
+$store->addField("abbr");
+$store->addField("state");
+$store->setData(PhpExt_Javascript::variable("Ext.exampledata.states"));
+$combo->setStore($store);
 
-$date =& $fset->addItem(new ExtDateField(null, "dob", "Data of Birth"));
-$date->AllowBlank = false;
+$fset->addItem($combo);
 
-$fs->addItem(&$fset);
+$fset->addItem(PhpExt_Form_DateField::createDateField( "dob", "Data of Birth")
+                ->setAllowBlank(false));
 
-$fs->addButton(new ExtButton(null,null,"Load", 
-	new ExtHandler(Javascript::stm("fs.getForm().load({url:'examples/form/xml-form.xml', waitMsg:'Loading',method: 'GET'})"))
+$fs->addItem($fset);
+$fs->addButton(PhpExt_Button::createTextButton("Load", 
+	new PhpExt_Handler(PhpExt_Javascript::stm("fs.getForm().load({url:'examples/form/xml-form.xml', waitMsg:'Loading',method: 'GET'})"))
 	));
 
-$submitBtn = new ExtButton(null, null, "Submit", 
-	new ExtHandler(Javascript::stm("fs.getForm().submit({url:'examples/form/xml-errors.xml', waitMsg:'Saving Data...'})"))
+$submitBtn = PhpExt_Button::createTextButton("Submit", 
+	new PhpExt_Handler(PhpExt_Javascript::stm("fs.getForm().submit({url:'examples/form/xml-errors.xml', waitMsg:'Saving Data...'})"))
 	);		
-
 $fs->addButton($submitBtn);
 
 
 //****************************** onReady
 
-echo Ext::onReady(
-	Javascript::stm(ExtQuickTips::init()),
-	Javascript::assign("Ext.form.Field.prototype.msgTarget",Javascript::valueToJavascript(EXT_FORM_MSGTARGETS_SIDE)),
+echo PhpExt_Ext::onReady(
+	PhpExt_Javascript::stm(PhpExt_QuickTips::init()),
+	PhpExt_Javascript::assign("Ext.form.Field.prototype.msgTarget",PhpExt_Javascript::valueToJavascript(PhpExt_Form_FormPanel::MSG_TARGET_SIDE)),
 	$fs->getJavascript(false, "fs"),
-	Javascript::assignNew("submit",$submitBtn->getJavascript()),
+	PhpExt_Javascript::assignNew("submit",$submitBtn->getJavascript()),
 	$fs->render("form-ct")
 );
 ?>

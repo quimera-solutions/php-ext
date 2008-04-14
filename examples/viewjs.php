@@ -24,7 +24,7 @@ if(isset($_GET['file'])) {
 		}
 		
 		echo "
-<textarea $readonly id=\"genjs\" class=\"codepress javascript linenumbers-off readonly-on\" style=\"width:485px;height:460px;\" wrap=\"off\">
+<textarea $readonly id=\"genjs\" class=\"codepress javascript linenumbers-off readonly-on\" style=\"width:481px;height:436px;\" wrap=\"off\">
 ";
 require $full_file;		
 echo "</textarea>

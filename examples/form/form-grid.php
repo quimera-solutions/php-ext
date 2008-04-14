@@ -1,13 +1,27 @@
 <?php
-include_once("../../php-ext/php-ext.php");
+set_include_path(get_include_path().';'.realpath('../../library'));
+include_once 'PhpExt/Javascript.php';
+PhpExt_Javascript::sendContentType();
 
-include_once(NS_PHP_EXTJS_CORE);
-include_once(NS_PHP_EXTJS_DATA);
-include_once(NS_PHP_EXTJS_FORM);
-include_once(NS_PHP_EXTJS_PANELS);
-include_once(NS_PHP_EXTJS_GRID);
+include_once 'PhpExt/Ext.php';
+include_once 'PhpExt/Data/Store.php';
+include_once 'PhpExt/Data/ArrayReader.php';
+include_once 'PhpExt/Data/FieldConfigObject.php';
+include_once 'PhpExt/Grid/ColumnModel.php';
+include_once 'PhpExt/Grid/ColumnConfigObject.php';
+include_once 'PhpExt/Panel.php';
+include_once 'PhpExt/Grid/GridPanel.php';
+include_once 'PhpExt/Grid/RowSelectionModel.php';
+include_once 'PhpExt/Listener.php';
+include_once 'PhpExt/Config/ConfigObject.php';
+include_once 'PhpExt/Form/FormPanel.php';
+include_once 'PhpExt/Form/FieldSet.php';
+include_once 'PhpExt/Form/TextField.php';
+include_once 'PhpExt/QuickTips.php';
+include_once 'PhpExt/Layout/ColumnLayout.php';
+include_once 'PhpExt/Layout/ColumnLayoutData.php';
+include_once 'PhpExt/Layout/FitLayout.php';
 
-header("Content-type:text/javascript");
 
 // Sample Data
 $myData = array(
@@ -43,24 +57,27 @@ $myData = array(
     );
     
 // Store
-$store = new ExtStore();
-$store->Reader =& new ExtArrayReader();
-$store->Reader->addField(new ExtFieldConfigObject("company"));
-$store->Reader->addField(new ExtFieldConfigObject("price",null,"float"));
-$store->Reader->addField(new ExtFieldConfigObject("change",null,"float"));
-$store->Reader->addField(new ExtFieldConfigObject("pctChange",null,"float"));
-$store->Reader->addField(new ExtFieldConfigObject("lastChange",null,"date",null,null,null,"n/j h:ia"));
-//$store->Data =& $myData;
-$store->Data = Javascript::variable("data");
+$store = new PhpExt_Data_Store();
+$reader = new PhpExt_Data_ArrayReader();
+$reader->addField(new PhpExt_Data_FieldConfigObject("company"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("price",null,"float"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("change",null,"float"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("pctChange",null,"float"));
+$reader->addField(new PhpExt_Data_FieldConfigObject("lastChange",null,"date","n/j h:ia",null,null,null));
+$store->setReader($reader)
+      ->setData(PhpExt_Javascript::variable("data"));
+/* Data array could be used directly also as
+ $store->setData($myData)
+*/      
 
-$italicRenderer = Javascript::functionDef("italic","return '<i>' + value + '</i>'",array("value"));
-$changeRenderer = Javascript::functionDef("change","if(val > 0){
+$italicRenderer = PhpExt_Javascript::functionDef("italic","return '<i>' + value + '</i>'",array("value"));
+$changeRenderer = PhpExt_Javascript::functionDef("change","if(val > 0){
             return '<span style=\"color:green;\">' + val + '</span>';
         }else if(val < 0){
             return '<span style=\"color:red;\">' + val + '</span>';
         }
         return val;",array("val"));
-$pctChangeRenderer = Javascript::functionDef("pctChange","if(val > 0){
+$pctChangeRenderer = PhpExt_Javascript::functionDef("pctChange","if(val > 0){
             return '<span style=\"color:green;\">' + val + '%</span>';
         }else if(val < 0){
             return '<span style=\"color:red;\">' + val + '%</span>';
@@ -68,76 +85,78 @@ $pctChangeRenderer = Javascript::functionDef("pctChange","if(val > 0){
         return val;",array("val"));
 
 // ColumnModel
-$colModel = new ExtColumnModel();
-$colModel->addColumn(new ExtColumnConfigObject("Company","company","company",null, true, 160, false));
-$colModel->addColumn(new ExtColumnConfigObject("Price","price",null,Javascript::variable("Ext.util.Format.usMoney"), true, 75));
-$colModel->addColumn(new ExtColumnConfigObject("Change","change",null,Javascript::variable(change), true, 75));
-$colModel->addColumn(new ExtColumnConfigObject("% Change","pctChange",null,Javascript::variable(pctChange), true, 75));
-$colModel->addColumn(new ExtColumnConfigObject("Last Updated","lastChange",null,Javascript::variable("Ext.util.Format.dateRenderer('m/d/Y')"), true, 85));
+$colModel = new PhpExt_Grid_ColumnModel();
+$colModel->addColumn(PhpExt_Grid_ColumnConfigObject::createColumn("Company","company","company",160, null, null, true, false))
+         ->addColumn(PhpExt_Grid_ColumnConfigObject::createColumn("Price","price",null,75,null,PhpExt_Javascript::variable("Ext.util.Format.usMoney"), null, true))
+         ->addColumn(PhpExt_Grid_ColumnConfigObject::createColumn("Change","change",null,75,null,PhpExt_Javascript::variable('change'), null, true))
+         ->addColumn(PhpExt_Grid_ColumnConfigObject::createColumn("% Change","pctChange",null,75,null,PhpExt_Javascript::variable('pctChange'), null, true))
+         ->addColumn(PhpExt_Grid_ColumnConfigObject::createColumn("Last Updated","lastChange",null,75,null,PhpExt_Javascript::variable("Ext.util.Format.dateRenderer('m/d/Y')"), null, true));
 
 
 // Form Panel
-$gridForm = new ExtFormPanel("company-form");
-$gridForm->Frame = true;
-$gridForm->LabelAlign = EXT_FORM_LABEL_ALIGN_LEFT;
-$gridForm->Title = "Company Data";
-$gridForm->BodyStyle = "padding: 5px;";
-$gridForm->Width = 750;
-$gridForm->Layout = EXT_CONTAINER_LAYOUTS_COLUMN;
+$gridForm = new PhpExt_Form_FormPanel("company-form");
+$gridForm->setFrame(true)
+         ->setLabelAlign(PhpExt_Form_FormPanel::LABEL_ALIGN_LEFT)
+         ->setTitle("Company Data")
+         ->setBodyStyle("padding: 5px;")
+         ->setWidth(750)
+         ->setLayout(new PhpExt_Layout_ColumnLayout());
 
-$leftPanel = new ExtPanel();
-$leftPanel->ColumnWidth = 0.6;
-$leftPanel->Layout = EXT_CONTAINER_LAYOUTS_FIT;
+// Setup Grid
+$leftPanel = new PhpExt_Panel();
+$leftPanel->setLayout(new PhpExt_Layout_FitLayout());
 
-$grid = new ExtGridPanel();
-$grid->Store =& $store;
-$grid->ColumnModel =& $colModel;
-$grid->SelectionModel =& new ExtRowSelectionModel();
-$grid->SelectionModel->SingleSelect = true;
-$grid->SelectionModel->addListener("rowselect", 
-	new ExtListener(Javascript::functionDef(null,
-		"Ext.getCmp(\"company-form\").getForm().loadRecord(rec);",
-		array("sm","row","rec")))
-	);
-$grid->AutoExpandColumn = "company";
-$grid->Height = 350;
-$grid->Title = "Company Data";
-$grid->Border = true;
-$grid->addListener("render",
-	new ExtListener(Javascript::functionDef(null, 
-		"g.getSelectionModel().selectRow(0);", array("g")),
-		null, 10)
-	);
+$selModel = new PhpExt_Grid_RowSelectionModel();
+$selModel->setSingleSelect(true)
+         ->attachListener("rowselect", 
+			new PhpExt_Listener(PhpExt_Javascript::functionDef(null,
+				"Ext.getCmp(\"company-form\").getForm().loadRecord(rec);",
+				array("sm","row","rec")))
+			);
+$grid = new PhpExt_Grid_GridPanel();
+$grid->setStore($store)
+     ->setColumnModel($colModel)
+     ->setSelectionModel($selModel)
+     ->setAutoExpandColumn("company")
+     ->setHeight(350)
+     ->setTitle("Company Data")
+     ->setBorder(true)
+     ->attachListener("render",
+		new PhpExt_Listener(PhpExt_Javascript::functionDef(null, 
+			"g.getSelectionModel().selectRow(0);", array("g")),
+			null, 10)
+		);
+$leftPanel->addItem($grid);
+$gridForm->addItem($leftPanel, new PhpExt_Layout_ColumnLayoutData(0.6));
 
-$leftPanel->addItem(&$grid);
-$gridForm->addItem(&$leftPanel);
+// Setup Fields
+$rightPanel = new PhpExt_Form_FieldSet();
+$rightPanel->setLabelWidth(90)
+           ->setTitle("Company Details")
+           ->setDefaults(new PhpExt_Config_ConfigObject(array("width"=>140)))
+           ->setDefaultType("textfield")
+           ->setAutoHeight(true)
+           ->setBodyStyle(PhpExt_Javascript::inlineStm("Ext.isIE ? 'padding:0 0 5px 15px;' : 'padding:10px 15px;'"))
+           ->setBorder(false)
+           ->setCssStyle(new PhpExt_Config_ConfigObject(array(
+	                        "margin-left"=>"10px",
+	                        "margin-right"=>PhpExt_Javascript::inlineStm('Ext.isIE6 ? (Ext.isStrict ? "-10px" : "-13px") : "0"')))
+	                     ); 
+$rightPanel->addItem(PhpExt_Form_TextField::createTextField("company","Name"));
+$rightPanel->addItem(PhpExt_Form_TextField::createTextField("price","Price"));
+$rightPanel->addItem(PhpExt_Form_TextField::createTextField("pctChange","% Change"));
+$rightPanel->addItem(PhpExt_Form_TextField::createTextField("lastChange","Last Updated"));
 
-$rightPanel = new ExtFieldSet();
-$rightPanel->ColumnWidth = 0.4;
-$rightPanel->LabelWidth = 90;
-$rightPanel->Title = "Company Details";
-$rightPanel->Defaults = new ExtConfigObject(array("width"=>140));
-$rightPanel->DefaultType = "textfield";
-$rightPanel->AutoHeight = true;
-$rightPanel->BodyStyle = Javascript::inlineStm("Ext.isIE ? 'padding:0 0 5px 15px;' : 'padding:10px 15px;'");
-$rightPanel->Border = false;
-$rightPanel->CssStyle = new ExtConfigObject(array("margin-left"=>"10px",
-	"margin-right"=>Javascript::inlineStm("Ext.isIE6 ? (Ext.isStrict ? \"-10px\" : \"-13px\") : \"0\""))); 
-$rightPanel->addItem(new ExtTextField(null,"company","Name"));
-$rightPanel->addItem(new ExtTextField(null,"price","Price"));
-$rightPanel->addItem(new ExtTextField(null,"pctChange","% Change"));
-$rightPanel->addItem(new ExtDateField(null,"lastChange","Last Updated"));
-
-$gridForm->RenderTo = Javascript::variable("Ext.get('content-box')");
-$gridForm->addItem(&$rightPanel);
+$gridForm->addItem($rightPanel, new PhpExt_Layout_ColumnLayoutData(0.4));
+$gridForm->setRenderTo(PhpExt_Javascript::variable("Ext.get('centercolumn')"));
 
 
 //****************************** onReady
 
-echo Ext::onReady(
-	Javascript::stm(ExtQuickTips::init()),
-	Javascript::assign("data",Javascript::valueToJavascript($myData)),
-	//Javascript::valueToJavascript($myData),
+echo PhpExt_Ext::onReady(
+	PhpExt_Javascript::stm(PhpExt_QuickTips::init()),
+	PhpExt_Javascript::assign("data",PhpExt_Javascript::valueToJavascript($myData)),
+	//PhpExt_Javascript::valueToJavascript($myData),
 	$store->getJavascript(false, "ds"),
 	$italicRenderer,
 	$changeRenderer,

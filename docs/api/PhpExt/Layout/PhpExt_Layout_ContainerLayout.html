@@ -1,0 +1,1025 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_Layout_ContainerLayout</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PhpExt_Layout_ContainerLayout</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Every layout is composed of one or more Ext.Container elements internally, and ContainerLayout provides the basic foundation for all other layout classes in Ext.</p>
+<p class="description"><p>It is a non-visual class that simply provides the base logic required for a Container to function as a layout. This class is intended to be extended and should generally not need to be created directly via the new keyword.</p></p>
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/PhpExt_Container.html#methodgetLayout">PhpExt_Container::getLayout()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/PhpExt_Container.html#methodsetLayout">PhpExt_Container::setLayout()</a></li>
+			</ul>
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---Layout---ContainerLayout.php.html">/PhpExt/Layout/ContainerLayout.php</a> (line <span class="field"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a28">28</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a>
+   |
+   --PhpExt_Layout_ContainerLayout</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../PhpExt/Layout/PhpExt_Layout_AnchorLayout.html">PhpExt_Layout_AnchorLayout</a>
+					</td>
+					<td>
+											This is a layout that enables anchoring of contained elements relative to the container's dimensions. If the container is resized, all anchored items are automatically rerendered according to their anchor rules.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../PhpExt/Layout/PhpExt_Layout_BorderLayout.html">PhpExt_Layout_BorderLayout</a>
+					</td>
+					<td>
+											This is a multi-pane, application-oriented UI layout style that supports multiple nested panels, automatic split bars between regions and built-in expanding and collapsing of regions.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../PhpExt/Layout/PhpExt_Layout_ColumnLayout.html">PhpExt_Layout_ColumnLayout</a>
+					</td>
+					<td>
+											This is the layout style of choice for creating structural layouts in a multi-column format where the width of each column can be specified as a percentage or fixed width, but the height is allowed to vary based on the content.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../PhpExt/Layout/PhpExt_Layout_FitLayout.html">PhpExt_Layout_FitLayout</a>
+					</td>
+					<td>
+											This is a base class for layouts that contain a single item that automatically expands to fill the layout's container.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../PhpExt/Layout/PhpExt_Layout_TableLayout.html">PhpExt_Layout_TableLayout</a>
+					</td>
+					<td>
+											This layout allows you to easily render content into an HTML table. The total number of columns can be specified, and rowspan and colspan can be used to create complex layouts within the table.
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LAYOUT_ABSOLUTE" title="details" class="const-name">LAYOUT_ABSOLUTE</a> = 					<span class="var-type"> 'absolute'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LAYOUT_ACCORDION" title="details" class="const-name">LAYOUT_ACCORDION</a> = 					<span class="var-type"> 'accordion'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LAYOUT_ANCHOR" title="details" class="const-name">LAYOUT_ANCHOR</a> = 					<span class="var-type"> 'anchor'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LAYOUT_BORDER" title="details" class="const-name">LAYOUT_BORDER</a> = 					<span class="var-type"> 'border'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LAYOUT_CARD" title="details" class="const-name">LAYOUT_CARD</a> = 					<span class="var-type"> 'card'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LAYOUT_COLUMN" title="details" class="const-name">LAYOUT_COLUMN</a> = 					<span class="var-type"> 'column'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LAYOUT_DEFAULT" title="details" class="const-name">LAYOUT_DEFAULT</a> = 					<span class="var-type"> null</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LAYOUT_FIT" title="details" class="const-name">LAYOUT_FIT</a> = 					<span class="var-type"> 'fit'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LAYOUT_FORM" title="details" class="const-name">LAYOUT_FORM</a> = 					<span class="var-type"> 'form'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#LAYOUT_TABLE" title="details" class="const-name">LAYOUT_TABLE</a> = 					<span class="var-type"> 'table'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																								<div class="var-title">
+					<img src="../../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$_validLayoutDataClassNames" title="details" class="var-name">$_validLayoutDataClassNames</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																															
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PhpExt_Layout_ContainerLayout</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addValidLayoutDataClassName" title="details" class="method-name">addValidLayoutDataClassName</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$className</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#addValidLayoutProperties" title="details" class="method-name">addValidLayoutProperties</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$validProps</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getExtraCssClass" title="details" class="method-name">getExtraCssClass</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLayoutKey" title="details" class="method-name">getLayoutKey</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getRenderHidden" title="details" class="method-name">getRenderHidden</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getValidLayoutDataClassNames" title="details" class="method-name">getValidLayoutDataClassNames</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">An</span>
+										<a href="#getValidLayoutProperties" title="details" class="method-name">getValidLayoutProperties</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html">PhpExt_Layout_ContainerLayout</a></span>
+										<a href="#setExtraCssClass" title="details" class="method-name">setExtraCssClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html">PhpExt_Layout_ContainerLayout</a></span>
+										<a href="#setRenderHidden" title="details" class="method-name">setRenderHidden</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$_validLayoutDataClassNames" id="$_validLayoutDataClassNames"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$_validLayoutDataClassNames</span>
+			 = <span class="var-default">array()</span>			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a103">103</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extClassName">PhpExt_Object::$_extClassName</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extConfigProperties">PhpExt_Object::$_extConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_validExtConfigProperties">PhpExt_Object::$_validExtConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_varName">PhpExt_Object::$_varName</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a123">123</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PhpExt_Layout_ContainerLayout</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_AnchorLayout.html#method__construct">PhpExt_Layout_AnchorLayout::__construct()</a>
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_AbsoluteLayout.html#method__construct">PhpExt_Layout_AbsoluteLayout::__construct()</a>
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html#method__construct">PhpExt_Layout_FormLayout::__construct()</a>
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_BorderLayout.html#method__construct">PhpExt_Layout_BorderLayout::__construct()</a>
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_ColumnLayout.html#method__construct">PhpExt_Layout_ColumnLayout::__construct()</a>
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_FitLayout.html#method__construct">PhpExt_Layout_FitLayout::__construct()</a>
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_CardLayout.html#method__construct">PhpExt_Layout_CardLayout::__construct()</a>
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_TableLayout.html#method__construct">PhpExt_Layout_TableLayout::__construct()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodaddValidLayoutDataClassName" id="addValidLayoutDataClassName"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addValidLayoutDataClassName</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a109">109</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addValidLayoutDataClassName
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$className</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$className</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddValidLayoutProperties" id="addValidLayoutProperties"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">addValidLayoutProperties</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a52">52</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds the layout specific valid properties</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			addValidLayoutProperties
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$validProps</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$validProps</span><span class="var-description">: An array containing the layout specific valid property names</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetExtraCssClass" id="getExtraCssClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getExtraCssClass</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a78">78</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An optional extra CSS class that will be added to the container (defaults to ''). This can be useful for adding customized styles to the container or any of its children using standard CSS rules.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getExtraCssClass
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLayoutKey" id="getLayoutKey"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getLayoutKey</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a119">119</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Returns the internal config string for the layout.</p>
+	<ul class="tags">
+				<li><span class="field">see:</span> PhpExt_Layout_ContainerLayout::LAYOUT_DEFAULT;</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLayoutKey
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_AnchorLayout.html#methodgetLayoutKey">PhpExt_Layout_AnchorLayout::getLayoutKey()</a>
+								: Returns the internal config string for the layout.
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_AbsoluteLayout.html#methodgetLayoutKey">PhpExt_Layout_AbsoluteLayout::getLayoutKey()</a>
+								: Returns the internal config string for the layout.
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_FormLayout.html#methodgetLayoutKey">PhpExt_Layout_FormLayout::getLayoutKey()</a>
+								: Returns the internal config string for the layout.
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_BorderLayout.html#methodgetLayoutKey">PhpExt_Layout_BorderLayout::getLayoutKey()</a>
+								: Returns the internal config string for the layout.
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_ColumnLayout.html#methodgetLayoutKey">PhpExt_Layout_ColumnLayout::getLayoutKey()</a>
+								: Returns the internal config string for the layout.
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_FitLayout.html#methodgetLayoutKey">PhpExt_Layout_FitLayout::getLayoutKey()</a>
+								: Returns the internal config string for the layout.
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_CardLayout.html#methodgetLayoutKey">PhpExt_Layout_CardLayout::getLayoutKey()</a>
+								: Returns the internal config string for the layout.
+							</li>
+					<li>
+				<a href="../../PhpExt/Layout/PhpExt_Layout_TableLayout.html#methodgetLayoutKey">PhpExt_Layout_TableLayout::getLayoutKey()</a>
+								: Returns the internal config string for the layout.
+							</li>
+				</ul>
+	</div>
+<a name="methodgetRenderHidden" id="getRenderHidden"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getRenderHidden</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a96">96</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to hide each contained item on render (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getRenderHidden
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetValidLayoutDataClassNames" id="getValidLayoutDataClassNames"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getValidLayoutDataClassNames</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a105">105</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getValidLayoutDataClassNames
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetValidLayoutProperties" id="getValidLayoutProperties"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getValidLayoutProperties</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a60">60</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Gets the layout specific valid properties</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> array containing the layout specific valid property names</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">An</span>
+		<span class="method-name">
+			getValidLayoutProperties
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetExtraCssClass" id="setExtraCssClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setExtraCssClass</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a70">70</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An optional extra CSS class that will be added to the container (defaults to ''). This can be useful for adding customized styles to the container or any of its children using standard CSS rules.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html">PhpExt_Layout_ContainerLayout</a></span>
+		<span class="method-name">
+			setExtraCssClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetRenderHidden" id="setRenderHidden"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setRenderHidden</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a88">88</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to hide each contained item on render (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Layout/PhpExt_Layout_ContainerLayout.html">PhpExt_Layout_ContainerLayout</a></span>
+		<span class="method-name">
+			setRenderHidden
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodaddValidConfigProperties">PhpExt_Object::addValidConfigProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodcreateMethodSignature">PhpExt_Object::createMethodSignature()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetConfigParams">PhpExt_Object::getConfigParams()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetExtConfigProperty">PhpExt_Object::getExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetJavascript">PhpExt_Object::getJavascript()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetMethodInvokeStm">PhpExt_Object::getMethodInvokeStm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodisExtObject">PhpExt_Object::isExtObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodparamToString">PhpExt_Object::paramToString()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtClassInfo">PhpExt_Object::setExtClassInfo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtConfigProperty">PhpExt_Object::setExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__get">PhpExt_Object::__get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__set">PhpExt_Object::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constLAYOUT_ABSOLUTE" id="LAYOUT_ABSOLUTE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LAYOUT_ABSOLUTE</span>
+			 = <span class="const-default"> 'absolute'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLAYOUT_ACCORDION" id="LAYOUT_ACCORDION"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LAYOUT_ACCORDION</span>
+			 = <span class="const-default"> 'accordion'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLAYOUT_ANCHOR" id="LAYOUT_ANCHOR"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LAYOUT_ANCHOR</span>
+			 = <span class="const-default"> 'anchor'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLAYOUT_BORDER" id="LAYOUT_BORDER"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LAYOUT_BORDER</span>
+			 = <span class="const-default"> 'border'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLAYOUT_CARD" id="LAYOUT_CARD"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LAYOUT_CARD</span>
+			 = <span class="const-default"> 'card'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLAYOUT_COLUMN" id="LAYOUT_COLUMN"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LAYOUT_COLUMN</span>
+			 = <span class="const-default"> 'column'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLAYOUT_DEFAULT" id="LAYOUT_DEFAULT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LAYOUT_DEFAULT</span>
+			 = <span class="const-default"> null</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLAYOUT_FIT" id="LAYOUT_FIT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LAYOUT_FIT</span>
+			 = <span class="const-default"> 'fit'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLAYOUT_FORM" id="LAYOUT_FORM"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LAYOUT_FORM</span>
+			 = <span class="const-default"> 'form'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constLAYOUT_TABLE" id="LAYOUT_TABLE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">LAYOUT_TABLE</span>
+			 = <span class="const-default"> 'table'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Layout_PhpExtLayoutContainerLayout.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:04:02 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

@@ -1,48 +1,51 @@
 <?php
-header("Content-type:text/javascript");
-include_once("../../php-ext/php-ext.php");
+set_include_path(get_include_path().';'.realpath('../../library'));
+include_once 'PhpExt/Javascript.php';
+PhpExt_Javascript::sendContentType();
 
-include_once(NS_PHP_EXTJS_CORE);
-include_once(NS_PHP_EXTJS_DATA);
-include_once(NS_PHP_EXTJS_FORM);
+include_once 'PhpExt/Ext.php';
+include_once 'PhpExt/Data/SimpleStore.php';
+include_once 'PhpExt/Data/FieldConfigObject.php';
+include_once 'PhpExt/Form/ComboBox.php';
+include_once 'PhpExt/QuickTips.php';
 
 // simple array store
-$store = new ExtSimpleStore();
-$store->Fields->addObject(new ExtFieldConfigObject("abbr"));
-$store->Fields->addObject(new ExtFieldConfigObject("state"));
-$store->Fields->addObject(new ExtFieldConfigObject("nick")); 
-$store->Data = Javascript::variable("Ext.exampledata.states"); // from states.js
+$store = new PhpExt_Data_SimpleStore();
+$store->addField("abbr");
+$store->addField("state");
+$store->addField("nick"); 
+$store->setData(PhpExt_Javascript::variable("Ext.exampledata.states")); // from states.js
 
-$combo = new ExtComboBox(null, null);
-$combo->Store =& $store;
-$combo->DisplayField = "state";
-$combo->TypeAhead = true;
-$combo->Mode = EXT_COMBOBOX_MODES_LOCAL;
-$combo->TriggerAction = EXT_COMBOBOX_TRIGGERACTION_ALL;
-$combo->EmptyText = "Select a state...";
-$combo->SelectOnFocus = true;
-$combo->ApplyTo = "local-states";
+$combo = new PhpExt_Form_ComboBox();
+$combo->setStore($store)
+      ->setDisplayField("state")
+      ->setTypeAhead(true)
+      ->setMode(PhpExt_Form_ComboBox::MODE_LOCAL)
+      ->setTriggerAction(PhpExt_Form_ComboBox::TRIGGER_ACTION_ALL)
+      ->setEmptyText("Select a state...")
+      ->setSelectOnFocus(true)
+      ->setApplyTo("local-states");
 
-$comboWithTooltip = new ExtComboBox(null, null);
-$comboWithTooltip->Template = '<tpl for="."><div ext:qtip="{state}. {nick}" class="x-combo-list-item">{state}</div></tpl>';
-$comboWithTooltip->Store =& $store;
-$comboWithTooltip->DisplayField = "state";
-$comboWithTooltip->TypeAhead = true;
-$comboWithTooltip->Mode = EXT_COMBOBOX_MODES_LOCAL;
-$comboWithTooltip->TriggerAction = EXT_COMBOBOX_TRIGGERACTION_ALL;
-$comboWithTooltip->EmptyText = "Select a state...";
-$comboWithTooltip->SelectOnFocus = true;
-$comboWithTooltip->ApplyTo = "local-states-with-qtip";
+$comboWithTooltip = new PhpExt_Form_ComboBox();
+$comboWithTooltip->setTemplate('<tpl for="."><div ext:qtip="{state}. {nick}" class="x-combo-list-item">{state}</div></tpl>')
+                 ->setStore($store)
+                 ->setDisplayField("state")
+                 ->setTypeAhead(true)
+                 ->setMode(PhpExt_Form_ComboBox::MODE_LOCAL)
+                 ->setTriggerAction(PhpExt_Form_ComboBox::TRIGGER_ACTION_ALL)
+                 ->setEmptyText("Select a state...")
+                 ->setSelectOnFocus(true)
+                 ->setApplyTo("local-states-with-qtip");
 
-$converted = new ExtComboBox(null, null);
-$converted->TypeAhead = true;
-$converted->TriggerAction = EXT_COMBOBOX_TRIGGERACTION_ALL;
-$converted->Transform = "state";
-$converted->Width = 135;
-$converted->ForceSelection = true;
+$converted = new PhpExt_Form_ComboBox();
+$converted->setTypeAhead(true)
+          ->setTriggerAction(PhpExt_Form_ComboBox::TRIGGER_ACTION_ALL)
+          ->setTransform("state")
+          ->setWidth(135)
+          ->setForceSelection(true);
     
-echo Ext::onReady(
-	ExtQuickTips::init(),
+echo PhpExt_Ext::onReady(
+	PhpExt_Javascript::stm(PhpExt_QuickTips::init()),
 	$store->getJavascript(false, "store"),
 	$combo->getJavascript(false, "combo"),	
 	$comboWithTooltip->getJavascript(false, "comboWithTooltip"),

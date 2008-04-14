@@ -1,0 +1,1177 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_Form_Action</title>
+			<link rel="stylesheet" href="../../media/stylesheet.css" />
+						<script src="../../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../../media/images/plus.png";
+				imgMinus.src = "../../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PhpExt_Form_Action</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-vars">Vars</a>
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The subclasses of this class provide actions to perform upon Forms.</p>
+<p class="description"><p>Instances of this class are only created by a Form when the Form needs to perform an action such as submit or load. The Configuration options listed for this class are set through the Form's action methods: submit, load and doAction.</p><p>The instance of Action which performed the action is passed to the success and failure callbacks of the Form's action methods (submit, load and doAction), and to the actioncomplete and actionfailed event handlers.</p></p>
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---Form---Action.php.html">/PhpExt/Form/Action.php</a> (line <span class="field"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a27">27</a></span>)
+		</p>
+		
+				
+		<pre><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a>
+   |
+   --PhpExt_Form_Action</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-vars">Vars</a>
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../PhpExt/Form/PhpExt_Form_Action_Load.html">PhpExt_Form_Action_Load</a>
+					</td>
+					<td>
+											A class which handles loading of data from a server into the Fields of an Ext.form.BasicForm.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../../PhpExt/Form/PhpExt_Form_Action_Response.html">PhpExt_Form_Action_Response</a>
+					</td>
+					<td>
+											An action response object for
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+												<a href="#sec-vars">Vars</a>
+				 
+				|
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#FAILURE_TYPE_CLIENT_INVALID" title="details" class="const-name">FAILURE_TYPE_CLIENT_INVALID</a> = 					<span class="var-type"> 'Action.CLIENT_INVALID'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#FAILURE_TYPE_CONNECT_FAILURE" title="details" class="const-name">FAILURE_TYPE_CONNECT_FAILURE</a> = 					<span class="var-type"> 'Action.CONNECT_FAILURE'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#FAILURE_TYPE_LOAD_FAILURE" title="details" class="const-name">FAILURE_TYPE_LOAD_FAILURE</a> = 					<span class="var-type"> 'Action.LOAD_FAILURE'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../../media/images/Constant.png" alt=" " />
+					<a href="#FAILURE_TYPE_SERVER_INVALID" title="details" class="const-name">FAILURE_TYPE_SERVER_INVALID</a> = 					<span class="var-type"> 'Action.SERVER_INVALID'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+															<a href="#sec-vars">Vars</a>
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																							
+				<div class="method-definition">
+					<img src="../../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PhpExt_Form_Action</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+										<a href="#getFailureCallback" title="details" class="method-name">getFailureCallback</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getFailureType" title="details" class="method-name">getFailureType</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getMethod" title="details" class="method-name">getMethod</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">array</span>
+										<a href="#getParams" title="details" class="method-name">getParams</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getResult" title="details" class="method-name">getResult</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>
+										<a href="#getScope" title="details" class="method-name">getScope</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+										<a href="#getSuccessCallback" title="details" class="method-name">getSuccessCallback</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getUrl" title="details" class="method-name">getUrl</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getWaitMessage" title="details" class="method-name">getWaitMessage</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getWaitTitle" title="details" class="method-name">getWaitTitle</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+										<a href="#setFailureCallback" title="details" class="method-name">setFailureCallback</a>
+											(<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+										<a href="#setFailureType" title="details" class="method-name">setFailureType</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+										<a href="#setMethod" title="details" class="method-name">setMethod</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+										<a href="#setParams" title="details" class="method-name">setParams</a>
+											(<span class="var-type">array</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+										<a href="#setResult" title="details" class="method-name">setResult</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+										<a href="#setScope" title="details" class="method-name">setScope</a>
+											(<span class="var-type"><a href="../../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+										<a href="#setSuccessCallback" title="details" class="method-name">setSuccessCallback</a>
+											(<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+										<a href="#setUrl" title="details" class="method-name">setUrl</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+										<a href="#setWaitMessage" title="details" class="method-name">setWaitMessage</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+										<a href="#setWaitTitle" title="details" class="method-name">setWaitTitle</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extClassName">PhpExt_Object::$_extClassName</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_extConfigProperties">PhpExt_Object::$_extConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_validExtConfigProperties">PhpExt_Object::$_validExtConfigProperties</a></span><br>
+							</span>
+													<img src="../../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../../PhpExt/PhpExt_Object.html#var$_varName">PhpExt_Object::$_varName</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-vars">Vars</a>
+																			<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a268">268</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PhpExt_Form_Action</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../../PhpExt/Form/PhpExt_Form_Action_Load.html#method__construct">PhpExt_Form_Action_Load::__construct()</a>
+							</li>
+					<li>
+				<a href="../../PhpExt/Form/PhpExt_Form_Action_Response.html#method__construct">PhpExt_Form_Action_Response::__construct()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodgetFailureCallback" id="getFailureCallback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFailureCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a54">54</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+		<span class="method-name">
+			getFailureCallback
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFailureType" id="getFailureType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getFailureType</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a241">241</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The type of failure detected. Possible values are</p>
+<p class="description"><p>Action Response properties:</p><p>When loading or submitting a form the response should be an Action object.  The following properties are intended  to be used when responding to a form load or submit request <ul><li>PhpExt_Form_Action::FAILURE_TYPE_CLIENT_INVALID</li><li>PhpExt_Form_Action::FAILURE_TYPE_CONNECT_FAILURE</li><li>PhpExt_Form_Action::FAILURE_TYPE_LOAD_FAILURE</li><li>PhpExt_Form_Action::FAILURE_TYPE_SERVER_INVALID</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#constFAILURE_TYPE_SERVER_INVALID">PhpExt_Form_Action::FAILURE_TYPE_SERVER_INVALID</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#constFAILURE_TYPE_LOAD_FAILURE">PhpExt_Form_Action::FAILURE_TYPE_LOAD_FAILURE</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#constFAILURE_TYPE_CONNECT_FAILURE">PhpExt_Form_Action::FAILURE_TYPE_CONNECT_FAILURE</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#constFAILURE_TYPE_CLIENT_INVALID">PhpExt_Form_Action::FAILURE_TYPE_CLIENT_INVALID</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getFailureType
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMethod" id="getMethod"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getMethod</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a82">82</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The HTTP method to use to access the requested URL. Defaults to the Ext.form.BasicForm's method, or if that is not specified, the underlying DOM form's method.</p>
+<p class="description"><p>Posible values are: <ul><li>PhpExt_Form_FormPanel::METHOD_GET</li><li>PhpExt_Form_FormPanel::METHOD_POST</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constMETHOD_POST">PhpExt_Form_FormPanel::METHOD_POST</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constMETHOD_GET">PhpExt_Form_FormPanel::METHOD_GET</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getMethod
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetParams" id="getParams"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getParams</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a100">100</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Extra parameter values to pass. These are added to the Form's Ext.form.BasicForm.baseParams and passed to the specified URL along with the Form's input fields.</p>
+	<ul class="tags">
+				<li><span class="field">return:</span> Format: array('param1'=&gt;'value1','param2'=&gt;'value2')</li>
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">array</span>
+		<span class="method-name">
+			getParams
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetResult" id="getResult"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getResult</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a261">261</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The response config object containing a boolean success property and other, action-specific properties.</p>
+<p class="description"><p>Action Response properties:</p><p>When loading or submitting a form the response should be an Action object.  The following properties are intended  to be used when responding to a form load or submit request</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getResult
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetScope" id="getScope"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getScope</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a118">118</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The scope in which to call the callback functions (The this reference for the callback functions).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>
+		<span class="method-name">
+			getScope
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetSuccessCallback" id="getSuccessCallback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getSuccessCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a142">142</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+		<span class="method-name">
+			getSuccessCallback
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetUrl" id="getUrl"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a160">160</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The URL that the Action is to invoke.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getUrl
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetWaitMessage" id="getWaitMessage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getWaitMessage</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a178">178</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The message to be displayed by a call to PhpExt_MessageBox::wait() during the time the action is being processed.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getWaitMessage
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetWaitTitle" id="getWaitTitle"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">getWaitTitle</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a196">196</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The title to be displayed by a call to PhpExt_MessageBox::wait() during the time the action is being processed.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getWaitTitle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetFailureCallback" id="setFailureCallback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setFailureCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a46">46</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The function to call when a failure packet was recieved, or when an error ocurred in the Ajax communication. The function is passed the following parameters:</p>
+<p class="description"><p>&lt;dl&gt;   &lt;dt&gt;form : Ext.form.BasicForm&lt;/dt&gt;      &lt;dd&gt;The form that requested the action&lt;/dd&gt;   &lt;dt&gt;action : Ext.form.Action&lt;/dt&gt;     &lt;dd&gt;The Action class. If an Ajax error ocurred, the failure type will be in failureType. The result property of this object may be examined to perform custom postprocessing.&lt;/dd&gt;  &lt;/dl&gt;</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+		<span class="method-name">
+			setFailureCallback
+		</span>
+					(<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFailureType" id="setFailureType"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setFailureType</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a224">224</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The type of failure detected. Possible values are</p>
+<p class="description"><p>Action Response properties:</p><p>When loading or submitting a form the response should be an Action object.  The following properties are intended  to be used when responding to a form load or submit request <ul><li>PhpExt_Form_Action::FAILURE_TYPE_CLIENT_INVALID</li><li>PhpExt_Form_Action::FAILURE_TYPE_CONNECT_FAILURE</li><li>PhpExt_Form_Action::FAILURE_TYPE_LOAD_FAILURE</li><li>PhpExt_Form_Action::FAILURE_TYPE_SERVER_INVALID</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#constFAILURE_TYPE_SERVER_INVALID">PhpExt_Form_Action::FAILURE_TYPE_SERVER_INVALID</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#constFAILURE_TYPE_LOAD_FAILURE">PhpExt_Form_Action::FAILURE_TYPE_LOAD_FAILURE</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#constFAILURE_TYPE_CONNECT_FAILURE">PhpExt_Form_Action::FAILURE_TYPE_CONNECT_FAILURE</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#constFAILURE_TYPE_CLIENT_INVALID">PhpExt_Form_Action::FAILURE_TYPE_CLIENT_INVALID</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+		<span class="method-name">
+			setFailureType
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMethod" id="setMethod"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setMethod</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a69">69</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The HTTP method to use to access the requested URL. Defaults to the Ext.form.BasicForm's method, or if that is not specified, the underlying DOM form's method.</p>
+<p class="description"><p>Posible values are: <ul><li>PhpExt_Form_FormPanel::METHOD_GET</li><li>PhpExt_Form_FormPanel::METHOD_POST</li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constMETHOD_POST">PhpExt_Form_FormPanel::METHOD_POST</a></li>
+				<li><span class="field">uses:</span> <a href="../../PhpExt/Form/PhpExt_Form_FormPanel.html#constMETHOD_GET">PhpExt_Form_FormPanel::METHOD_GET</a></li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+		<span class="method-name">
+			setMethod
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetParams" id="setParams"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setParams</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a92">92</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Extra parameter values to pass. These are added to the Form's Ext.form.BasicForm.baseParams and passed to the specified URL along with the Form's input fields.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+		<span class="method-name">
+			setParams
+		</span>
+					(<span class="var-type">array</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">array</span>
+				<span class="var-name">$value</span><span class="var-description">: Format: array('param1'=&gt;'value1','param2'=&gt;'value2')</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetResult" id="setResult"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setResult</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a253">253</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The response config object containing a boolean success property and other, action-specific properties.</p>
+<p class="description"><p>Action Response properties:</p><p>When loading or submitting a form the response should be an Action object.  The following properties are intended  to be used when responding to a form load or submit request</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+		<span class="method-name">
+			setResult
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetScope" id="setScope"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setScope</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a110">110</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The scope in which to call the callback functions (The this reference for the callback functions).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+		<span class="method-name">
+			setScope
+		</span>
+					(<span class="var-type"><a href="../../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../PhpExt/PhpExt_JavascriptStm.html">PhpExt_JavascriptStm</a></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetSuccessCallback" id="setSuccessCallback"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setSuccessCallback</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a134">134</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The function to call when a valid success return packet is recieved. The function is passed the following parameters:</p>
+<p class="description"><p>&lt;dl&gt;  	&lt;dt&gt;form : Ext.form.BasicForm&lt;/dt&gt;  		&lt;dd&gt;The form that requested the action&lt;/dd&gt;  	&lt;dt&gt;action : Ext.form.Action&lt;/dt&gt; 		&lt;dd&gt;The Action class. The result property of this object may be examined to perform custom postprocessing.&lt;/dd&gt;  &lt;/dl&gt;</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+		<span class="method-name">
+			setSuccessCallback
+		</span>
+					(<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../../PhpExt/PhpExt_Handler.html">PhpExt_Handler</a></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetUrl" id="setUrl"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setUrl</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a152">152</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The URL that the Action is to invoke.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+		<span class="method-name">
+			setUrl
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetWaitMessage" id="setWaitMessage"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setWaitMessage</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a170">170</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The message to be displayed by a call to PhpExt_MessageBox::wait() during the time the action is being processed.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+		<span class="method-name">
+			setWaitMessage
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetWaitTitle" id="setWaitTitle"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../../media/images/Method.png" />
+		<span class="method-title">setWaitTitle</span> (line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a188">188</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The title to be displayed by a call to PhpExt_MessageBox::wait() during the time the action is being processed.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../../PhpExt/Form/PhpExt_Form_Action.html">PhpExt_Form_Action</a></span>
+		<span class="method-name">
+			setWaitTitle
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodaddValidConfigProperties">PhpExt_Object::addValidConfigProperties()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodcreateMethodSignature">PhpExt_Object::createMethodSignature()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetConfigParams">PhpExt_Object::getConfigParams()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetExtConfigProperty">PhpExt_Object::getExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetJavascript">PhpExt_Object::getJavascript()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodgetMethodInvokeStm">PhpExt_Object::getMethodInvokeStm()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodisExtObject">PhpExt_Object::isExtObject()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodparamToString">PhpExt_Object::paramToString()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtClassInfo">PhpExt_Object::setExtClassInfo()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#methodsetExtConfigProperty">PhpExt_Object::setExtConfigProperty()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__get">PhpExt_Object::__get()</a></span><br>
+													<img src="../../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../../PhpExt/PhpExt_Object.html#method__set">PhpExt_Object::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-vars">Vars</a>
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constFAILURE_TYPE_CLIENT_INVALID" id="FAILURE_TYPE_CLIENT_INVALID"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">FAILURE_TYPE_CLIENT_INVALID</span>
+			 = <span class="const-default"> 'Action.CLIENT_INVALID'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#methodgetFailureType">PhpExt_Form_Action::getFailureType()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#methodsetFailureType">PhpExt_Form_Action::setFailureType()</a></li>
+			</ul>
+	
+	
+</div>
+<a name="constFAILURE_TYPE_CONNECT_FAILURE" id="FAILURE_TYPE_CONNECT_FAILURE"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">FAILURE_TYPE_CONNECT_FAILURE</span>
+			 = <span class="const-default"> 'Action.CONNECT_FAILURE'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#methodgetFailureType">PhpExt_Form_Action::getFailureType()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#methodsetFailureType">PhpExt_Form_Action::setFailureType()</a></li>
+			</ul>
+	
+	
+</div>
+<a name="constFAILURE_TYPE_LOAD_FAILURE" id="FAILURE_TYPE_LOAD_FAILURE"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">FAILURE_TYPE_LOAD_FAILURE</span>
+			 = <span class="const-default"> 'Action.LOAD_FAILURE'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a31">31</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#methodgetFailureType">PhpExt_Form_Action::getFailureType()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#methodsetFailureType">PhpExt_Form_Action::setFailureType()</a></li>
+			</ul>
+	
+	
+</div>
+<a name="constFAILURE_TYPE_SERVER_INVALID" id="FAILURE_TYPE_SERVER_INVALID"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">FAILURE_TYPE_SERVER_INVALID</span>
+			 = <span class="const-default"> 'Action.SERVER_INVALID'</span>
+			(line <span class="line-number"><a href="../../__filesource/fsource_PhpExt_Form_PhpExtFormAction.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#methodgetFailureType">PhpExt_Form_Action::getFailureType()</a></li>
+				<li><span class="field">usedby:</span> <a href="../../PhpExt/Form/PhpExt_Form_Action.html#methodsetFailureType">PhpExt_Form_Action::setFailureType()</a></li>
+			</ul>
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:02:33 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

@@ -1,0 +1,541 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_Ext</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PhpExt_Ext</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---Ext.php.html">/PhpExt/Ext.php</a> (line <span class="field"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a26">26</a></span>)
+		</p>
+		
+				
+		<pre></pre>
+	
+			</div>
+</div>
+
+
+	<a name="sec-const-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constant Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+						<span class="disabled">Constants</span> (<a href="#sec-consts">details</a>)
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<div class="const-summary">
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ELEMENT_ANCHOR_BOTTOM_CENTER" title="details" class="const-name">ELEMENT_ANCHOR_BOTTOM_CENTER</a> = 					<span class="var-type"> 'b'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ELEMENT_ANCHOR_BOTTOM_LEFT" title="details" class="const-name">ELEMENT_ANCHOR_BOTTOM_LEFT</a> = 					<span class="var-type"> 'bl'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ELEMENT_ANCHOR_BOTTOM_RIGHT" title="details" class="const-name">ELEMENT_ANCHOR_BOTTOM_RIGHT</a> = 					<span class="var-type"> 'br'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ELEMENT_ANCHOR_CENTER" title="details" class="const-name">ELEMENT_ANCHOR_CENTER</a> = 					<span class="var-type"> 'c'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ELEMENT_ANCHOR_CENTER_LEFT" title="details" class="const-name">ELEMENT_ANCHOR_CENTER_LEFT</a> = 					<span class="var-type"> 'l'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ELEMENT_ANCHOR_CENTER_RIGHT" title="details" class="const-name">ELEMENT_ANCHOR_CENTER_RIGHT</a> = 					<span class="var-type"> 'r'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ELEMENT_ANCHOR_TOP_CENTER" title="details" class="const-name">ELEMENT_ANCHOR_TOP_CENTER</a> = 					<span class="var-type"> 't'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ELEMENT_ANCHOR_TOP_LEFT" title="details" class="const-name">ELEMENT_ANCHOR_TOP_LEFT</a> = 					<span class="var-type"> 'tl'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#ELEMENT_ANCHOR_TOP_RIGHT" title="details" class="const-name">ELEMENT_ANCHOR_TOP_RIGHT</a> = 					<span class="var-type"> 'tr'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#HALIGN_CENTER" title="details" class="const-name">HALIGN_CENTER</a> = 					<span class="var-type"> 'center'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#HALIGN_LEFT" title="details" class="const-name">HALIGN_LEFT</a> = 					<span class="var-type"> 'left'</span>
+
+				</div>
+								<div class="const-title">
+					<img src="../media/images/Constant.png" alt=" " />
+					<a href="#HALIGN_RIGHT" title="details" class="const-name">HALIGN_RIGHT</a> = 					<span class="var-type"> 'right'</span>
+
+				</div>
+							</div>
+		</div>
+	</div>
+
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+															<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+									<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+											
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">string</span>
+										<a href="#combineAnchors" title="details" class="method-name">combineAnchors</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$elementAnchor</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$targetAnchor</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/StaticMethod.png" alt=" "/>
+					static 						<span class="method-result">void</span>
+										<a href="#onReady" title="details" class="method-name">onReady</a>
+										()
+									</div>
+																																											
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#__constructor" title="details" class="method-name">__constructor</a>
+										()
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+																		<a href="#sec-const-summary">Constants</a> (<a href="#sec-consts">details</a>)
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="methodcombineAnchors" id="combineAnchors"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static combineAnchors</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a71">71</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Combines Element Anchor contants defined in PhpExt_Ext. Possible values for either parameter are:</p>
+<p class="description"><p><ul><li><a href="../PhpExt/PhpExt_Ext.html#constELEMENT_ANCHOR_TOP_LEFT">PhpExt_Ext::ELEMENT_ANCHOR_TOP_LEFT</a></li><li><a href="../PhpExt/PhpExt_Ext.html#constELEMENT_ANCHOR_TOP_CENTER">PhpExt_Ext::ELEMENT_ANCHOR_TOP_CENTER</a></li><li><a href="../PhpExt/PhpExt_Ext.html#constELEMENT_ANCHOR_TOP_RIGHT">PhpExt_Ext::ELEMENT_ANCHOR_TOP_RIGHT</a></li><li><a href="../PhpExt/PhpExt_Ext.html#constELEMENT_ANCHOR_CENTER_LEFT">PhpExt_Ext::ELEMENT_ANCHOR_CENTER_LEFT</a></li><li><a href="../PhpExt/PhpExt_Ext.html#constELEMENT_ANCHOR_CENTER">PhpExt_Ext::ELEMENT_ANCHOR_CENTER</a></li><li><a href="../PhpExt/PhpExt_Ext.html#constELEMENT_ANCHOR_CENTER_RIGHT">PhpExt_Ext::ELEMENT_ANCHOR_CENTER_RIGHT</a></li><li><a href="../PhpExt/PhpExt_Ext.html#constELEMENT_ANCHOR_BOTTOM_LEFT">PhpExt_Ext::ELEMENT_ANCHOR_BOTTOM_LEFT</a></li><li><a href="../PhpExt/PhpExt_Ext.html#constELEMENT_ANCHOR_BOTTOM_CENTER">PhpExt_Ext::ELEMENT_ANCHOR_BOTTOM_CENTER</a></li><li><a href="../PhpExt/PhpExt_Ext.html#constELEMENT_ANCHOR_BOTTOM_RIGHT">PhpExt_Ext::ELEMENT_ANCHOR_BOTTOM_RIGHT</a></li></ul></p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">string</span>
+		<span class="method-name">
+			combineAnchors
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$elementAnchor</span>, <span class="var-type">string</span>&nbsp;<span class="var-name">$targetAnchor</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$elementAnchor</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$targetAnchor</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodonReady" id="onReady"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/StaticMethod.png" />
+		<span class="method-title">static onReady</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a45">45</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		static <span class="method-result">void</span>
+		<span class="method-name">
+			onReady
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="method__constructor" id="__constructor"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">__constructor</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a42">42</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			__constructor
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+						
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			<a name="constELEMENT_ANCHOR_BOTTOM_CENTER" id="ELEMENT_ANCHOR_BOTTOM_CENTER"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ELEMENT_ANCHOR_BOTTOM_CENTER</span>
+			 = <span class="const-default"> 'b'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a39">39</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constELEMENT_ANCHOR_BOTTOM_LEFT" id="ELEMENT_ANCHOR_BOTTOM_LEFT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ELEMENT_ANCHOR_BOTTOM_LEFT</span>
+			 = <span class="const-default"> 'bl'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a38">38</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constELEMENT_ANCHOR_BOTTOM_RIGHT" id="ELEMENT_ANCHOR_BOTTOM_RIGHT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ELEMENT_ANCHOR_BOTTOM_RIGHT</span>
+			 = <span class="const-default"> 'br'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a40">40</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constELEMENT_ANCHOR_CENTER" id="ELEMENT_ANCHOR_CENTER"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ELEMENT_ANCHOR_CENTER</span>
+			 = <span class="const-default"> 'c'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a36">36</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constELEMENT_ANCHOR_CENTER_LEFT" id="ELEMENT_ANCHOR_CENTER_LEFT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ELEMENT_ANCHOR_CENTER_LEFT</span>
+			 = <span class="const-default"> 'l'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a35">35</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constELEMENT_ANCHOR_CENTER_RIGHT" id="ELEMENT_ANCHOR_CENTER_RIGHT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ELEMENT_ANCHOR_CENTER_RIGHT</span>
+			 = <span class="const-default"> 'r'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a37">37</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constELEMENT_ANCHOR_TOP_CENTER" id="ELEMENT_ANCHOR_TOP_CENTER"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ELEMENT_ANCHOR_TOP_CENTER</span>
+			 = <span class="const-default"> 't'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a33">33</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constELEMENT_ANCHOR_TOP_LEFT" id="ELEMENT_ANCHOR_TOP_LEFT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ELEMENT_ANCHOR_TOP_LEFT</span>
+			 = <span class="const-default"> 'tl'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a32">32</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constELEMENT_ANCHOR_TOP_RIGHT" id="ELEMENT_ANCHOR_TOP_RIGHT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">ELEMENT_ANCHOR_TOP_RIGHT</span>
+			 = <span class="const-default"> 'tr'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a34">34</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constHALIGN_CENTER" id="HALIGN_CENTER"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">HALIGN_CENTER</span>
+			 = <span class="const-default"> 'center'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a29">29</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constHALIGN_LEFT" id="HALIGN_LEFT"><!-- --></A>
+<div class="evenrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">HALIGN_LEFT</span>
+			 = <span class="const-default"> 'left'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a28">28</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+<a name="constHALIGN_RIGHT" id="HALIGN_RIGHT"><!-- --></A>
+<div class="oddrow">
+
+	<div class="const-header">
+		<img src="../media/images/Variable.png" />
+		<span class="const-title">
+			<span class="const-name">HALIGN_RIGHT</span>
+			 = <span class="const-default"> 'right'</span>
+			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtExt.php.html#a30">30</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	
+	
+</div>
+						
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:04:16 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

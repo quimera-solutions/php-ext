@@ -1,0 +1,3485 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+  <html xmlns="http://www.w3.org/1999/xhtml">
+		<head>
+			<!-- template designed by Marco Von Ballmoos  -->
+			<title>Docs For Class PhpExt_Panel</title>
+			<link rel="stylesheet" href="../media/stylesheet.css" />
+						<script src="../media/lib/classTree.js"></script>
+												<script language="javascript" type="text/javascript">
+				var imgPlus = new Image();
+				var imgMinus = new Image();
+				imgPlus.src = "../media/images/plus.png";
+				imgMinus.src = "../media/images/minus.png";
+				
+				function showNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgMinus.src;
+					oTable.style.display = "block";
+				}
+				
+				function hideNode(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+							var oImg = document.layers["img" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+							var oImg = document.all["img" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+							var oImg = document.getElementById("img" + Node);
+									break;
+							}
+					oImg.src = imgPlus.src;
+					oTable.style.display = "none";
+				}
+				
+				function nodeIsVisible(Node){
+							switch(navigator.family){
+								case 'nn4':
+									// Nav 4.x code fork...
+							var oTable = document.layers["span" + Node];
+									break;
+								case 'ie4':
+									// IE 4/5 code fork...
+							var oTable = document.all["span" + Node];
+									break;
+								case 'gecko':
+									// Standards Compliant code fork...
+							var oTable = document.getElementById("span" + Node);
+									break;
+							}
+					return (oTable && oTable.style.display == "block");
+				}
+				
+				function toggleNodeVisibility(Node){
+					if (nodeIsVisible(Node)){
+						hideNode(Node);
+					}else{
+						showNode(Node);
+					}
+				}
+			</script>
+					</head>
+		<body>
+			<div class="page-body">			
+<h2 class="class-name"><img src="../media/images/Class_logo.png"
+														alt=" Class"
+														title=" Class"
+														style="vertical-align: middle"> PhpExt_Panel</h2>
+
+<a name="sec-description"></a>
+<div class="info-box">
+	<div class="info-box-title">Description</div>
+	<div class="nav-bar">
+					<span class="disabled">Description</span> |
+							<a href="#sec-descendents">Descendents</a>
+			|											<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+						|											<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+						
+											<a href="#sec-consts">Constants</a>
+						
+			</div>
+	<div class="info-box-body">
+        		<!-- ========== Info from phpDoc block ========= -->
+		<p class="notes">
+			Located in <a class="field" href="_PhpExt---Panel.php.html">/PhpExt/Panel.php</a> (line <span class="field"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a34">34</a></span>)
+		</p>
+		
+				
+		<pre><a href="../PhpExt/PhpExt_Object.html">PhpExt_Object</a>
+   |
+   --<a href="../PhpExt/PhpExt_Observable.html">PhpExt_Observable</a>
+      |
+      --<a href="../PhpExt/PhpExt_Component.html">PhpExt_Component</a>
+         |
+         --<a href="../PhpExt/PhpExt_BoxComponent.html">PhpExt_BoxComponent</a>
+            |
+            --<a href="../PhpExt/PhpExt_Container.html">PhpExt_Container</a>
+               |
+               --PhpExt_Panel</pre>
+	
+			</div>
+</div>
+
+	<a name="sec-descendents"></a>
+	<div class="info-box">
+		<div class="info-box-title">Direct descendents</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+			<span class="disabled">Descendents</span>
+			|												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+								|															<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-consts">Constants</a>
+							
+					</div>
+		<div class="info-box-body">
+			<table cellpadding="2" cellspacing="0" class="class-table">
+				<tr>
+					<th class="class-table-header">Class</th>
+					<th class="class-table-header">Description</th>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/Form/PhpExt_Form_FieldSet.html">PhpExt_Form_FieldSet</a>
+					</td>
+					<td>
+											Standard container used for grouping form fields.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/Form/PhpExt_Form_FormPanel.html">PhpExt_Form_FormPanel</a>
+					</td>
+					<td>
+											Standard form container.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/Grid/PhpExt_Grid_GridPanel.html">PhpExt_Grid_GridPanel</a>
+					</td>
+					<td>
+											This class represents the primary interface of a component based grid control.
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/PhpExt_TabPanel.html">PhpExt_TabPanel</a>
+					</td>
+					<td>
+											
+										</td>
+				</tr>
+								<tr>
+					<td style="padding-right: 2em; white-space: nowrap">
+						<img src="../media/images/Class.png"
+								 alt=" class"
+								 title=" class"
+								 style="vertical-align: center"/>
+						<a href="../PhpExt/PhpExt_Window.html">PhpExt_Window</a>
+					</td>
+					<td>
+											A specialized panel intended for use as an application window. Windows are floated and draggable by default, and also provide specific behavior like the ability to maximize and restore (with an event for minimizing, since the minimize behavior is application-specific).
+										</td>
+				</tr>
+							</table>
+		</div>
+	</div>
+
+
+	<a name="sec-var-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variable Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+						<span class="disabled">Vars</span> (<a href="#sec-vars">details</a>)
+							| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+															<a href="#sec-consts">Constants</a>
+							
+					</div>
+		<div class="info-box-body">
+			<div class="var-summary">
+																																																								<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type">mixed</span>
+					<a href="#$BaseCssClass" title="details" class="var-name">$BaseCssClass</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>
+					<a href="#$_bottomToolbar" title="details" class="var-name">$_bottomToolbar</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../PhpExt/PhpExt_ButtonCollection.html">PhpExt_ButtonCollection</a></span>
+					<a href="#$_buttons" title="details" class="var-name">$_buttons</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../PhpExt/PhpExt_ToolConfigObjectCollection.html">PhpExt_ToolConfigObjectCollection</a></span>
+					<a href="#$_tools" title="details" class="var-name">$_tools</a>
+				</div>
+																<div class="var-title">
+					<img src="../media/images/Variable.png" alt=" " />
+					<span class="var-type"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>
+					<a href="#$_topToolbar" title="details" class="var-name">$_topToolbar</a>
+				</div>
+											</div>
+		</div>
+	</div>
+
+	<a name="sec-method-summary"></a>
+	<div class="info-box">
+		<div class="info-box-title">Method Summary</span></div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+															<a href="#sec-consts">Constants</a>
+							
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+				 
+				|
+						<span class="disabled">Methods</span> (<a href="#sec-methods">details</a>)
+		</div>
+		<div class="info-box-body">			
+			<div class="method-summary">
+																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																																															
+				<div class="method-definition">
+					<img src="../media/images/Constructor.png" alt=" "/>
+											<span class="method-result">PhpExt_Panel</span>
+										<a href="#__construct" title="details" class="method-name">__construct</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Button.html">PhpExt_Button</a></span>
+										<a href="#addButton" title="details" class="method-name">addButton</a>
+											(<span class="var-type"></span>&nbsp;<span class="var-name">$button</span>, <span class="var-type"><a href="../PhpExt/PhpExt_Button.html">PhpExt_Button</a></span>&nbsp;<span class="var-name">$field</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#addTool" title="details" class="method-name">addTool</a>
+											(<span class="var-type"><a href="../PhpExt/PhpExt_ToolConfigObjectCollection.html">PhpExt_ToolConfigObjectCollection</a></span>&nbsp;<span class="var-name">$tool</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getAnimCollapse" title="details" class="method-name">getAnimCollapse</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string|DOMNode|Element</span>
+										<a href="#getApplyTo" title="details" class="method-name">getApplyTo</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+										<a href="#getAutoLoad" title="details" class="method-name">getAutoLoad</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getAutoScroll" title="details" class="method-name">getAutoScroll</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getBaseCssClass" title="details" class="method-name">getBaseCssClass</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getBodyBorder" title="details" class="method-name">getBodyBorder</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getBodyStyle" title="details" class="method-name">getBodyStyle</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getBorder" title="details" class="method-name">getBorder</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>
+										<a href="#getBottomToolbar" title="details" class="method-name">getBottomToolbar</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getButtonAlign" title="details" class="method-name">getButtonAlign</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_ButtonCollection.html">PhpExt_ButtonCollection</a></span>
+										<a href="#getButtons" title="details" class="method-name">getButtons</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getCollapsed" title="details" class="method-name">getCollapsed</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getCollapsedCssClass" title="details" class="method-name">getCollapsedCssClass</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getCollapseFirst" title="details" class="method-name">getCollapseFirst</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getCollapsible" title="details" class="method-name">getCollapsible</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">void</span>
+										<a href="#getConfigParams" title="details" class="method-name">getConfigParams</a>
+											([<span class="var-type"></span>&nbsp;<span class="var-name">$lazy</span> = <span class="var-default">false</span>])
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getContentElement" title="details" class="method-name">getContentElement</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getDraggable" title="details" class="method-name">getDraggable</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getElements" title="details" class="method-name">getElements</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getFloating" title="details" class="method-name">getFloating</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getFooter" title="details" class="method-name">getFooter</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getFrame" title="details" class="method-name">getFrame</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getHeader" title="details" class="method-name">getHeader</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getHeaderAsText" title="details" class="method-name">getHeaderAsText</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getHideCollapseTool" title="details" class="method-name">getHideCollapseTool</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getHtml" title="details" class="method-name">getHtml</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getIconCssClass" title="details" class="method-name">getIconCssClass</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getKeys" title="details" class="method-name">getKeys</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getLoadMask" title="details" class="method-name">getLoadMask</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getMaskDisabled" title="details" class="method-name">getMaskDisabled</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getMinButtonWidth" title="details" class="method-name">getMinButtonWidth</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getShadow" title="details" class="method-name">getShadow</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">integer</span>
+										<a href="#getShadowOffset" title="details" class="method-name">getShadowOffset</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getShim" title="details" class="method-name">getShim</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">string</span>
+										<a href="#getTitle" title="details" class="method-name">getTitle</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result">boolean</span>
+										<a href="#getTitleCollapse" title="details" class="method-name">getTitleCollapse</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_ToolConfigObjectCollection.html">PhpExt_ToolConfigObjectCollection</a></span>
+										<a href="#getTools" title="details" class="method-name">getTools</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>
+										<a href="#getTopToolbar" title="details" class="method-name">getTopToolbar</a>
+										()
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setAnimCollapse" title="details" class="method-name">setAnimCollapse</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setApplyTo" title="details" class="method-name">setApplyTo</a>
+											(<span class="var-type">string|DOMNode|Element</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setAutoLoad" title="details" class="method-name">setAutoLoad</a>
+											(<span class="var-type">$value</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setAutoScroll" title="details" class="method-name">setAutoScroll</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setBaseCssClass" title="details" class="method-name">setBaseCssClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setBodyBorder" title="details" class="method-name">setBodyBorder</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setBodyStyle" title="details" class="method-name">setBodyStyle</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setBorder" title="details" class="method-name">setBorder</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setBottomToolbar" title="details" class="method-name">setBottomToolbar</a>
+											(<span class="var-type"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setButtonAlign" title="details" class="method-name">setButtonAlign</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setCollapsed" title="details" class="method-name">setCollapsed</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setCollapsedCssClass" title="details" class="method-name">setCollapsedCssClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setCollapseFirst" title="details" class="method-name">setCollapseFirst</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setCollapsible" title="details" class="method-name">setCollapsible</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setContentElement" title="details" class="method-name">setContentElement</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setDraggable" title="details" class="method-name">setDraggable</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setElements" title="details" class="method-name">setElements</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setFloating" title="details" class="method-name">setFloating</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setFooter" title="details" class="method-name">setFooter</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setFrame" title="details" class="method-name">setFrame</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setHeader" title="details" class="method-name">setHeader</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setHeaderAsText" title="details" class="method-name">setHeaderAsText</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setHideCollapseTool" title="details" class="method-name">setHideCollapseTool</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setHtml" title="details" class="method-name">setHtml</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setIconCssClass" title="details" class="method-name">setIconCssClass</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setKeys" title="details" class="method-name">setKeys</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setLoadMask" title="details" class="method-name">setLoadMask</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setMaskDisabled" title="details" class="method-name">setMaskDisabled</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setMinButtonWidth" title="details" class="method-name">setMinButtonWidth</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setShadow" title="details" class="method-name">setShadow</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setShadowOffset" title="details" class="method-name">setShadowOffset</a>
+											(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setShim" title="details" class="method-name">setShim</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setTitle" title="details" class="method-name">setTitle</a>
+											(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setTitleCollapse" title="details" class="method-name">setTitleCollapse</a>
+											(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+															
+				<div class="method-definition">
+					<img src="../media/images/Method.png" alt=" "/>
+											<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+										<a href="#setTopToolbar" title="details" class="method-name">setTopToolbar</a>
+											(<span class="var-type"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>&nbsp;<span class="var-name">$value</span>)
+									</div>
+											</div>
+		</div>
+	</div>		
+
+	<a name="sec-vars"></a>
+	<div class="info-box">
+		<div class="info-box-title">Variables</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+										<a href="#sec-var-summary">Vars</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-consts">Constants</a>
+							
+										| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+			
+<a name="var$BaseCssClass" id="$BaseCssClass"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type">mixed</span>
+			<span class="var-name">$BaseCssClass</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a147">147</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_bottomToolbar" id="$_bottomToolbar"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>
+			<span class="var-name">$_bottomToolbar</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a153">153</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_buttons" id="$_buttons"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../PhpExt/PhpExt_ButtonCollection.html">PhpExt_ButtonCollection</a></span>
+			<span class="var-name">$_buttons</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a259">259</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A collection of PhpExt_Button Objects</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_tools" id="$_tools"><!-- --></A>
+<div class="oddrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../PhpExt/PhpExt_ToolConfigObjectCollection.html">PhpExt_ToolConfigObjectCollection</a></span>
+			<span class="var-name">$_tools</span>
+						(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a750">750</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+<a name="var$_topToolbar" id="$_topToolbar"><!-- --></A>
+<div class="evenrow">
+
+	<div class="var-header">
+		<img src="../media/images/Variable.png" />
+		<span class="var-title">
+			<span class="var-type"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>
+			<span class="var-name">$_topToolbar</span>
+			 = <span class="var-default"> null</span>			(line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a674">674</a></span>)
+		</span>
+	</div>
+
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	
+		
+		
+
+</div>
+							<h4>Inherited Variables</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../PhpExt/PhpExt_Container.html">PhpExt_Container</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Container.html#var$_defaultLayout">PhpExt_Container::$_defaultLayout</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Container.html#var$_items">PhpExt_Container::$_items</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Container.html#var$_layout">PhpExt_Container::$_layout</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../PhpExt/PhpExt_Component.html">PhpExt_Component</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Component.html#var$_layoutData">PhpExt_Component::$_layoutData</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Component.html#var$_ownerCollection">PhpExt_Component::$_ownerCollection</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Component.html#var$_plugins">PhpExt_Component::$_plugins</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Component.html#var$_xType">PhpExt_Component::$_xType</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../PhpExt/PhpExt_Observable.html">PhpExt_Observable</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Observable.html#var$_listeners">PhpExt_Observable::$_listeners</a></span><br>
+							</span>
+											</blockquote> 
+									<p>Inherited from <span class="classname"><a href="../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_extClassName">PhpExt_Object::$_extClassName</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_extConfigProperties">PhpExt_Object::$_extConfigProperties</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_validExtConfigProperties">PhpExt_Object::$_validExtConfigProperties</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="var-title">
+								<span class="var-name"><a href="../PhpExt/PhpExt_Object.html#var$_varName">PhpExt_Object::$_varName</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<a name="sec-methods"></a>
+	<div class="info-box">
+		<div class="info-box-title">Methods</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendents</a> |
+															<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+																			<a href="#sec-consts">Constants</a>
+							
+										<a href="#sec-method-summary">Methods</a> (<span class="disabled">details</span>)
+						
+		</div>
+		<div class="info-box-body">
+			<A NAME='method_detail'></A>
+<a name="method__construct" id="__construct"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Constructor.png" />
+		<span class="method-title">Constructor __construct</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a772">772</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">PhpExt_Panel</span>
+		<span class="method-name">
+			__construct
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../PhpExt/PhpExt_Container.html#method__construct">PhpExt_Container::__construct()</a></dt>
+					</dl>
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_FieldSet.html#method__construct">PhpExt_Form_FieldSet::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_FormPanel.html#method__construct">PhpExt_Form_FormPanel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_GridPanel.html#method__construct">PhpExt_Grid_GridPanel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_EditorGridPanel.html#method__construct">PhpExt_Grid_EditorGridPanel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_TabPanel.html#method__construct">PhpExt_TabPanel::__construct()</a>
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_Window.html#method__construct">PhpExt_Window::__construct()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodaddButton" id="addButton"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addButton</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a843">843</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Adds a button to the footer</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Button.html">PhpExt_Button</a></span>
+		<span class="method-name">
+			addButton
+		</span>
+					(<span class="var-type"></span>&nbsp;<span class="var-name">$button</span>, <span class="var-type"><a href="../PhpExt/PhpExt_Button.html">PhpExt_Button</a></span>&nbsp;<span class="var-name">$field</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../PhpExt/PhpExt_Button.html">PhpExt_Button</a></span>
+				<span class="var-name">$field</span>			</li>
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$button</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodaddTool" id="addTool"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">addTool</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a766">766</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A <a href="../PhpExt/Config/PhpExt_ToolConfigObject.html">PhpExt_ToolConfigObject</a> to add to the tools collection</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			addTool
+		</span>
+					(<span class="var-type"><a href="../PhpExt/PhpExt_ToolConfigObjectCollection.html">PhpExt_ToolConfigObjectCollection</a></span>&nbsp;<span class="var-name">$tool</span>, [<span class="var-type">string</span>&nbsp;<span class="var-name">$name</span> = <span class="var-default">null</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../PhpExt/PhpExt_ToolConfigObjectCollection.html">PhpExt_ToolConfigObjectCollection</a></span>
+				<span class="var-name">$tool</span>			</li>
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$name</span><span class="var-description">: Optional key to locate the tool on the collection</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodgetAnimCollapse" id="getAnimCollapse"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAnimCollapse</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a50">50</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to animate the transition when the panel is collapsed, false to skip the animation (defaults to true if the Ext.Fx class is available, otherwise false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getAnimCollapse
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetApplyTo" id="getApplyTo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getApplyTo</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a89">89</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The id of the node, a DOM node or an existing Element corresponding to a DIV that is already present in the document that specifies some panel-specific structural markup. When applyTo is used, constituent parts of the panel can be specified by CSS class name within the main element, and the panel will automatically create those components from that markup. Any required components not specified in the markup will be autogenerated if necessary. The following class names are supported (baseCls will be replaced by BaseCssClass):</p>
+<p class="description"><p><pre> baseCls + '-header'
+ baseCls + '-header-text'
+ baseCls + '-bwrap'
+ baseCls + '-tbar'
+ baseCls + '-body'
+ baseCls + '-bbar'
+ baseCls + '-footer'</pre>  Using this config, a call to render() is not required. If applyTo is specified, any value passed for renderTo will be ignored and the target element's parent node will automatically be used as the panel's container.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string|DOMNode|Element</span>
+		<span class="method-name">
+			getApplyTo
+		</span>
+				()
+			</div>
+	
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../PhpExt/PhpExt_Component.html#methodgetApplyTo">PhpExt_Component::getApplyTo()</a></dt>
+						<dd>The id of the node, a DOM node or an existing Element corresponding to a DIV that is already present in the document that specifies some structural markup for this component. When applyTo is used, constituent parts of the component can also be specified by id or CSS class name within the main element, and the component being created may attempt to create its subcomponents from that markup if applicable. Using this config, a call to render() is not required. If applyTo is specified, any value passed for renderTo will be ignored and the target element's parent node will automatically be used as the component's container.</dd>
+					</dl>
+			
+	</div>
+<a name="methodgetAutoLoad" id="getAutoLoad"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAutoLoad</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a108">108</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/Config/PhpExt_AutoLoadConfigObject.html">PhpExt_AutoLoadConfigObject</a></span>
+		<span class="method-name">
+			getAutoLoad
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetAutoScroll" id="getAutoScroll"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getAutoScroll</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a126">126</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to use overflow:'auto' on the panel's body element and show scroll bars automatically when necessary, false to clip any overflowing content (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getAutoScroll
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetBaseCssClass" id="getBaseCssClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getBaseCssClass</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a144">144</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The base CSS class to apply to this panel's element (defaults to 'x-panel').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getBaseCssClass
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_FieldSet.html#methodgetBaseCssClass">PhpExt_Form_FieldSet::getBaseCssClass()</a>
+								: The base CSS class applied to the fieldset (defaults to 'x-fieldset').
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_TabPanel.html#methodgetBaseCssClass">PhpExt_TabPanel::getBaseCssClass()</a>
+								: The base CSS class applied to the panel (defaults to 'x-tab-panel').
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_Window.html#methodgetBaseCssClass">PhpExt_Window::getBaseCssClass()</a>
+								: The base CSS class to apply to this panel's element (defaults to 'x-window').
+							</li>
+				</ul>
+	</div>
+<a name="methodgetBodyBorder" id="getBodyBorder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getBodyBorder</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a186">186</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to display an interior border on the body element of the panel, false to hide it (defaults to true). This only applies when border == true. If border == true and bodyBorder == false, the border will display as a 1px wide inset border, giving the entire body element an inset appearance.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getBodyBorder
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetBodyStyle" id="getBodyStyle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getBodyStyle</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a204">204</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Custom CSS styles to be applied to the body element in the format expected by Ext.Element.applyStyles (defaults to null).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getBodyStyle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetBorder" id="getBorder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getBorder</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a223">223</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to display the borders of the panel's body element, false to hide them (defaults to true). By default, the border is a 2px wide inset border, but this can be further altered by setting bodyBorder to false.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getBorder
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetBottomToolbar" id="getBottomToolbar"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getBottomToolbar</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a168">168</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The bottom toolbar of the panel. This is a PhpExt_Toolbar_Toolbar object or any of its descendants. To access the bottom toolbar after javascript render, use getBottomToolbar.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>
+		<span class="method-name">
+			getBottomToolbar
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetButtonAlign" id="getButtonAlign"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getButtonAlign</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a249">249</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getButtonAlign
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_FormPanel.html#methodgetButtonAlign">PhpExt_Form_FormPanel::getButtonAlign()</a>
+							</li>
+				</ul>
+	</div>
+<a name="methodgetButtons" id="getButtons"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getButtons</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a264">264</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_ButtonCollection.html">PhpExt_ButtonCollection</a></span>
+		<span class="method-name">
+			getButtons
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCollapsed" id="getCollapsed"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCollapsed</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a300">300</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to render the panel collapsed, false to render it expanded (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getCollapsed
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCollapsedCssClass" id="getCollapsedCssClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCollapsedCssClass</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a318">318</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A CSS class to add to the panel's element after it has been collapsed (defaults to 'x-panel-collapsed').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getCollapsedCssClass
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCollapseFirst" id="getCollapseFirst"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCollapseFirst</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a282">282</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to make sure the collapse/expand toggle button always renders first (to the left of) any other tools in the panel's title bar, false to render it last (defaults to true).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getCollapseFirst
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetCollapsible" id="getCollapsible"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getCollapsible</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a336">336</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to make the panel collapsible and have the expand/collapse toggle button automatically rendered into the header tool button area, false to keep the panel statically sized with no button (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getCollapsible
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetConfigParams" id="getConfigParams"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getConfigParams</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a826">826</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> protected</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">void</span>
+		<span class="method-name">
+			getConfigParams
+		</span>
+					([<span class="var-type"></span>&nbsp;<span class="var-name">$lazy</span> = <span class="var-default">false</span>])
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"></span>
+				<span class="var-name">$lazy</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../PhpExt/PhpExt_Container.html#methodgetConfigParams">PhpExt_Container::getConfigParams()</a></dt>
+					</dl>
+			
+	</div>
+<a name="methodgetContentElement" id="getContentElement"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getContentElement</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a354">354</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The id of an existing HTML node to use as the panel's body content (defaults to '').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getContentElement
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetDraggable" id="getDraggable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getDraggable</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a372">372</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to enable dragging of this Panel (defaults to false). For custom drag/drop implementations, an Ext.Panel.DD config could also be passed in this config instead of true, although Ext.Panel.DD is an internal, undocumented class.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getDraggable
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/PhpExt_Window.html#methodgetDraggable">PhpExt_Window::getDraggable()</a>
+								: True to allow the window to be dragged by the header bar, false to disable dragging (defaults to true). Note that by default the window will be centered in the viewport, so if dragging is disabled the window may need to be positioned programmatically after render (e.g., myWindow.setPosition(100, 100);).
+							</li>
+				</ul>
+	</div>
+<a name="methodgetElements" id="getElements"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getElements</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a408">408</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A comma-delimited list of panel elements to initialize when the panel is rendered. Normally, this list will be generated automatically based on the items added to the panel at config time, but sometimes it might be useful to make sure a structural element is rendered even if not specified at config time (for example, you may want to add a button or toolbar dynamically after the panel has been rendered). Adding those elements to this list will allocate the required placeholders in the panel when it is rendered. Valid values are</p>
+<p class="description"><p>header  tbar (top bar)  body  bbar (bottom bar)  footer</p><p>Defaults to 'body'.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getElements
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFloating" id="getFloating"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getFloating</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a426">426</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to float the panel (absolute position it with automatic shimming and shadow), false to display it inline where it is rendered (defaults to false). Note that by default, setting floating to true will cause the panel to display at negative offsets so that it is hidden -- because the panel is absolute positioned, the position must be set explicitly after render (e.g., myPanel.setPosition(100,100);). Also, when floating a panel you should always assign a fixed width, otherwise it will be auto width and will expand to fill to the right edge of the viewport.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getFloating
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFooter" id="getFooter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getFooter</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a444">444</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to create the footer element explicitly, false to skip creating it. By default, when footer is not specified, if one or more buttons have been added to the panel the footer will be created automatically, otherwise it will not.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getFooter
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetFrame" id="getFrame"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getFrame</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a462">462</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to render the panel with custom rounded borders, false to render with plain 1px square borders (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getFrame
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHeader" id="getHeader"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getHeader</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a480">480</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to create the header element explicitly, false to skip creating it. By default, when header is not specified, if a title is set the header will be created automatically, otherwise it will not. If a title is set but header is explicitly set to false, the header will not be rendered.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getHeader
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHeaderAsText" id="getHeaderAsText"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getHeaderAsText</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a498">498</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to display the panel title in the header, false to hide it (defaults to true).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getHeaderAsText
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHideCollapseTool" id="getHideCollapseTool"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getHideCollapseTool</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a516">516</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to hide the expand/collapse toggle button when collapsible = true, false to display it (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getHideCollapseTool
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetHtml" id="getHtml"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getHtml</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a534">534</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An HTML fragment, or a DomHelper specification to use as the panel's body content (defaults to '').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getHtml
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetIconCssClass" id="getIconCssClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getIconCssClass</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a552">552</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A CSS class that will provide a background image to be used as the panel header icon (defaults to '').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getIconCssClass
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetKeys" id="getKeys"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getKeys</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a570">570</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A KeyMap config object (in the format expected by Ext.KeyMap.addBinding used to assign custom key handling to this panel (defaults to null).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getKeys
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetLoadMask" id="getLoadMask"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getLoadMask</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a742">742</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The id of the DOM Element which servers as loading mask to show loading messages</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getLoadMask
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_GridPanel.html#methodgetLoadMask">PhpExt_Grid_GridPanel::getLoadMask()</a>
+								: An PhpExt_LoadMask object or true to mask the grid while loading (defaults to false).
+							</li>
+				</ul>
+	</div>
+<a name="methodgetMaskDisabled" id="getMaskDisabled"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getMaskDisabled</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a592">592</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to mask the panel when it is disabled, false to not mask it (defaults to true).</p>
+<p class="description"><p>Either way, the panel will always tell its contained elements to disable themselves when it is disabled,  but masking the panel can provide an additional visual cue that the panel is disabled.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getMaskDisabled
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetMinButtonWidth" id="getMinButtonWidth"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getMinButtonWidth</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a610">610</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Minimum width in pixels of all buttons in this panel (defaults to 75)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getMinButtonWidth
+		</span>
+				()
+			</div>
+	
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_FormPanel.html#methodgetMinButtonWidth">PhpExt_Form_FormPanel::getMinButtonWidth()</a>
+								: Minimum width of all buttons in pixels (defaults to 75)
+							</li>
+				</ul>
+	</div>
+<a name="methodgetShadow" id="getShadow"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getShadow</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a628">628</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True (or a valid PhpExt_Shadow.Mode value) to display a shadow behind the panel, false to display no shadow (defaults to 'PhpExt_MODE_SIDES'). Note that this option only applies when floating = true.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getShadow
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetShadowOffset" id="getShadowOffset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getShadowOffset</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a646">646</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The number of pixels to offset the shadow if displayed (defaults to 4). Note that this option only applies when floating = true.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">integer</span>
+		<span class="method-name">
+			getShadowOffset
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetShim" id="getShim"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getShim</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a665">665</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">False to disable the iframe shim in browsers which need one (defaults to true). Note that this option only applies when floating = true.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getShim
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTitle" id="getTitle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTitle</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a706">706</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The title text to display in the panel header (defaults to ''). When a title is specified the header element will automatically be created and displayed unless header is explicitly set to false. If you don't want to specify a title at config time, but you may want one later, you must either specify a non-empty title (a blank space ' ' will do) or header:true so that the container element will get created.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">string</span>
+		<span class="method-name">
+			getTitle
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTitleCollapse" id="getTitleCollapse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTitleCollapse</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a724">724</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to allow expanding and collapsing the panel (when collapsible = true) by clicking anywhere in the header bar, false to allow it only by clicking to tool button (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result">boolean</span>
+		<span class="method-name">
+			getTitleCollapse
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTools" id="getTools"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTools</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a756">756</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A <a href="../PhpExt/PhpExt_ToolConfigObjectCollection.html">PhpExt_ToolConfigObjectCollection</a> of tool buttons to be added to the header tool area.</p>
+<p class="description"><p>Note that apart from the toggle tool which is provided when a panel is collapsible, these tools only provide the visual button. Any required functionality must be provided by adding handlers that implement the necessary behavior.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_ToolConfigObjectCollection.html">PhpExt_ToolConfigObjectCollection</a></span>
+		<span class="method-name">
+			getTools
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodgetTopToolbar" id="getTopToolbar"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">getTopToolbar</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a688">688</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The top toolbar of the panel. This is a PhpExt_Toolbar_Toolbar object or any of its descendants.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>
+		<span class="method-name">
+			getTopToolbar
+		</span>
+				()
+			</div>
+	
+		
+			
+	</div>
+<a name="methodsetAnimCollapse" id="setAnimCollapse"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setAnimCollapse</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a42">42</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to animate the transition when the panel is collapsed, false to skip the animation (defaults to true if the Ext.Fx class is available, otherwise false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setAnimCollapse
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetApplyTo" id="setApplyTo"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setApplyTo</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a71">71</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The id of the node, a DOM node or an existing Element corresponding to a DIV that is already present in the document that specifies some panel-specific structural markup. When applyTo is used, constituent parts of the panel can be specified by CSS class name within the main element, and the panel will automatically create those components from that markup. Any required components not specified in the markup will be autogenerated if necessary. The following class names are supported (baseCls will be replaced by BaseCssClass):</p>
+<p class="description"><p><pre> baseCls + '-header'
+ baseCls + '-header-text'
+ baseCls + '-bwrap'
+ baseCls + '-tbar'
+ baseCls + '-body'
+ baseCls + '-bbar'
+ baseCls + '-footer'</pre>  Using this config, a call to render() is not required. If applyTo is specified, any value passed for renderTo will be ignored and the target element's parent node will automatically be used as the panel's container.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setApplyTo
+		</span>
+					(<span class="var-type">string|DOMNode|Element</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string|DOMNode|Element</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			<hr class="separator" />
+		<div class="notes">Redefinition of:</div>
+		<dl>
+			<dt><a href="../PhpExt/PhpExt_Component.html#methodsetApplyTo">PhpExt_Component::setApplyTo()</a></dt>
+						<dd>The id of the node, a DOM node or an existing Element corresponding to a DIV that is already present in the document that specifies some structural markup for this component. When applyTo is used, constituent parts of the component can also be specified by id or CSS class name within the main element, and the component being created may attempt to create its subcomponents from that markup if applicable. Using this config, a call to render() is not required. If applyTo is specified, any value passed for renderTo will be ignored and the target element's parent node will automatically be used as the component's container.</dd>
+					</dl>
+			
+	</div>
+<a name="methodsetAutoLoad" id="setAutoLoad"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setAutoLoad</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a100">100</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setAutoLoad
+		</span>
+					(<span class="var-type">$value</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">$value</span>
+				<span class="var-name">$value</span><span class="var-description">: PhpExt_AutoLoadConfigObject</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetAutoScroll" id="setAutoScroll"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setAutoScroll</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a118">118</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to use overflow:'auto' on the panel's body element and show scroll bars automatically when necessary, false to clip any overflowing content (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setAutoScroll
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBaseCssClass" id="setBaseCssClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setBaseCssClass</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a136">136</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The base CSS class to apply to this panel's element (defaults to 'x-panel').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setBaseCssClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_FieldSet.html#methodsetBaseCssClass">PhpExt_Form_FieldSet::setBaseCssClass()</a>
+								: The base CSS class applied to the fieldset (defaults to 'x-fieldset').
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_TabPanel.html#methodsetBaseCssClass">PhpExt_TabPanel::setBaseCssClass()</a>
+								: The base CSS class applied to the panel (defaults to 'x-tab-panel').
+							</li>
+					<li>
+				<a href="../PhpExt/PhpExt_Window.html#methodsetBaseCssClass">PhpExt_Window::setBaseCssClass()</a>
+								: The base CSS class to apply to this panel's element (defaults to 'x-window').
+							</li>
+				</ul>
+	</div>
+<a name="methodsetBodyBorder" id="setBodyBorder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setBodyBorder</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a178">178</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to display an interior border on the body element of the panel, false to hide it (defaults to true). This only applies when border == true. If border == true and bodyBorder == false, the border will display as a 1px wide inset border, giving the entire body element an inset appearance.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setBodyBorder
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBodyStyle" id="setBodyStyle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setBodyStyle</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a196">196</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Custom CSS styles to be applied to the body element in the format expected by Ext.Element.applyStyles (defaults to null).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setBodyStyle
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBorder" id="setBorder"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setBorder</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a215">215</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to display the borders of the panel's body element, false to hide them (defaults to true). By default, the border is a 2px wide inset border, but this can be further altered by setting bodyBorder to false.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setBorder
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetBottomToolbar" id="setBottomToolbar"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setBottomToolbar</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a159">159</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The bottom toolbar of the panel. This is a PhpExt_Toolbar_Toolbar object or any of its descendants. To access the bottom toolbar after javascript render, use getBottomToolbar.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setBottomToolbar
+		</span>
+					(<span class="var-type"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetButtonAlign" id="setButtonAlign"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setButtonAlign</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a241">241</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The alignment of any buttons added to this panel. Valid values are:</p>
+<p class="description"><p><ul><li>PhpExt_Ext::EXT_HALIGN_LEFT</li><li>PhpExt_Ext::EXT_HALIGN_RIGHT</li><li>PhpExt_Ext::EXT_HALIGN_CENTER</li></ul> Defaults to PhpExt_Ext::EXT_HALIGN_RIGHT</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+				<li><span class="field">uses:</span> PhpExt_Ext::EXT_HALIGN_RIGHT</li>
+				<li><span class="field">uses:</span> PhpExt_Ext::EXT_HALIGN_LEFT</li>
+				<li><span class="field">uses:</span> PhpExt_Ext::EXT_HALIGN_CENTER</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setButtonAlign
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_FormPanel.html#methodsetButtonAlign">PhpExt_Form_FormPanel::setButtonAlign()</a>
+								: The alignment of any buttons added to this panel. Valid values are:
+							</li>
+				</ul>
+	</div>
+<a name="methodsetCollapsed" id="setCollapsed"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setCollapsed</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a292">292</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to render the panel collapsed, false to render it expanded (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setCollapsed
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCollapsedCssClass" id="setCollapsedCssClass"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setCollapsedCssClass</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a310">310</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A CSS class to add to the panel's element after it has been collapsed (defaults to 'x-panel-collapsed').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setCollapsedCssClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCollapseFirst" id="setCollapseFirst"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setCollapseFirst</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a274">274</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to make sure the collapse/expand toggle button always renders first (to the left of) any other tools in the panel's title bar, false to render it last (defaults to true).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setCollapseFirst
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetCollapsible" id="setCollapsible"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setCollapsible</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a328">328</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to make the panel collapsible and have the expand/collapse toggle button automatically rendered into the header tool button area, false to keep the panel statically sized with no button (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setCollapsible
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetContentElement" id="setContentElement"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setContentElement</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a346">346</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The id of an existing HTML node to use as the panel's body content (defaults to '').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setContentElement
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetDraggable" id="setDraggable"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setDraggable</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a364">364</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to enable dragging of this Panel (defaults to false). For custom drag/drop implementations, an Ext.Panel.DD config could also be passed in this config instead of true, although Ext.Panel.DD is an internal, undocumented class.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setDraggable
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/PhpExt_Window.html#methodsetDraggable">PhpExt_Window::setDraggable()</a>
+								: True to allow the window to be dragged by the header bar, false to disable dragging (defaults to true). Note that by default the window will be centered in the viewport, so if dragging is disabled the window may need to be positioned programmatically after render (e.g., myWindow.setPosition(100, 100);).
+							</li>
+				</ul>
+	</div>
+<a name="methodsetElements" id="setElements"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setElements</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a391">391</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A comma-delimited list of panel elements to initialize when the panel is rendered. Normally, this list will be generated automatically based on the items added to the panel at config time, but sometimes it might be useful to make sure a structural element is rendered even if not specified at config time (for example, you may want to add a button or toolbar dynamically after the panel has been rendered). Adding those elements to this list will allocate the required placeholders in the panel when it is rendered. Valid values are</p>
+<p class="description"><p>header  tbar (top bar)  body  bbar (bottom bar)  footer</p><p>Defaults to 'body'.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setElements
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFloating" id="setFloating"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setFloating</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a418">418</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to float the panel (absolute position it with automatic shimming and shadow), false to display it inline where it is rendered (defaults to false). Note that by default, setting floating to true will cause the panel to display at negative offsets so that it is hidden -- because the panel is absolute positioned, the position must be set explicitly after render (e.g., myPanel.setPosition(100,100);). Also, when floating a panel you should always assign a fixed width, otherwise it will be auto width and will expand to fill to the right edge of the viewport.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setFloating
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFooter" id="setFooter"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setFooter</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a436">436</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to create the footer element explicitly, false to skip creating it. By default, when footer is not specified, if one or more buttons have been added to the panel the footer will be created automatically, otherwise it will not.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setFooter
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetFrame" id="setFrame"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setFrame</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a454">454</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to render the panel with custom rounded borders, false to render with plain 1px square borders (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setFrame
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetHeader" id="setHeader"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setHeader</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a472">472</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to create the header element explicitly, false to skip creating it. By default, when header is not specified, if a title is set the header will be created automatically, otherwise it will not. If a title is set but header is explicitly set to false, the header will not be rendered.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setHeader
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetHeaderAsText" id="setHeaderAsText"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setHeaderAsText</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a490">490</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to display the panel title in the header, false to hide it (defaults to true).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setHeaderAsText
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetHideCollapseTool" id="setHideCollapseTool"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setHideCollapseTool</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a508">508</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to hide the expand/collapse toggle button when collapsible = true, false to display it (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setHideCollapseTool
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetHtml" id="setHtml"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setHtml</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a526">526</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">An HTML fragment, or a DomHelper specification to use as the panel's body content (defaults to '').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setHtml
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetIconCssClass" id="setIconCssClass"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setIconCssClass</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a544">544</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A CSS class that will provide a background image to be used as the panel header icon (defaults to '').</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setIconCssClass
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetKeys" id="setKeys"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setKeys</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a562">562</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">A KeyMap config object (in the format expected by Ext.KeyMap.addBinding used to assign custom key handling to this panel (defaults to null).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setKeys
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetLoadMask" id="setLoadMask"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setLoadMask</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a734">734</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The id of the DOM Element which servers as loading mask to show loading messages</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setLoadMask
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/Grid/PhpExt_Grid_GridPanel.html#methodsetLoadMask">PhpExt_Grid_GridPanel::setLoadMask()</a>
+								: An PhpExt_LoadMask object or true to mask the grid while loading (defaults to false).
+							</li>
+				</ul>
+	</div>
+<a name="methodsetMaskDisabled" id="setMaskDisabled"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setMaskDisabled</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a582">582</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to mask the panel when it is disabled, false to not mask it (defaults to true).</p>
+<p class="description"><p>Either way, the panel will always tell its contained elements to disable themselves when it is disabled,  but masking the panel can provide an additional visual cue that the panel is disabled.</p></p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setMaskDisabled
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetMinButtonWidth" id="setMinButtonWidth"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setMinButtonWidth</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a602">602</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">Minimum width in pixels of all buttons in this panel (defaults to 75)</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setMinButtonWidth
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+			<hr class="separator" />
+		<div class="notes">Redefined in descendants as:</div>
+		<ul class="redefinitions">
+					<li>
+				<a href="../PhpExt/Form/PhpExt_Form_FormPanel.html#methodsetMinButtonWidth">PhpExt_Form_FormPanel::setMinButtonWidth()</a>
+								: Minimum width of all buttons in pixels (defaults to 75)
+							</li>
+				</ul>
+	</div>
+<a name="methodsetShadow" id="setShadow"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setShadow</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a620">620</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True (or a valid PhpExt_Shadow.Mode value) to display a shadow behind the panel, false to display no shadow (defaults to 'PhpExt_MODE_SIDES'). Note that this option only applies when floating = true.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setShadow
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetShadowOffset" id="setShadowOffset"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setShadowOffset</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a638">638</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The number of pixels to offset the shadow if displayed (defaults to 4). Note that this option only applies when floating = true.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setShadowOffset
+		</span>
+					(<span class="var-type">integer</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">integer</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetShim" id="setShim"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setShim</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a657">657</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">False to disable the iframe shim in browsers which need one (defaults to true). Note that this option only applies when floating = true.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setShim
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTitle" id="setTitle"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setTitle</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a698">698</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The title text to display in the panel header (defaults to ''). When a title is specified the header element will automatically be created and displayed unless header is explicitly set to false. If you don't want to specify a title at config time, but you may want one later, you must either specify a non-empty title (a blank space ' ' will do) or header:true so that the container element will get created.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setTitle
+		</span>
+					(<span class="var-type">string</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">string</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTitleCollapse" id="setTitleCollapse"><!-- --></a>
+<div class="oddrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setTitleCollapse</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a716">716</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">True to allow expanding and collapsing the panel (when collapsible = true) by clicking anywhere in the header bar, false to allow it only by clicking to tool button (defaults to false).</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setTitleCollapse
+		</span>
+					(<span class="var-type">boolean</span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type">boolean</span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+<a name="methodsetTopToolbar" id="setTopToolbar"><!-- --></a>
+<div class="evenrow">
+	
+	<div class="method-header">
+		<img src="../media/images/Method.png" />
+		<span class="method-title">setTopToolbar</span> (line <span class="line-number"><a href="../__filesource/fsource_PhpExt__PhpExtPanel.php.html#a680">680</a></span>)
+	</div> 
+	
+	<!-- ========== Info from phpDoc block ========= -->
+<p class="short-description">The top toolbar of the panel. This is a PhpExt_Toolbar_Toolbar object or any of its descendants.</p>
+	<ul class="tags">
+				<li><span class="field">access:</span> public</li>
+			</ul>
+	
+	<div class="method-signature">
+		<span class="method-result"><a href="../PhpExt/PhpExt_Panel.html">PhpExt_Panel</a></span>
+		<span class="method-name">
+			setTopToolbar
+		</span>
+					(<span class="var-type"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>&nbsp;<span class="var-name">$value</span>)
+			</div>
+	
+			<ul class="parameters">
+					<li>
+				<span class="var-type"><a href="../PhpExt/Toolbar/PhpExt_Toolbar_Toolbar.html">PhpExt_Toolbar_Toolbar</a></span>
+				<span class="var-name">$value</span>			</li>
+				</ul>
+		
+			
+	</div>
+							<h4>Inherited Methods</h4>
+				<a name='inherited_methods'><!-- --></a>	
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../PhpExt/PhpExt_Container.html">PhpExt_Container</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#method__construct">PhpExt_Container::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodaddItem">PhpExt_Container::addItem()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodgetActiveItem">PhpExt_Container::getActiveItem()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodgetAutoDestroy">PhpExt_Container::getAutoDestroy()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodgetBufferResize">PhpExt_Container::getBufferResize()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodgetConfigParams">PhpExt_Container::getConfigParams()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodgetDefaults">PhpExt_Container::getDefaults()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodgetDefaultType">PhpExt_Container::getDefaultType()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodgetHideBorders">PhpExt_Container::getHideBorders()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodgetItems">PhpExt_Container::getItems()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodgetLayout">PhpExt_Container::getLayout()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodgetMonitorResize">PhpExt_Container::getMonitorResize()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodsetActiveItem">PhpExt_Container::setActiveItem()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodsetAutoDestroy">PhpExt_Container::setAutoDestroy()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodsetBufferResize">PhpExt_Container::setBufferResize()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodsetDefaults">PhpExt_Container::setDefaults()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodsetDefaultType">PhpExt_Container::setDefaultType()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodsetHideBorders">PhpExt_Container::setHideBorders()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodsetLayout">PhpExt_Container::setLayout()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Container.html#methodsetMonitorResize">PhpExt_Container::setMonitorResize()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../PhpExt/PhpExt_BoxComponent.html">PhpExt_BoxComponent</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_BoxComponent.html#method__construct">PhpExt_BoxComponent::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_BoxComponent.html#methodgetAutoHeight">PhpExt_BoxComponent::getAutoHeight()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_BoxComponent.html#methodgetAutoWidth">PhpExt_BoxComponent::getAutoWidth()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_BoxComponent.html#methodgetHeight">PhpExt_BoxComponent::getHeight()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_BoxComponent.html#methodgetWidth">PhpExt_BoxComponent::getWidth()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_BoxComponent.html#methodsetAutoHeight">PhpExt_BoxComponent::setAutoHeight()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_BoxComponent.html#methodsetAutoWidth">PhpExt_BoxComponent::setAutoWidth()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_BoxComponent.html#methodsetHeight">PhpExt_BoxComponent::setHeight()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_BoxComponent.html#methodsetWidth">PhpExt_BoxComponent::setWidth()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../PhpExt/PhpExt_Component.html">PhpExt_Component</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#method__construct">PhpExt_Component::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetAllowDomMove">PhpExt_Component::getAllowDomMove()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetApplyTo">PhpExt_Component::getApplyTo()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetAutoShow">PhpExt_Component::getAutoShow()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetConfigParams">PhpExt_Component::getConfigParams()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetContainerCssClass">PhpExt_Component::getContainerCssClass()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetCssClass">PhpExt_Component::getCssClass()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetCssStyle">PhpExt_Component::getCssStyle()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetDisabledCssClass">PhpExt_Component::getDisabledCssClass()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetHideMode">PhpExt_Component::getHideMode()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetHideParent">PhpExt_Component::getHideParent()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetId">PhpExt_Component::getId()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetLayoutData">PhpExt_Component::getLayoutData()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetOwnerCollection">PhpExt_Component::getOwnerCollection()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetPlugins">PhpExt_Component::getPlugins()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodgetRenderTo">PhpExt_Component::getRenderTo()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodrender">PhpExt_Component::render()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetAllowDomMove">PhpExt_Component::setAllowDomMove()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetApplyTo">PhpExt_Component::setApplyTo()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetAutoShow">PhpExt_Component::setAutoShow()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetContainerCssClass">PhpExt_Component::setContainerCssClass()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetCssClass">PhpExt_Component::setCssClass()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetCssStyle">PhpExt_Component::setCssStyle()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetDisabledCssClass">PhpExt_Component::setDisabledCssClass()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetExtClassInfo">PhpExt_Component::setExtClassInfo()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetHideMode">PhpExt_Component::setHideMode()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetHideParent">PhpExt_Component::setHideParent()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetId">PhpExt_Component::setId()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetLayoutData">PhpExt_Component::setLayoutData()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetOwnerCollection">PhpExt_Component::setOwnerCollection()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Component.html#methodsetRenderTo">PhpExt_Component::setRenderTo()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../PhpExt/PhpExt_Observable.html">PhpExt_Observable</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Observable.html#method__construct">PhpExt_Observable::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Observable.html#methodattachListener">PhpExt_Observable::attachListener()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Observable.html#methodgetConfigParams">PhpExt_Observable::getConfigParams()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Observable.html#methodgetListeners">PhpExt_Observable::getListeners()</a></span><br>
+											</blockquote>
+									<!-- =========== Summary =========== -->
+					<p>Inherited From <span class="classname"><a href="../PhpExt/PhpExt_Object.html">PhpExt_Object</a></span></p>
+					<blockquote>
+													<img src="../media/images/Constructor.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#method__construct">PhpExt_Object::__construct()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodaddValidConfigProperties">PhpExt_Object::addValidConfigProperties()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodcreateMethodSignature">PhpExt_Object::createMethodSignature()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetConfigParams">PhpExt_Object::getConfigParams()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetExtConfigProperty">PhpExt_Object::getExtConfigProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetJavascript">PhpExt_Object::getJavascript()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodgetMethodInvokeStm">PhpExt_Object::getMethodInvokeStm()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodisExtObject">PhpExt_Object::isExtObject()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodparamToString">PhpExt_Object::paramToString()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodsetExtClassInfo">PhpExt_Object::setExtClassInfo()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#methodsetExtConfigProperty">PhpExt_Object::setExtConfigProperty()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#method__get">PhpExt_Object::__get()</a></span><br>
+													<img src="../media/images/Method.png" alt=" "/>
+							<span class="method-name"><a href="../PhpExt/PhpExt_Object.html#method__set">PhpExt_Object::__set()</a></span><br>
+											</blockquote>
+										
+		</div>
+	</div>
+
+	<a name="sec-consts"></a>
+	<div class="info-box">
+		<div class="info-box-title">Class Constants</div>
+		<div class="nav-bar">
+			<a href="#sec-description">Description</a> |
+							<a href="#sec-descendents">Descendants</a> |
+										<a href="#sec-var-summary">Constants</a> (<span class="disabled">details</span>)
+						
+			
+												<a href="#sec-var-summary">Vars</a> (<a href="#sec-vars">details</a>)
+														| 
+									<a href="#sec-method-summary">Methods</a> (<a href="#sec-methods">details</a>)
+							
+					</div>
+		<div class="info-box-body">
+										<h4>Inherited Constants</h4>
+				<A NAME='inherited_vars'><!-- --></A>
+									<p>Inherited from <span class="classname"><a href="../PhpExt/PhpExt_Component.html">PhpExt_Component</a></span></p>
+					<blockquote>
+													<img src="../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../PhpExt/PhpExt_Component.html#constHIDE_MODE_DISPLAY">PhpExt_Component::HIDE_MODE_DISPLAY</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../PhpExt/PhpExt_Component.html#constHIDE_MODE_OFFSETS">PhpExt_Component::HIDE_MODE_OFFSETS</a></span><br>
+							</span>
+													<img src="../media/images/Variable.png" />
+							<span class="const-title">
+								<span class="const-name"><a href="../PhpExt/PhpExt_Component.html#constHIDE_MODE_VISIBILITY">PhpExt_Component::HIDE_MODE_VISIBILITY</a></span><br>
+							</span>
+											</blockquote> 
+										
+		</div>
+	</div>
+	
+	<p class="notes" id="credit">
+		Documentation generated on Sun, 13 Apr 2008 23:05:21 -0500 by <a href="http://www.phpdoc.org" target="_blank">phpDocumentor 1.4.0</a>
+	</p>
+	</div></body>
+</html>

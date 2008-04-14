@@ -1,11 +1,4 @@
 <?php
-header("Content-type:text/javascript");
-include_once("../php-ext/php-ext.php");
-
-include_once(NS_PHP_EXTJS_CORE);
-include_once(NS_PHP_EXTJS_FORM);
-
-
 if(isset($_GET['file'])) {
 	$file = $_GET['file'];
 	$full_file = $file;
@@ -27,7 +20,7 @@ if(isset($_GET['file'])) {
 		
 		
 		echo "
-<textarea $readonly id=\"phpsrc\" class=\"codepress php linenumbers-off readonly-on\" style=\"width:485px;height:460px;\" wrap=\"off\">
+<textarea $readonly id=\"phpsrc\" class=\"codepress php linenumbers-off readonly-on\" style=\"width:481px;height:436px;\" wrap=\"off\">
 ".$code."
 </textarea>
 $script

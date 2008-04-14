@@ -1,18 +1,19 @@
 <?php
-header("Content-type:text/javascript");
-include_once("../../php-ext/php-ext.php");
+set_include_path(get_include_path().';'.realpath('../../library'));
+include_once 'PhpExt/Javascript.php';
+PhpExt_Javascript::sendContentType();
 
-include_once(NS_PHP_EXTJS_CORE);
-include_once(NS_PHP_EXTJS_PANELS);
+include_once 'PhpExt/Ext.php';
+include_once 'PhpExt/Panel.php';
 
-$p = new ExtPanel();
-$p->Title = "My Panel";
-$p->Collapsible = true;
-$p->RenderTo = Javascript::variable("Ext.get('content-box')");
-$p->Width = 400;
-$p->Html = Javascript::variable("Ext.example.bogusMarkup");  
+$p = new PhpExt_Panel();
+$p->setTitle("My Panel")
+  ->setCollapsible(true)
+  ->setRenderTo(PhpExt_Javascript::variable("Ext.get('centercolumn')"))
+  ->setWidth(400)
+  ->setHtml(PhpExt_Javascript::variable("Ext.example.bogusMarkup"));  
     
-echo Ext::OnReady(
+echo PhpExt_Ext::OnReady(
 	$p->getJavascript(false, "p")
 );
 ?>
