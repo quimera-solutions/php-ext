@@ -679,6 +679,7 @@ class PhpExt_Panel extends PhpExt_Container
      */
     public function setTopToolbar(PhpExt_Toolbar_Toolbar $value) {
 		$this->_topToolbar = $value;
+		$this->_extConfigProperties['tbar'] = $this->_topToolbar;
 		return $this;
 	}	
 	/**
