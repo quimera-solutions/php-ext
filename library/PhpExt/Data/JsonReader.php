@@ -14,7 +14,7 @@
 /**
  * @see PhpExt_Data_DataReader
  */
-include_once 'PhpExt/Data/datareader.php';
+include_once 'PhpExt/Data/DataReader.php';
 
 /**
  * Data reader class to create an Array of Ext.data.Record objects from a JSON response based on mappings in a provided Ext.data.Record constructor.
