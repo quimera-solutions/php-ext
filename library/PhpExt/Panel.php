@@ -827,7 +827,7 @@ class PhpExt_Panel extends PhpExt_Container
     protected function getConfigParams($lazy = false) {        
 		if ($this->_bottomToolbar->getItems()->getCount() == 0 && !$this->_bottomToolbar->getMustRender())
 		    $this->setExtConfigProperty("bbar", null);
-		if ($this->_topToolbar->getItems()->getCount() == 0 && !$this->_bottomToolbar->getMustRender())
+		if ($this->_topToolbar->getItems()->getCount() == 0 && !$this->_topToolbar->getMustRender())
 		    $this->setExtConfigProperty("tbar", null);
 		if ($this->_tools->getCount() == 0)
 		    $this->setExtConfigProperty("tools", null);
