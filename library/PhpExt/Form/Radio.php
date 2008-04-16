@@ -24,8 +24,8 @@ include_once 'PhpExt/Form/Checkbox.php';
 class PhpExt_Form_Radio extends PhpExt_Form_Checkbox 
 {	
 	
-	public function __construct($id, $name, $label = null) {
-		parent::__construct($id, $name, $label);
+	public function __construct() {
+		parent::__construct();
 		$this->setExtClassInfo("Ext.form.Radio","radio");
 	}	 
 
