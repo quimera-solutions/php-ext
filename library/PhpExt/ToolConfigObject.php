@@ -111,7 +111,7 @@ class PhpExt_ToolConfigObject extends PhpExt_Config_ConfigObject
      *      <dd>The host Panel</dd>
 	 * </dl>
      * 
-     * @param PhpExt_JavascriptStm $value 
+     * @param PhpExt_Handler $value 
      * @return PhpExt_ToolConfigObject
      */
     public function setHandler($value) {
@@ -129,7 +129,7 @@ class PhpExt_ToolConfigObject extends PhpExt_Config_ConfigObject
      *      <dd>The host Panel</dd>
 	 * </dl>
      * 
-     * @return PhpExt_JavascriptStm
+     * @return PhpExt_Handler
      */
     public function getHandler() {
     	return $this->getExtConfigProperty("handler");
@@ -210,7 +210,7 @@ class PhpExt_ToolConfigObject extends PhpExt_Config_ConfigObject
     
 	/**
 	 * @param string $id The type of tool to create. For a list of possible values see {@link PhpExt_Tool::setId()}.
-	 * @param PhpExt_JavascriptStm $handler The Javacript function to call when clicked, can be created with {@link PhpExt_Javascript::functionDef()} 
+	 * @param array $handler The function to call when clicked. 
 	 * @param boolean $scope The scope in which to call the handler.
 	 * @param string $qtip A tip string, or a config argument to Ext.QuickTip.register
 	 * @param string $hidden True to initially render hidden. 

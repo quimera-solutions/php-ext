@@ -679,7 +679,6 @@ class PhpExt_Panel extends PhpExt_Container
      */
     public function setTopToolbar(PhpExt_Toolbar_Toolbar $value) {
 		$this->_topToolbar = $value;
-		$this->_extConfigProperties['tbar'] = $this->_topToolbar;
 		return $this;
 	}	
 	/**
@@ -760,7 +759,7 @@ class PhpExt_Panel extends PhpExt_Container
     
     /**
      * A {@link PhpExt_ToolConfigObject} to add to the tools collection
-     * @param PhpExt_ToolConfigObject $tool
+     * @param PhpExt_ToolConfigObjectCollection $tool
      * @param string $name Optional key to locate the tool on the collection
      * @return PhpExt_Panel
      */
@@ -821,14 +820,13 @@ class PhpExt_Panel extends PhpExt_Container
 		$this->_topToolbar = new PhpExt_Toolbar_Toolbar();
 		$this->_extConfigProperties['tbar'] = $this->_topToolbar;
 		$this->_tools = new PhpExt_ToolConfigObjectCollection();
-		$this->_tools->setForceArray(true);
 		$this->_extConfigProperties['tools'] = $this->_tools;
 	}
 
     protected function getConfigParams($lazy = false) {        
 		if ($this->_bottomToolbar->getItems()->getCount() == 0 && !$this->_bottomToolbar->getMustRender())
 		    $this->setExtConfigProperty("bbar", null);
-		if ($this->_topToolbar->getItems()->getCount() == 0 && !$this->_topToolbar->getMustRender())
+		if ($this->_topToolbar->getItems()->getCount() == 0 && !$this->_bottomToolbar->getMustRender())
 		    $this->setExtConfigProperty("tbar", null);
 		if ($this->_tools->getCount() == 0)
 		    $this->setExtConfigProperty("tools", null);
