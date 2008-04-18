@@ -1,5 +1,5 @@
 <?php
-set_include_path(get_include_path().';'.realpath('../../library'));
+set_include_path(get_include_path().PATH_SEPARATOR.realpath('../../library'));
 include_once 'PhpExt/Javascript.php';
 PhpExt_Javascript::sendContentType();
 

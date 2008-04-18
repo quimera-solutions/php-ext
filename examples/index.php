@@ -7,7 +7,7 @@ $baseUrl = str_replace($docRoot,$httpHost,$dir);
 $extjsCheck = realpath(dirname(__FILE__)."/../resources/ext-2.0.2/ext-core.js");
 
 if ($extjsCheck !== false) {
-	set_include_path(get_include_path().";".realpath("../library"));
+	set_include_path(get_include_path().PATH_SEPARATOR.realpath("../library"));
 	include_once 'PhpExt/Ext.php';
 	include_once 'PhpExt/Window.php';	
 	include_once 'PhpExt/AutoLoadConfigObject.php';
