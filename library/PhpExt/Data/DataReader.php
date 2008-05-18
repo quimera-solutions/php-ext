@@ -46,6 +46,26 @@ abstract class PhpExt_Data_DataReader extends PhpExt_Object
 		return $this->_fields;
 	}
 	
+	// RecordType
+    protected $_recordType = null;
+	/**
+	 * The Record type class for the reader.  It will override the specified fields if available.
+	 * @param string $value 
+	 * @return PhpExt_Data_DataReader
+	 */
+	public function setRecordType($value) {
+	    $this->_recordType = $value;
+	    return $this;
+	}	
+	/**
+	 * The Record type class for the reader.  It will override the specified fields if available.
+	 * @return string
+	*/
+	public function getRecordType() {
+	    return $this->_recordType = $value;
+	}
+	
+	
 	public function __construct() {
 		parent::__construct();
 		$this->setExtClassInfo("Ext.data.DataReader", null);
@@ -73,8 +93,11 @@ abstract class PhpExt_Data_DataReader extends PhpExt_Object
 		if ($this->_varName == null) {
 			$configParams = $this->getConfigParams($lazy);
 			$configObj = "{".implode(",",$configParams)."}";
-								
-			$recordType = $this->_fields->getJavascript(); 			
+
+			if ($this->_recordType !== null)
+			    $recordType = $this->_recordType;
+			else
+			    $recordType = $this->_fields->getJavascript(); 			
 					
 			$className = $this->_extClassName;
 	
