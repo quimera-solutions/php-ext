@@ -22,10 +22,15 @@ include_once 'PhpExt/BoxComponent.php';
 include_once 'PhpExt/Form/FormPanel.php';
 
 /**
+ * @see PhpExt_Toolbar_IToolbarItem
+ */
+include_once 'PhpExt/Toolbar/IToolbarItem.php';
+
+/**
  * @package PhpExt
  * @subpackage Form
  */
-class PhpExt_Form_Field extends PhpExt_BoxComponent 
+class PhpExt_Form_Field extends PhpExt_BoxComponent implements PhpExt_Toolbar_IToolbarItem 
 {
     // AutoCreate
     /**
