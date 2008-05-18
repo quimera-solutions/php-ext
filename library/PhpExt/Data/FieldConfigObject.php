@@ -27,7 +27,7 @@ class PhpExt_Data_FieldConfigObject extends PhpExt_Config_ConfigObject
     const TYPE_STRING  = 'string';
     const TYPE_INT = 'int';
     const TYPE_FLOAT = 'float';
-    const TYPE_BOOLEAN = 'boolean';
+    const TYPE_BOOLEAN = 'bool';
     const TYPE_DATE = 'date';
     
     const SORT_DIR_ASC = 'ASC';
