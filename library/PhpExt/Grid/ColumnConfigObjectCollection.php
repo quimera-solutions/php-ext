@@ -11,9 +11,9 @@
  * 
  */
 /**
- * @see PhpExt_ObjectCollection
+ * @see PhpExt_AbstractCollection
  */
-include_once 'PhpExt/ObjectCollection.php';
+include_once 'PhpExt/AbstractCollection.php';
 /**
  * @see PhpExt_Grid_ColumnConfigObject
  */
@@ -26,7 +26,7 @@ include_once 'PhpExt/Grid/ColumnConfigObject.php';
  * @package PhpExt
  * @subpackage Grid
  */
-class PhpExt_Grid_ColumnConfigObjectCollection extends PhpExt_ObjectCollection 
+class PhpExt_Grid_ColumnConfigObjectCollection extends PhpExt_AbstractCollection 
 {
 	
 	public function __construct($collection = array()) {

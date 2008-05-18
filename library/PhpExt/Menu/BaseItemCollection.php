@@ -11,9 +11,9 @@
  * 
  */
 /**
- * @see PhpExt_ObjectCollection
+ * @see PhpExt_AbstractCollection
  */
-include_once 'PhpExt/ObjectCollection.php';
+include_once 'PhpExt/AbstractCollection.php';
 /**
  * @see PhpExt_Menu_BaseItem
  */
@@ -26,7 +26,7 @@ include_once 'PhpExt/Menu/BaseItem.php';
  * @package PhpExt
  * @subpackage Menu
  */
-class PhpExt_Menu_BaseItemCollection extends PhpExt_ObjectCollection 
+class PhpExt_Menu_BaseItemCollection extends PhpExt_AbstractCollection 
 {
 	
 	public function __construct($collection = array()) {

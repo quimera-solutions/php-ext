@@ -18,94 +18,51 @@ include_once 'PhpExt/Object.php';
  * @see PhpExt_Javascript
  */
 include_once 'PhpExt/Javascript.php';
+/**
+ * @see PhpExt_AbstractCollection
+ */
+include_once 'PhpExt/AbstractCollection.php';
 
 /**
  * @package PhpExt
  */
-class PhpExt_ObjectCollection   
+class PhpExt_ObjectCollection extends PhpExt_AbstractCollection   
 {
+    public function __construct($collection = array()) {
+		parent::__construct($collection);				
+	}
+    
 	/**
-	 * Collection Container
+	 * Adds a PhpExt_Object to the Collection
 	 *
-	 * @var array	 
+	 * @param PhpExt_Object $object
+	 * @param string $name
+	 * @return int the index of the new element
 	 */
-	protected $Collection = array();
-	
-	/**
-	 * True to force the collection to render as array when now elements present.
-	 *
-	 * @var boolean
-	 */
-	protected $_forceArray = false;
-	
-	/**
-	 * True to force the collection to render as array when now elements present.
-	 *
-	 * @param boolean $value
-	 */
-	public function setForceArray($value) {
-	    $this->_forceArray = $value;
+	public function add($object, $name = null) {
+		return $this->addObject($object, $name);
 	}
 	
 	/**
-	 * True to force the collection to render as array when now elements present.
+	 * Gets the Object with the key specified by $name
 	 *
-	 * @return boolean
+	 * @param string $name
+	 * @return PhpExt_Object
 	 */
-	public function getForceArray() {
-	    return $this->_forceArray;
+	public function getByName($name) {
+		return $this->getObjectByName($name);
 	}
 	
-	
-	public function __construct($collection = array()) {
-		$this->Collection = $collection;	
+	/**
+	 * Gets the Object in the specified index
+	 *
+	 * @param int $index
+	 * @return PhpExt_Object
+	 */
+	public function &getByIndex($index) {
+		return $this->getObjectByIndex($index);
 	}
-	
-	protected function addObject($object, $name = null) {
-		if ($name !== null)
-			$this->Collection[$name] =& $object;
-		else
-			$this->Collection[] =& $object;
-		return count($this->Collection);
-	}
-	
-	public function removeObject($name) {
-	    unset($this->Collection[$name]);
-	}
-	
-	protected function getObjectByName($name) {
-		if (array_key_exists($name, $this->Collection))
-			return $this->Collection[$name];
-		return null;  
-	}
-	
-	protected function getObjectByIndex($index) {
-		if ($index < count($this->Collection) )
-			return $this->Collection[$index];
-		return null;  
-	}
-	
-	public function getCount() {
-		return count($this->Collection);
-	}
-	
-	public function getJavascript() {
-		$resolvedObjs = array();
-		foreach($this->Collection as &$obj) {			
-			$resolvedObjs[] = PhpExt_Javascript::valueToJavascript($obj, true);
-		}
-		if (count($resolvedObjs) == 1 && !$this->_forceArray)
-			return $resolvedObjs[0];
-		else
-			return "[".implode(",",$resolvedObjs)."]";
-	}
-	
-	static public function isExtObjectCollection($value) {
-		if (is_object($value)) {
-			return ($value instanceof PhpExt_ObjectCollection);
-		}
-		return false;
-	}
+			
 }
 
 

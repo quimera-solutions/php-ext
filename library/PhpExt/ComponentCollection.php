@@ -11,9 +11,9 @@
  * 
  */
 /**
- * @see PhpExt_ObjectCollection
+ * @see PhpExt_AbstractCollection
  */
-include_once 'PhpExt/ObjectCollection.php';
+include_once 'PhpExt/AbstractCollection.php';
 /**
  * @see PhpExt_Component
  */
@@ -25,7 +25,7 @@ include_once 'PhpExt/Component.php';
  * 
  * @package PhpExt
  */
-class PhpExt_ComponentCollection extends PhpExt_ObjectCollection 
+class PhpExt_ComponentCollection extends PhpExt_AbstractCollection 
 {
     protected $_owner;
 	

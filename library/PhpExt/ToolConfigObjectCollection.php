@@ -11,9 +11,9 @@
  * 
  */
 /**
- * @see PhpExt_ObjectCollection
+ * @see PhpExt_AbstractCollection
  */
-include_once 'PhpExt/ObjectCollection.php';
+include_once 'PhpExt/AbstractCollection.php';
 /**
  * @see PhpExt_ToolConfigObject
  */
@@ -25,7 +25,7 @@ include_once 'PhpExt/ToolConfigObject.php';
  * 
  * @package PhpExt
  */
-class PhpExt_ToolConfigObjectCollection extends PhpExt_ObjectCollection 
+class PhpExt_ToolConfigObjectCollection extends PhpExt_AbstractCollection 
 {
 	
 	public function __construct($collection = array()) {

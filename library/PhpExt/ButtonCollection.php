@@ -11,9 +11,9 @@
  * 
  */
 /**
- * @see PhpExt_ObjectCollection
+ * @see PhpExt_AbstractCollection
  */
-include_once 'PhpExt/ObjectCollection.php';
+include_once 'PhpExt/AbstractCollection.php';
 
 
 /**
@@ -21,11 +21,12 @@ include_once 'PhpExt/ObjectCollection.php';
  * 
  * @package PhpExt
  */
-class PhpExt_ButtonCollection extends PhpExt_ObjectCollection 
+class PhpExt_ButtonCollection extends PhpExt_AbstractCollection 
 {
 	
 	public function __construct($collection = array()) {
-		parent::__construct($collection);			
+		parent::__construct($collection);		
+		$this->setForceArray(true);	
 	}
 	
     /**

@@ -11,9 +11,9 @@
  * 
  */
 /**
- * @see PhpExt_ObjectCollection
+ * @see PhpExt_AbstractCollection
  */
-include_once 'PhpExt/ObjectCollection.php';
+include_once 'PhpExt/AbstractCollection.php';
 
 
 /**
@@ -22,7 +22,7 @@ include_once 'PhpExt/ObjectCollection.php';
  * @package PhpExt
  * @subpackage Toolbar
  */
-class PhpExt_Toolbar_IToolbarItemCollection extends PhpExt_ObjectCollection 
+class PhpExt_Toolbar_IToolbarItemCollection extends PhpExt_AbstractCollection 
 {
 	
 	public function __construct($collection = array()) {
@@ -37,7 +37,7 @@ class PhpExt_Toolbar_IToolbarItemCollection extends PhpExt_ObjectCollection
 	 * @return int the index of the new element
 	 */
 	public function add(PhpExt_Toolbar_IToolbarItem $object, $name = null) {
-		return $this->addObject($object, $name);
+		return $this->addObject($object, $name);		
 	}
 	
 	/**

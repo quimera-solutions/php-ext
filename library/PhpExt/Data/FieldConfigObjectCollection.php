@@ -11,9 +11,9 @@
  * 
  */
 /**
- * @see PhpExt_ObjectCollection
+ * @see PhpExt_AbstractCollection
  */
-include_once 'PhpExt/ObjectCollection.php';
+include_once 'PhpExt/AbstractCollection.php';
 
 
 /**
@@ -22,7 +22,7 @@ include_once 'PhpExt/ObjectCollection.php';
  * @package PhpExt
  * @subpackage Data
  */
-class PhpExt_Data_FieldConfigObjectCollection extends PhpExt_ObjectCollection 
+class PhpExt_Data_FieldConfigObjectCollection extends PhpExt_AbstractCollection 
 {
 	
 	public function __construct($collection = array()) {
@@ -36,7 +36,7 @@ class PhpExt_Data_FieldConfigObjectCollection extends PhpExt_ObjectCollection
 	 * @param string $name
 	 * @return int the index of the new element
 	 */
-	public function add(PhpExt_Data_FieldConfigObject $object, $name = null) {
+	public function add(PhpExt_Data_FieldConfigObject $object, $name = null) {	    
 		return $this->addObject($object, $name);
 	}
 	
