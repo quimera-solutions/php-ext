@@ -15,7 +15,10 @@
  * @see PhpExt_Observable
  */
 include_once 'PhpExt/Observable.php';
-
+/**
+ * @see PhpExt_ObjectCollection
+ */
+include_once 'PhpExt/ObjectCollection.php';
 
 
 /**
@@ -396,8 +399,8 @@ abstract class PhpExt_Component extends PhpExt_Observable
 		$this->addValidConfigProperties($validProps);
 		
 		// TODO: Implement PluginCollection
-		//$this->_plugins = new PhpExt_ObjectCollection();
-		//$this->setExtConfigProperty("plugins", $this->_plugins);
+		$this->_plugins = new PhpExt_ObjectCollection();
+		$this->setExtConfigProperty("plugins", $this->_plugins);
 	}	
 	
 	protected function setExtClassInfo($extClassName, $xtype) {
@@ -406,7 +409,11 @@ abstract class PhpExt_Component extends PhpExt_Observable
 	}	
 	
 	protected function getConfigParams($lazy = false) {
-		$params = parent::getConfigParams($lazy);
+		if ($this->_plugins->getCount() == 0) {
+		    $this->setExtConfigProperty("plugins", null);
+		}
+	    
+	    $params = parent::getConfigParams($lazy);
 
 		if ($lazy && $this->_xType != null) {
 			$params[] = $this->paramToString("xtype",$this->_xType);
@@ -416,6 +423,7 @@ abstract class PhpExt_Component extends PhpExt_Observable
 		    $layoutParams = $this->_layoutData->getConfigParams();
 		    $params = array_merge($params, $layoutParams);
 		}
+
 
 		return $params;
 	}
