@@ -140,7 +140,7 @@ class PhpExt_Grid_GroupingView extends PhpExt_Grid_GridView
      * @return PhpExt_Grid_GroupingView
      */
     public function setGroupTextTemplate($value) {
-    	$this->setExtConfigProperty("groupingTextTemplate", $value);
+    	$this->setExtConfigProperty("groupTextTpl", $value);
     	return $this;
     }	
     /**
@@ -148,7 +148,7 @@ class PhpExt_Grid_GroupingView extends PhpExt_Grid_GridView
      * @return string
      */
     public function getGroupTextTemplate() {
-    	return $this->getExtConfigProperty("groupingTextTemplate");
+    	return $this->getExtConfigProperty("groupTextTpl");
     }
     
     // HideGroupedColumn
