@@ -196,16 +196,16 @@ class PhpExt_Grid_ColumnConfigObject extends PhpExt_Config_ConfigObject
      * 	<dt><b>store</b> : Ext.data.Store</dt>
      * 		<dd>The Ext.data.Store object from which the Record was extracted.</dd>
 	 * </dl>
-     * @param PhpExt_JavascriptStm $value 
+     * @param PhpExt_JavascriptStm|PhpExt_Object $value 
      * @return PhpExt_Grid_ColumnConfigObject
      */
-    public function setRenderer(PhpExt_JavascriptStm $value) {
+    public function setRenderer($value) {
     	$this->setExtConfigProperty("renderer", $value);
     	return $this;
     }	
     /**
      * 
-     * @return PhpExt_JavascriptStm
+     * @return PhpExt_JavascriptStm|PhpExt_Object
      */
     public function getRenderer() {
     	return $this->getExtConfigProperty("renderer");
