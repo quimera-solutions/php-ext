@@ -23,7 +23,7 @@ include_once 'PhpExt/Object.php';
 class PhpExt_Data_Record extends PhpExt_Object
 {
 	/** 
-	 * @var PhpExt_Data_FieldConfigObject 
+	 * @var PhpExt_Data_FieldConfigObjectCollection 
 	 */
 	public $Fields = null;
 	
@@ -35,13 +35,18 @@ class PhpExt_Data_Record extends PhpExt_Object
 		$this->Fields = new PhpExt_ObjectCollection();		
 	}	
 	
-	protected function getConfigParams($lazy) {
+	protected function getConfigParams($lazy = false) {
 		$params = parent::getConfigParams();
 
 		if ($this->Fields != null)
 			$params[] = $this->paramToString("fields",$this->Fields);
 			
 		return $params;
+	}
+	
+	public static function create(PhpExt_Data_FieldConfigObjectCollection $fields) {	    
+		$mc = PhpExt_Object::createMethodSignature("create", array($fields), true);
+		return PhpExt_Object::getMethodInvokeStm('Ext.data.Record', $mc, true);
 	}
  	
 	
