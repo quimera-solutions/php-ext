@@ -50,8 +50,6 @@ class PhpExt_Layout_AnchorLayout extends PhpExt_Layout_ContainerLayout  {
 	    $this->setExtClassInfo("Ext.layout.AnchorLayout", null);	    	   
 
 	    $validLayoutProps = array(
-	        "anchor",
-	        "anchorSize"
 	    );
 	    $this->addValidLayoutProperties($validLayoutProps);
 	    

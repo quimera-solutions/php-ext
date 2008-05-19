@@ -27,36 +27,10 @@ include_once 'PhpExt/Layout/AnchorLayoutData.php';
  */
 class PhpExt_Layout_FormLayoutData extends PhpExt_Layout_AnchorLayoutData 
 {	
-    // ClearCssClass
-    /**
-     * The CSS class to apply to the special clearing div rendered directly after each form field wrapper (defaults to 'x-form-clear-left')
-     * @see PhpExt_Layout_ColumnLayoutData
-     * @param string $value 
-     * @return PhpExt_Layout_FormLayoutData
-     */
-    public function setClearCssClass($value) {
-    	$this->setExtConfigProperty("clearCls", $value);
-    	return $this;
-    }	
-    /**
-     * The CSS class to apply to the special clearing div rendered directly after each form field wrapper (defaults to 'x-form-clear-left')
-     * @see PhpExt_Layout_ColumnLayoutData
-     * @return string
-     */
-    public function getClearCssClass() {
-    	return $this->getExtConfigProperty("clearCls");
-    }
-    
-    //TODO: Implement FormLayoutData properties
-    
     
 	public function __construct() {
-		parent::__construct();		
-		
-		//$this->setLayoutProperty("x",$anchor);
-
+		parent::__construct();					
 	}		
- 	
-	
+ 		
 }
 
