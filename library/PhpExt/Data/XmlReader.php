@@ -108,22 +108,22 @@ class PhpExt_Data_XmlReader extends PhpExt_Data_DataReader
     	return $this->getExtConfigProperty("success");
     }
     
-    // Total
+    // TotalRecords
     /**
      * The DomQuery path from which to retrieve the total number of records in the dataset. This is only needed if the whole dataset is not passed in one go, but is being paged from the remote server.
      * @param string $value 
      * @return PhpExt_Data_XmlReader
      */
-    public function setTotal($value) {
-    	$this->setExtConfigProperty("total", $value);
+    public function setTotalRecords($value) {
+    	$this->setExtConfigProperty("totalRecords", $value);
     	return $this;
     }	
     /**
      * The DomQuery path from which to retrieve the total number of records in the dataset. This is only needed if the whole dataset is not passed in one go, but is being paged from the remote server.
      * @return string
      */
-    public function getTotal() {
-    	return $this->getExtConfigProperty("total");
+    public function getTotalRecords() {
+    	return $this->getExtConfigProperty("totalRecords");
     }
     
 	
@@ -135,7 +135,7 @@ class PhpExt_Data_XmlReader extends PhpExt_Data_DataReader
 		    "id",
 		    "record",
 		    "success",
-		    "total"
+		    "totalRecords"
 		);
 		$this->addValidConfigProperties($validProps);
 	}	
