@@ -90,22 +90,26 @@ class PhpExt_Grid_ColumnModel extends PhpExt_Observable
 
 	
 	public function getJavascript($lazy = false, $varName = null) {
-		$configParams = $this->getConfigParams($lazy);
-				
-		$className = $this->_extClassName;		
-		$configObj = $configParams[0];
-				
-		if ($lazy)
-			return $configObj;
-		else {
-			$js = "new $className($configObj)";
-			if ($varName != null) {
-				$this->_varName = $varName;
-				$js = "var $varName = $js;";
-			}
-				
-			return $js;
-		}
+	    if ($this->_varName == null) {
+			$configParams = $this->getConfigParams($lazy);
+					
+			$className = $this->_extClassName;		
+			$configObj = $configParams[0];
+					
+			if ($lazy)
+				return $configObj;
+			else {
+				$js = "new $className($configObj)";
+				if ($varName != null) {
+					$this->_varName = $varName;
+					$js = "var $varName = $js;";
+				}
+					
+				return $js;
+		    }
+	    } else {
+	        return $this->_varName;
+	    }
 	}
 	
 	protected function getConfigParams($lazy = false) {
