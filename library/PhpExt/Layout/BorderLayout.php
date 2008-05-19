@@ -25,8 +25,6 @@ include_once 'PhpExt/Layout/ContainerLayout.php';
  * @subpackage Layout
  */
 class PhpExt_Layout_BorderLayout extends PhpExt_Layout_ContainerLayout  {
-
-    //TODO: Implement BorderLayout properties
     
     /**
      * Returns the internal config string for the layout.
@@ -43,8 +41,6 @@ class PhpExt_Layout_BorderLayout extends PhpExt_Layout_ContainerLayout  {
 	    $this->setExtClassInfo("Ext.layout.AnchorLayout", null);	    	   
 
 	    $validLayoutProps = array(
-	        "anchor",
-	        "anchorSize"
 	    );
 	    $this->addValidLayoutProperties($validLayoutProps);
 	    
