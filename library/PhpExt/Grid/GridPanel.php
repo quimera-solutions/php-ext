@@ -424,7 +424,7 @@ class PhpExt_Grid_GridPanel extends PhpExt_Panel
      * The {@link PhpExt_Grid_GridView} used by the grid. This can be set before a call to render().
      * @see PhpExt_Grid_GridView
      * @see PhpExt_Grid_GroupingView
-     * @param boolean $value 
+     * @param PhpExt_Grid_GridView $value 
      * @return PhpExt_Grid_GridPanel
      */
     public function setView($value) {
@@ -435,7 +435,7 @@ class PhpExt_Grid_GridPanel extends PhpExt_Panel
      * The {@link PhpExt_Grid_GridView} used by the grid. This can be set before a call to render().
      * @see PhpExt_Grid_GridView
      * @see PhpExt_Grid_GroupingView 
-     * @return boolean
+     * @return PhpExt_Grid_GridView
      */
     public function getView() {
     	return $this->getExtConfigProperty("view");
