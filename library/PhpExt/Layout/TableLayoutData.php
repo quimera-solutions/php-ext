@@ -37,7 +37,7 @@ class PhpExt_Layout_TableLayoutData extends PhpExt_Layout_ContainerLayoutData
      * @return PhpExt_Container
      */
     public function setColSpan($value) {
-    	$this->setExtLayoutConfigProperty("colspan", $value);
+    	$this->setLayoutProperty("colspan", $value);
     	return $this;
     }	
     /**
@@ -46,7 +46,7 @@ class PhpExt_Layout_TableLayoutData extends PhpExt_Layout_ContainerLayoutData
      * @return integer
      */
     public function getColSpan() {
-    	return $this->getExtConfigProperty("colspan");
+    	return $this->getLayoutProperty("colspan");
     }
     
     // RowSpan
@@ -57,7 +57,7 @@ class PhpExt_Layout_TableLayoutData extends PhpExt_Layout_ContainerLayoutData
      * @return PhpExt_Container
      */
     public function setRowSpan($value) {
-    	$this->setExtLayoutConfigProperty("rowspan", $value);
+    	$this->setLayoutProperty("rowspan", $value);
     	return $this;
     }	
     /**
@@ -66,15 +66,53 @@ class PhpExt_Layout_TableLayoutData extends PhpExt_Layout_ContainerLayoutData
      * @return integer
      */
     public function getRowSpan() {
-    	return $this->getExtConfigProperty("rowspan");
-    }    
+    	return $this->getLayoutProperty("rowspan");
+    } 
+
+    // CellId
+    /**
+     * An id applied to the table cell containing the item.
+     * @param string $value 
+     * @return PhpExt_Layout_TableLayoutData
+     */
+    public function setCellId($value) {
+        $this->setLayoutProperty("cellId", $value);
+        return $this;
+    }	
+    /**
+     * An id applied to the table cell containing the item.
+     * @return string
+    */
+    public function getCellId() {
+        return $this->getLayoutProperty("cellId");
+    }
+    
+    // CellCssClass
+    /**
+     * A CSS class name added to the table cell containing the item.
+     * @param string $value 
+     * @return PhpExt_Layout_TableLayoutData
+     */
+    public function setCellCssClass($value) {
+        $this->setLayoutProperty("cellCls", $value);
+        return $this;
+    }	
+    /**
+     * A CSS class name added to the table cell containing the item.
+     * @return string
+    */
+    public function getCellCssClass() {
+        return $this->getLayoutProperty("cellCls");
+    }
     
     
-	public function __construct($colspan = null, $rowspan = null) {
+	public function __construct($colspan = null, $rowspan = null, $cellId = null, $cellCssClass = null) {
 		parent::__construct();		
 		
 		$this->setLayoutProperty("colspan",$colspan);
 		$this->setLayoutProperty("rowspan",$rowspan);
+		$this->setLayoutProperty("cellId",$cellId);
+		$this->setLayoutProperty("cellCls",$cellCssClass);
 	}		
  	
 	
