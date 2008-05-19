@@ -12,9 +12,9 @@
  */
 
 /**
- * @see PhpExt_Form_Field
+ * @see PhpExt_Form_TextField
  */
-include_once 'PhpExt/Form/Field.php';
+include_once 'PhpExt/Form/TextField.php';
 
 /**
  * Numeric text field that provides automatic keystroke filtering and numeric validation.
@@ -22,7 +22,7 @@ include_once 'PhpExt/Form/Field.php';
  * @package PhpExt
  * @subpackage Form
  */
-class PhpExt_Form_NumberField extends PhpExt_Form_Field 
+class PhpExt_Form_NumberField extends PhpExt_Form_TextField 
 {	
     // AllowDecimals
     /**
