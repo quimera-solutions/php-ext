@@ -24,15 +24,7 @@ include_once 'PhpExt/Layout/FormLayout.php';
  * Standard form container.
  * <p><b>Although they are not listed, this class also accepts all the config options required to configure its internal Ext.form.BasicForm</b></p>
  * <p>FormPanel uses a Ext.layout.FormLayout internally, and that is required for fields and labels to work correctly within the FormPanel's layout. To nest additional layout styles within a FormPanel, you should nest additional Panels or other containers that can provide additional layout functionality. You should not override FormPanel's layout.</p>
- * <p>By default, Ext Forms are submitted through Ajax, using Ext.form.Action. To enable normal browser submission of the Ext Form contained in this FormPanel, override the Form's onSubmit, and submit methods:
- * <code>
- * var myForm = new Ext.form.FormPanel({
- *       onSubmit: Ext.emptyFn,
- *       submit: function() {
- *           this.getForm().getEl().dom.submit();
- *       }
- *   });
- * </code>
+ * <p>By default, Ext Forms are submitted through Ajax, using Ext.form.Action. To enable normal browser submission of the Ext Form contained in this FormPanel, use the StandardSubmit property.
  * @package PhpExt
  * @subpackage Form
  */
@@ -216,8 +208,8 @@ class PhpExt_Form_FormPanel extends PhpExt_Panel
     /**#@+
 	 * Internal BasicForm config properties:
 	 * 
-	 * <p>The FormPanel uses a {@link PhpExt_Form_BasicForm} to handle actions like load, sumbit or reset.  
-	 * BasicForm options may be included in the FormPanel Configuration for customization</p>
+	 * The FormPanel uses a {@link PhpExt_Form_BasicForm} to handle actions like load, sumbit or reset.  
+	 * BasicForm options may be included in the FormPanel Configuration for customization
 	 * 
 	 */
 
@@ -323,6 +315,24 @@ class PhpExt_Form_FormPanel extends PhpExt_Panel
     	return $this->getExtConfigProperty("reader");
     }
     
+    // StandardSubmit
+    /**
+     * If set to true, standard HTML form submits are used instead of XHR (Ajax) style form submissions. (defaults to false)
+     * @param boolean $value 
+     * @return PhpExt_Form_FormPanel
+     */
+    public function setStandardSubmit($value) {
+    	$this->setExtConfigProperty("standardSubmit", $value);
+    	return $this;
+    }	
+    /**
+     * If set to true, standard HTML form submits are used instead of XHR (Ajax) style form submissions. (defaults to false)
+     * @return boolean
+     */
+    public function getStandardSubmit() {
+    	return $this->getExtConfigProperty("standardSubmit");
+    }
+    
     // Timeout
     /**
      * Timeout for form actions in seconds (default is 30 seconds).
@@ -396,6 +406,24 @@ class PhpExt_Form_FormPanel extends PhpExt_Panel
     }
     
 	/**#@-*/
+
+    // OnSubmit
+    /**
+     * Override for the onSubmit event. Use PhpExt_Javascript::stm("Ext.emptyFn") to avoid the default handler.
+     * @param PhpExt_JavascriptStm $value 
+     * @return PhpExt_Form_FormPanel
+     */
+    public function setOnSubmit($value) {        
+    	$this->setExtConfigProperty("onSubmit", $value);
+    	return $this;
+    }	
+    /**
+     * Override for the onSubmit event. Use PhpExt_Javascript::stm("Ext.emptyFn") to avoid the default handler
+     * @return PhpExt_JavascriptStm
+     */
+    public function getOnSubmit() {
+    	return $this->getExtConfigProperty("onSubmit");
+    }
 	
 	public $FieldsLazyRender = true;
 	
@@ -417,10 +445,12 @@ class PhpExt_Form_FormPanel extends PhpExt_Panel
             "fileUpload",
             "method",
             "reader",
+			"standardSubmit",
             "timeout",
             "trackResetOnLoad",
             "url",
-            "waitMsgTarget"
+            "waitMsgTarget",
+            "onSubmit"
 		);
 		$this->addValidConfigProperties($validProps);
 
