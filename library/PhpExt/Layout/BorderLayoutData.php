@@ -27,6 +27,12 @@ include_once 'PhpExt/Layout/ContainerLayoutData.php';
  */
 class PhpExt_Layout_BorderLayoutData extends PhpExt_Layout_ContainerLayoutData 
 {	
+    const REGION_NORTH = 'north';
+    const REGION_WEST = 'west';
+    const REGION_CENTER = 'center';
+    const REGION_EAST = 'east';
+    const REGION_SOUTH = 'south'; 
+    
     // AnimCollapse
     /**
      * When a collapsed region's bar is clicked, the region's panel will be displayed as a floated panel that will close again once the user mouses out of that panel (or clicks out if autoHide = false). Setting animFloat to false will prevent the open and close of these floated panels from being animated (defaults to true).
@@ -137,8 +143,8 @@ class PhpExt_Layout_BorderLayoutData extends PhpExt_Layout_ContainerLayoutData
 	
 	// Margins
 	/**
-	 * An object containing margins to apply to the region in the format {left: (left margin), top: (top margin), right: (right margin), bottom: (bottom margin)}
-	 * @param object $value 
+	 * An object containing margins to apply to the region in the format {left: (left margin), top: (top margin), right: (right margin), bottom: (bottom margin)} or a string with the margin values in the format "left top right bottom"
+	 * @param mixed $value 
 	 * @return PhpExt_Layout_BorderLayoutData
 	 */
 	public function setMargins($value) {
@@ -146,8 +152,8 @@ class PhpExt_Layout_BorderLayoutData extends PhpExt_Layout_ContainerLayoutData
 	    return $this;
 	}	
 	/**
-	 * An object containing margins to apply to the region in the format {left: (left margin), top: (top margin), right: (right margin), bottom: (bottom margin)}
-	 * @return object
+	 * An object containing margins to apply to the region in the format {left: (left margin), top: (top margin), right: (right margin), bottom: (bottom margin)} or a string with the margin values in the format "left top right bottom"
+	 * @return mixed
 	*/
 	public function getMargins() {
 	    return $this->getLayoutProperty("margins");
@@ -188,6 +194,35 @@ class PhpExt_Layout_BorderLayoutData extends PhpExt_Layout_ContainerLayoutData
 	public function getMinWidth() {
 	    return $this->getLayoutProperty("minWidth");
 	}
+	
+	// Region
+	/**
+	 * The region to render the related component. Posible values are:
+	 * <li>{@link PhpExt_Layout_BorderLayoutData::REGION_NORTH}</li>
+	 * <li>{@link PhpExt_Layout_BorderLayoutData::REGION_WEST}</li>
+	 * <li>{@link PhpExt_Layout_BorderLayoutData::REGION_CENTER}</li>
+	 * <li>{@link PhpExt_Layout_BorderLayoutData::REGION_EAST}</li>
+	 * <li>{@link PhpExt_Layout_BorderLayoutData::REGION_SOUTH}</li>
+	 * @param string $value 
+	 * @return PhpExt_Layout_BorderLayoutData
+	 */
+	public function setRegion($value) {
+	    $this->setLayoutProperty("region", $value);
+	    return $this;
+	}	
+	/**
+	 * The region to render the related component. Posible values are:
+	 * <li>{@link PhpExt_Layout_BorderLayoutData::REGION_NORTH}</li>
+	 * <li>{@link PhpExt_Layout_BorderLayoutData::REGION_WEST}</li>
+	 * <li>{@link PhpExt_Layout_BorderLayoutData::REGION_CENTER}</li>
+	 * <li>{@link PhpExt_Layout_BorderLayoutData::REGION_EAST}</li>
+	 * <li>{@link PhpExt_Layout_BorderLayoutData::REGION_SOUTH}</li>
+	 * @return string
+	*/
+	public function getRegion() {
+	    return $this->getLayoutProperty("region");
+	}
+	
 	
 	// Split
 	/**
@@ -243,9 +278,115 @@ class PhpExt_Layout_BorderLayoutData extends PhpExt_Layout_ContainerLayoutData
 	    return $this->getLayoutProperty("useSplitTips");
 	}	
 	
-	public function __construct() {
+	/**#@+
+	 * Inherited from SpliBar Config Options:
+	 * 
+	 * The border layout inherits the properties from the splitbar for the regions split element.
+	 * 
+	 */
+    // MaxSize
+    /**
+     * The maximum size of the resizing element. (Defaults to 2000)
+     * @param integer $value 
+     * @return PhpExt_Layout_BorderLayoutData
+     */
+    public function setMaxSize($value) {
+        $this->setExtConfigProperty("maxSize", $value);
+        return $this;
+    }	
+    /**
+     * The maximum size of the resizing element. (Defaults to 2000)
+     * @return integer
+    */
+    public function getMaxSize() {
+        return $this->getExtConfigProperty("maxSize");
+    }
+    
+    // MinSize
+    /**
+     * The minimum size of the resizing element. (Defaults to 0)
+     * @param integer $value 
+     * @return PhpExt_Layout_BorderLayoutData
+     */
+    public function setMinSize($value) {
+        $this->setExtConfigProperty("minSize", $value);
+        return $this;
+    }	
+    /**
+     * The minimum size of the resizing element. (Defaults to 0)
+     * @return integer
+    */
+    public function getMinSize() {
+        return $this->getExtConfigProperty("minSize");
+    }
+    
+    // UseShim
+    /**
+     * Whether to create a transparent shim that overlays the page when dragging, enables dragging across iframes.
+     * @param boolean $value 
+     * @return PhpExt_Layout_BorderLayoutData
+     */
+    public function setUseShim($value) {
+        $this->setExtConfigProperty("useShim", $value);
+        return $this;
+    }	
+    /**
+     * Whether to create a transparent shim that overlays the page when dragging, enables dragging across iframes.
+     * @return boolean
+    */
+    public function getUseShim() {
+        return $this->getExtConfigProperty("useShim");
+    }       
+
+	/**#@-*/
+		
+	
+	public function __construct($region) {
 		parent::__construct();		
-	}		
+		
+		$this->setRegion($region);
+	}
+
+	/**
+	 * Creates a region
+	 *
+	 * @return PhpExt_Layout_BorderLayoutData
+	 */
+	public static function createNorthRegion() {
+	    return new PhpExt_Layout_BorderLayoutData(PhpExt_Layout_BorderLayoutData::REGION_NORTH);
+	}
+	/**
+	 * Creates a region
+	 *
+	 * @return PhpExt_Layout_BorderLayoutData
+	 */
+    public static function createWestRegion() {
+	    return new PhpExt_Layout_BorderLayoutData(PhpExt_Layout_BorderLayoutData::REGION_WEST);
+	}
+	/**
+	 * Creates a region
+	 *
+	 * @return PhpExt_Layout_BorderLayoutData
+	 */
+    public static function createCenterRegion() {
+	    return new PhpExt_Layout_BorderLayoutData(PhpExt_Layout_BorderLayoutData::REGION_CENTER);
+	}
+	/**
+	 * Creates a region
+	 *
+	 * @return PhpExt_Layout_BorderLayoutData
+	 */
+    public static function createEastRegion() {
+	    return new PhpExt_Layout_BorderLayoutData(PhpExt_Layout_BorderLayoutData::REGION_EAST);
+	}
+	/**
+	 * Creates a region
+	 *
+	 * @return PhpExt_Layout_BorderLayoutData
+	 */
+    public static function createSouthRegion() {
+	    return new PhpExt_Layout_BorderLayoutData(PhpExt_Layout_BorderLayoutData::REGION_SOUTH);
+	}
  	
 	
 }
