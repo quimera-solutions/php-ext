@@ -29,7 +29,7 @@ class PhpExt_Toolbar_Separator extends PhpExt_Toolbar_Item
 	}	
 	
 	public function getJavascript($lazy = false, $varName = null) {					
-		$className = $this->ExtClassName;		
+		$className = $this->_extClassName;		
 		$configObj = "";
 		
 		if ($lazy)
