@@ -16,6 +16,11 @@
 include_once 'PhpExt/Panel.php';
 
 /**
+ *  @see PhpExt_Layout_TabLayout
+ */
+include_once 'PhpExt/Layout/TabLayout.php';
+
+/**
  * @package PhpExt 
  */
 class PhpExt_TabPanel extends PhpExt_Panel
@@ -401,6 +406,9 @@ class PhpExt_TabPanel extends PhpExt_Panel
 		    "wheelIncrement"
 		);
 		$this->addValidConfigProperties($validProps);
+		
+	    $this->_defaultLayout = new PhpExt_Layout_TabLayout();
+		$this->setLayout($this->_defaultLayout);
 	}	
 		
 }
