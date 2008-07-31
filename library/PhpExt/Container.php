@@ -259,7 +259,7 @@ abstract class PhpExt_Container extends PhpExt_BoxComponent
 		
 		$validProps = array(
 		    "activeItem",
-		    "autoDesttoy",
+		    "autoDestroy",
 		    "bufferResize",
 		    "defaults",
 		    "defaultType",
@@ -281,10 +281,11 @@ abstract class PhpExt_Container extends PhpExt_BoxComponent
     
 		$layout = $this->getLayout();
 		if ($layout !== null) {
-		    $params[] = $this->paramToString("layout", $layout->getLayoutKey());
+		    if ($this->_defaultLayout !== null  && $this->_defaultLayout->getLayoutKey() != $layout->getLayoutKey())
+		        $params[] = $this->paramToString("layout", $layout->getLayoutKey());
 		    $layoutConfig = $layout->getJavascript(true); 	    		   
 		    if ($layoutConfig != '{}')
-			    $params[] = $this->paramToString("layoutConfig",$layoutConfig);
+			    $params[] = "layoutConfig:".$layoutConfig;
 		}
 
 		return $params;
