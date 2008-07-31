@@ -18,8 +18,7 @@ include_once 'PhpExt/Config/ConfigObject.php';
 
 
 /**
- * @package PhpExt
- * @subpackage 	
+ * @package PhpExt 
  */
 class PhpExt_AutoLoadConfigObject extends PhpExt_Config_ConfigObject
 {
