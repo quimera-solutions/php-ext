@@ -192,6 +192,24 @@ abstract class PhpExt_Component extends PhpExt_Observable
 		return $this->getExtConfigProperty("disabledClass");
 	}	
 	
+	// El
+	/**
+	 * The DOM element to which this component show be rendered to.  This should be used instead of renderTo or applyTo if using lazy render.
+	 * @param string $value 
+	 * @return PhpExt_Component
+	 */
+	public function setEl($value) {
+	    $this->setExtConfigProperty("el", $value);
+	    return $this;
+	}	
+	/**
+	 * The DOM element to which this component show be rendered to.  This should be used instead of renderTo or applyTo if using lazy render.
+	 * @return string
+	*/
+	public function getEl() {
+	    return $this->getExtConfigProperty("el");
+	}
+	
 	// HideMode
 	/**
 	 * How this component should hidden. Supported values are <code>PhpExt_Component::HIDE_MODE_VISIBILITY</code> (css visibility), <code>PhpExt_Component::HIDE_MODE_OFFSETS</code> (negative offset position) and <code>PhpExt_Component::HIDE_MODE_DISPLAY</code> (css display) - defaults to <code>PhpExt_Component::HIDE_MODE_DISPLAY</code>.
@@ -386,6 +404,7 @@ abstract class PhpExt_Component extends PhpExt_Observable
 			"cls",
 			"ctCls",
 			"disabledClass",
+			"el",
 			"hideMode",
 			"hideParent",
 			"id",
