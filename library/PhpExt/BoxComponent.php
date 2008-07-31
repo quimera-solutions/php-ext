@@ -24,7 +24,7 @@ include_once 'PhpExt/Component.php';
  * @package PhpExt
  * 
  */
-abstract class PhpExt_BoxComponent extends PhpExt_Component 
+class PhpExt_BoxComponent extends PhpExt_Component 
 {
 	// AutoHeight
 	/**
