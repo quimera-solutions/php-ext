@@ -44,7 +44,7 @@ class PhpExt_Data_JsonStore extends PhpExt_Data_Store
      * @return string
      */
     public function getData() {
-    	return parent::setData();
+    	return parent::getData();
     }
     
 	/**
@@ -155,7 +155,7 @@ class PhpExt_Data_JsonStore extends PhpExt_Data_Store
      * Name of the property from which to retrieve the total number of records in the dataset. This is only needed if the whole dataset is not passed in one go, but is being paged from the remote server.
      * @return string
      */
-    public function getTotal() {
+    public function getTotalProperty() {
     	return $this->getExtConfigProperty("totalProperty");
     }	
 	/**#@-*/
