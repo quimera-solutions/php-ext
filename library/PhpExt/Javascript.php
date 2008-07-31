@@ -27,6 +27,8 @@ class PhpExt_Javascript {
 	 */
 	static public function functionDef($functionName, $functionBody, $functionParams = array()) {
 		$functionName = ($functionName === null)?"":" ".$functionName;
+		if (PhpExt_Javascript::isJavascriptStm($functionBody))
+		    $functionBody = $functionBody->output();
 		$function = "function$functionName(".implode(",",$functionParams).") {
 			$functionBody
 		}";
@@ -136,7 +138,8 @@ class PhpExt_Javascript {
 			return json_encode($value);
 		else {
 			if ($jsonEncoder == null) {
-				include_once(PHP_EXTJS_DOC_ROOT . "/lib/json.php");
+			    $DS = DIRECTORY_SEPARATOR;
+				include_once('.'.$DS.'Lib'.$DS.'json.php');
 				$jsonEncoder = new Services_JSON();
 			}			
 			return $jsonEncoder->encode($value);		
