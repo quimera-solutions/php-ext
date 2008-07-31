@@ -16,9 +16,9 @@
  */
 include_once'PhpExt/Observable.php';
 /**
- * @see PhpExt_Grid_ColumnConfigObjectCollection
+ * @see PhpExt_Grid_IColumnCollection
  */
-include_once'PhpExt/Grid/ColumnConfigObjectCollection.php';
+include_once'PhpExt/Grid/IColumnCollection.php';
 
 /**
  * This is the default implementation of a ColumnModel used by the Grid. This class is initialized with an Array of column config objects.
@@ -60,20 +60,20 @@ class PhpExt_Grid_ColumnModel extends PhpExt_Observable
 {
     // Columns	
 	/**
-	 * @var PhpExt_Grid_ColumnConfigObjectCollection
+	 * @var PhpExt_Grid_IColumnCollection
 	 */
 	public $_columns = null;
 	/**
 	 * @param PhpExt_Grid_ColumnConfigObject $column
 	 * @return PhpExt_Grid_ColumnModel
 	 */
-	public function addColumn(PhpExt_Grid_ColumnConfigObject $column) {
+	public function addColumn(PhpExt_Grid_IColumn $column) {
 	    $this->_columns->add($column);
 	    return $this;
 	}
 	/**	
 	 * 
-	 * @return PhpExt_Grid_ColumnConfigObjectCollection
+	 * @return PhpExt_Grid_IColumnCollection
 	 */
 	public function getColumns() {
 		return $this->_columns;
@@ -84,7 +84,7 @@ class PhpExt_Grid_ColumnModel extends PhpExt_Observable
 		$this->setExtClassInfo("Ext.grid.ColumnModel", null);
 			
 		
-		$this->_columns = new PhpExt_Grid_ColumnConfigObjectCollection();		
+		$this->_columns = new PhpExt_Grid_IColumnCollection();		
 	}	
 	
 

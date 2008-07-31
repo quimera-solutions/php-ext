@@ -17,11 +17,16 @@
 include_once'PhpExt/Grid/RowSelectionModel.php';
 
 /**
+ * @see PhpExt_Grid_IColumn
+ */
+include_once 'PhpExt/Grid/IColumn.php';
+
+/**
  * A custom selection model that renders a column of checkboxes that can be toggled to select or deselect rows.
  * @package PhpExt
  * @subpackage Grid
  */
-class PhpExt_Grid_CheckboxSelectionModel extends PhpExt_Grid_RowSelectionModel  
+class PhpExt_Grid_CheckboxSelectionModel extends PhpExt_Grid_RowSelectionModel implements PhpExt_Grid_IColumn  
 {	
 	// Header
 	/**
@@ -83,15 +88,7 @@ class PhpExt_Grid_CheckboxSelectionModel extends PhpExt_Grid_RowSelectionModel
 		$this->setExtClassInfo("Ext.grid.CheckboxSelectionModel", null);
 	
 	}				
-	
-	protected function getConfigParams($lazy = false) {
-		$params = parent::getConfigParams($lazy);
 		
-		if ($this->SingleSelect)
-			$params[] = $this->paramToString("singleSelect",$this->SingleSelect);
-					
-		return $params;
-	}
 }
 
 

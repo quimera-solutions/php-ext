@@ -11,9 +11,14 @@
  * 
  */
 /**
- * @see PhpExt_Config_ConfigObject
+ * @see PhpExt_Object
  */
-include_once 'PhpExt/Grid/ColumnConfigObject.php';
+include_once 'PhpExt/Object.php';
+
+/**
+ * @see PhpExt_Grid_IColumn
+ */
+include_once 'PhpExt/Grid/IColumn.php';
 
 /**
  * This is a utility class that can be passed into a {@link PhpExt_Grid_ColumnModel} as a column config that provides an automatic row numbering column.
@@ -21,16 +26,16 @@ include_once 'PhpExt/Grid/ColumnConfigObject.php';
  * @package PhpExt
  * @subpackage Grid
  */
-class PhpExt_Grid_RowNumberer extends PhpExt_Grid_ColumnConfigObject
+class PhpExt_Grid_RowNumberer extends PhpExt_Object implements PhpExt_Grid_IColumn
 {
     
 	public function __construct() {
-		parent::__construct('');
-					
+		parent::__construct();
+	    $this->setExtClassInfo("Ext.grid.RowNumberer", null);				
 	}	
 	
-	public static function getInstance() {
-	    return new self(); 
+    public function getJavascript($lazy = false, $varName = null) {
+		return PhpExt_Object::getJavascript(false, $varName);
 	}
 }
 

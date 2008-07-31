@@ -15,9 +15,9 @@
  */
 include_once 'PhpExt/AbstractCollection.php';
 /**
- * @see PhpExt_Grid_ColumnConfigObject
+ * @see PhpExt_Grid_IColumn
  */
-include_once 'PhpExt/Grid/ColumnConfigObject.php';
+include_once 'PhpExt/Grid/IColumn.php';
 
 
 /**
@@ -26,7 +26,7 @@ include_once 'PhpExt/Grid/ColumnConfigObject.php';
  * @package PhpExt
  * @subpackage Grid
  */
-class PhpExt_Grid_ColumnConfigObjectCollection extends PhpExt_AbstractCollection 
+class PhpExt_Grid_IColumnCollection extends PhpExt_AbstractCollection 
 {
 	
 	public function __construct($collection = array()) {
@@ -34,13 +34,13 @@ class PhpExt_Grid_ColumnConfigObjectCollection extends PhpExt_AbstractCollection
 	}
 	
 	/**
-	 * Adds a PhpExt_Grid_ColumnConfigObject to the Collection
+	 * Adds a PhpExt_Grid_IColumn to the Collection
 	 *
-	 * @param PhpExt_Grid_ColumnConfigObject $object
+	 * @param PhpExt_Grid_IColumn $object
 	 * @param string $name
 	 * @return int the index of the new element
 	 */
-	public function add(PhpExt_Grid_ColumnConfigObject $object, $name = null) {
+	public function add(PhpExt_Grid_IColumn $object, $name = null) {
 		return $this->addObject($object, $name);
 	}
 	
@@ -48,7 +48,7 @@ class PhpExt_Grid_ColumnConfigObjectCollection extends PhpExt_AbstractCollection
 	 * Gets the Component with the key specified by $name
 	 *
 	 * @param string $name
-	 * @return PhpExt_Grid_ColumnConfigObject
+	 * @return PhpExt_Grid_IColumn
 	 */
 	public function getByName($name) {
 		return $this->getObjectByName($name);
@@ -58,7 +58,7 @@ class PhpExt_Grid_ColumnConfigObjectCollection extends PhpExt_AbstractCollection
 	 * Gets the Component in the specified index
 	 *
 	 * @param int $index
-	 * @return PhpExt_Grid_ColumnConfigObject
+	 * @return PhpExt_Grid_IColumn
 	 */
 	public function &getByIndex($index) {
 		return $this->getObjectByIndex($index);

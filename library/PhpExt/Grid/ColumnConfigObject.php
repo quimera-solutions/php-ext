@@ -16,10 +16,15 @@
 include_once 'PhpExt/Config/ConfigObject.php';
 
 /**
+ * @see PhpExt_Grid_IColumn
+ */
+include_once 'PhpExt/Grid/IColumn.php';
+
+/**
  * @package PhpExt
  * @subpackage Grid
  */
-class PhpExt_Grid_ColumnConfigObject extends PhpExt_Config_ConfigObject
+class PhpExt_Grid_ColumnConfigObject extends PhpExt_Config_ConfigObject implements PhpExt_Grid_IColumn
 {
     // Align
     /**
