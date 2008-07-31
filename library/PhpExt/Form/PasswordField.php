@@ -26,7 +26,7 @@ include_once 'PhpExt/Config/ConfigObject.php';
  * @package PhpExt
  * @subpackage Form
  */
-class PhpExt_Form_PassworField extends PhpExt_Form_TextField 
+class PhpExt_Form_PasswordField extends PhpExt_Form_TextField 
 {		
 	
 	public function __construct() {
@@ -49,7 +49,7 @@ class PhpExt_Form_PassworField extends PhpExt_Form_TextField
 	 * @return PhpExt_Form_PassworField
 	 */
 	public static function createPasswordField($name, $label = null, $id = null) {
-	    $c = new PhpExt_Form_PassworField();
+	    $c = new PhpExt_Form_PasswordField();
 	    $c->setName($name);
 	    if ($label !== null)
 	      $c->setFieldLabel($label);
