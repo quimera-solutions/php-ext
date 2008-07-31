@@ -12,9 +12,9 @@
  */
 
 /**
- * @see PhpExt_Layout_ContainerLayoutData 
+ * @see PhpExt_Layout_FitLayoutData 
  */
-include_once 'PhpExt/Layout/ContainerLayoutData.php';
+include_once 'PhpExt/Layout/FitLayoutData.php';
 
 
 /**

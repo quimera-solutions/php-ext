@@ -37,6 +37,7 @@ class PhpExt_Layout_ContainerLayout extends PhpExt_Object  {
 	const LAYOUT_FIT = 'fit';
 	const LAYOUT_FORM = 'form';
 	const LAYOUT_TABLE = 'table';
+	const LAYOUT_TAB = 'card';
     
     /**
      * An array containing the layout specific valid property names

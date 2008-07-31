@@ -59,6 +59,11 @@ class PhpExt_Layout_CardLayout extends PhpExt_Layout_FitLayout  {
 	    parent::__construct();
 	    $this->setExtClassInfo("Ext.layout.CardLayout", null);
 	    
+	    $validProps = array(
+	        "deferredRender"	        
+	    );
+	    $this->addValidConfigProperties($validProps);
+	    
 	    $this->addValidLayoutDataClassName("PhpExt_Layout_CardLayoutData");
 	}
 	
