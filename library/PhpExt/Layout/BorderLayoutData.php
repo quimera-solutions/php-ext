@@ -291,7 +291,7 @@ class PhpExt_Layout_BorderLayoutData extends PhpExt_Layout_ContainerLayoutData
      * @return PhpExt_Layout_BorderLayoutData
      */
     public function setMaxSize($value) {
-        $this->setExtConfigProperty("maxSize", $value);
+        $this->setLayoutProperty("maxSize", $value);
         return $this;
     }	
     /**
@@ -299,7 +299,7 @@ class PhpExt_Layout_BorderLayoutData extends PhpExt_Layout_ContainerLayoutData
      * @return integer
     */
     public function getMaxSize() {
-        return $this->getExtConfigProperty("maxSize");
+        return $this->getLayoutProperty("maxSize");
     }
     
     // MinSize
@@ -309,7 +309,7 @@ class PhpExt_Layout_BorderLayoutData extends PhpExt_Layout_ContainerLayoutData
      * @return PhpExt_Layout_BorderLayoutData
      */
     public function setMinSize($value) {
-        $this->setExtConfigProperty("minSize", $value);
+        $this->setLayoutProperty("minSize", $value);
         return $this;
     }	
     /**
@@ -317,7 +317,7 @@ class PhpExt_Layout_BorderLayoutData extends PhpExt_Layout_ContainerLayoutData
      * @return integer
     */
     public function getMinSize() {
-        return $this->getExtConfigProperty("minSize");
+        return $this->getLayoutProperty("minSize");
     }
     
     // UseShim
@@ -327,7 +327,7 @@ class PhpExt_Layout_BorderLayoutData extends PhpExt_Layout_ContainerLayoutData
      * @return PhpExt_Layout_BorderLayoutData
      */
     public function setUseShim($value) {
-        $this->setExtConfigProperty("useShim", $value);
+        $this->setLayoutProperty("useShim", $value);
         return $this;
     }	
     /**
@@ -335,7 +335,7 @@ class PhpExt_Layout_BorderLayoutData extends PhpExt_Layout_ContainerLayoutData
      * @return boolean
     */
     public function getUseShim() {
-        return $this->getExtConfigProperty("useShim");
+        return $this->getLayoutProperty("useShim");
     }       
 
 	/**#@-*/
