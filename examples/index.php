@@ -19,12 +19,14 @@ if ($extjsCheck !== false) {
 	$file = $example_id . ".php";
 	
 	$win = new PhpExt_Window();
-	$win->setTitle("Sample Source: " . $file)
+	$win->setTitle("Sample Source: " . $file)	
 	   ->setWidth(500)
 	   ->setHeight(500)
 	   ->setLayout(new PhpExt_Layout_FitLayout())
 	   ->setResizable(false)
-	   ->setCloseAction(PhpExt_Window::CLOSE_ACTION_HIDE);
+	   ->setCloseAction(PhpExt_Window::CLOSE_ACTION_HIDE)
+	   ->setBodyBorder(false)
+	   ->setPlain(true);
 	
 	// PHP Source
 	$phpTab = new PhpExt_Panel();
@@ -46,6 +48,8 @@ if ($extjsCheck !== false) {
 		      
     $tabs = new PhpExt_TabPanel();
 	$tabs->setActiveTab(0)
+	    ->setPlain(true)
+	    ->setFrame(false)
 	    ->addItem($phpTab)
 	    ->addItem($jsTab);
 	$win->addItem($tabs);    	      	   
