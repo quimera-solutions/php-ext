@@ -43,10 +43,11 @@
 		<h4>Grids</h4>
 		<table cellspacing="0">
 			<tr><td><a href="examples/?eid=grid/array-grid">Array Grid</a></td>
-				<td><a href="examples/?eid=grid/xml-grid">Xml Grid</a></td></tr>			
-			<tr><td><a href="examples/?eid=grid/edit-grid">Editor Grid</a></td>
-				<td><a href="examples/?eid=grid/grouping">Grouping Grid</a></td></tr>
-			<tr><td colspan="2">More comming soon...</td></tr>
+				<td><a href="examples/?eid=grid/json-grid">JSON Grid</a></td></tr>			
+			<tr><td><a href="examples/?eid=grid/xml-grid">XML Grid</a></td>
+				<td><a href="examples/?eid=grid/edit-grid">Editor Grid</a></td></tr>
+			<tr><td><a href="examples/?eid=grid/grouping">Array Grouping Grid</a></td>
+				<td><a href="examples/?eid=grid/grouping_json-grid">JSON Grouping Grid</a></td></tr>			
 		</table>
 		<h4>Trees</h4>
 		<table cellspacing="0">
@@ -59,8 +60,9 @@
 		</table>
 		<h4>Layouts</h4>
 		<table cellspacing="0">
-			<tr><td><a href="examples/?eid=layout/complex">Complex Layout</a></td>
-			<td><a href="examples/?eid=form/anchoring">Anchor Layout</a></td></tr>
+			<tr><td colspan="2"><a href="examples/?eid=layout/complex">Complex (Border, Accordion, Tab)</a></td></tr>
+			<tr><td><a href="examples/?eid=form/anchoring">Anchor</a></td>
+				<td><a href="examples/?eid=layout/accordion">Accordion</a></td></tr>			
 		</table>
 		<h4>Menus & Toolbars</h4>
 		<table cellspacing="0">
