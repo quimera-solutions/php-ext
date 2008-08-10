@@ -45,7 +45,7 @@ $search->setStore($ds)
        ->setPageSize(10)
        ->setHideTrigger(true)
        ->setTemplate($resultTpl)
-       ->setApplyTo("search")
+       ->setApplyTo("fsearch")
        ->setItemCssSelector("div.search-item")
        ->attachListener("onSelect", new PhpExt_Listener(
 		PhpExt_Javascript::functionDef(null,
