@@ -37,6 +37,7 @@ for($i=2;$i<count($lines);$i++) {
         $curversion = str_replace("==","", $lines[$i]);
         $logs[$curversion]['version'] = $curversion;        
         $logs[$curversion]['date'] = $lines[$i+1];
+        $logs[$curversion]['log'] = "";
         $i+= 2;        
     }
     else {
