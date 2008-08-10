@@ -15,7 +15,7 @@ if ($extjsCheck !== false) {
 	include_once 'PhpExt/TabPanel.php';
 	include_once 'PhpExt/Panel.php';
 	
-	$example_id = $_GET['eid'];
+	$example_id = @$_GET['eid'];
 	$file = $example_id . ".php";
 	
 	$win = new PhpExt_Window();
