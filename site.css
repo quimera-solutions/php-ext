@@ -46,11 +46,12 @@ li {
 	background: #404040;
 	color: white;
 	position: relative;
-	height: 50px;
+	height: 80px;
 }
 
 #header h1 {
 	margin: 0;
+margin-top: 15px;
 	padding: 0;
 	color: #76A7E8;
 	height: 34px;
@@ -64,9 +65,9 @@ li {
 
 #menu {
 	float: right;
-	margin: 0 20px;
+	margin: 15px 0px;
 	padding: 0;
-}  
+}
 
 #menu li {
 	float: left;
@@ -83,6 +84,33 @@ color: #76A7E8;
 #menu li a:hover {	
 	color: red;
 }
+
+#topbanner {	
+	width: 468px;
+	height: 60px;
+	position: absolute;
+	right: 5px;
+	top: 5px;	
+}
+
+#topbox {
+	position: relative;
+	background-color: #eee;  
+	font-size: 8pt; 
+	padding: 2px; 
+	padding-right: 5px; 
+	text-align: right; 
+	height: 25px;
+}
+
+#topbox>div {
+position:relative;
+}
+
+#topbox #search {
+	position:absolute; right: 20px; top: 3px;
+}
+	
 
 .content {
 position:relative;
@@ -141,6 +169,72 @@ position:relative;
 .resources li, .links td {
 	margin-left: 20px !important;
 }
+
+/* INFOBOX */
+.columns_container {
+border: solid 0px;
+width: 100%;
+}
+.columns_container .column {
+width: 48%;
+border: solid 0px;
+float: left;
+margin: 5px;
+}
+
+.infobox {
+position: relative;
+margin-bottom: 20px;
+}
+
+.infobox .title {
+display: block;
+border-left: solid 4px #86AB09;
+background: #404040;
+color: white;
+font-size: 13px;
+font-weight: bold;
+padding: 4px;
+height:15px;
+}
+
+.infobox .title img {
+position:absolute;
+top:5px;
+right:7px;
+border:none;
+}
+
+.infobox div {
+padding: 4px;
+}
+
+.infobox div ul {
+margin:0px;
+margin-left: 6px;
+}
+
+.infobox div ul li {
+margin-left: 0px;
+list-style-image: url(images/bullet_square_blue.png);
+list-style-position: inside;
+}
+
+.infobox div li.star {
+list-style-image: url(images/star_yellow.png);
+font-weight: bold;
+}
+
+.infobox div li.syndicate {
+list-style-image: url(images/xml.gif);
+font-weight: bold;
+border-top: dotted 1px #1860A8;
+margin-top: 4px;
+padding-top: 4px;
+}
+
+
+/* Example Box */
 
 .example-box {
 
@@ -254,7 +348,7 @@ padding-left: 5px;
 	margin: 0px;
 	margin-top: 3px;
 	padding: 2px;
-	
+	overflow: auto;
 }
 
 /* BLOG */

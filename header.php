@@ -6,6 +6,7 @@
     <base href="<?php echo $baseUrl; ?>/" />
     
     <link rel="stylesheet" type="text/css" href="site.css" />
+    <link rel="alternate" type="application/rss+xml" title="PHP-Ext Blog" href="http://php-ext.quimera-solutions.com/blog/feeds/">
     
     
 <?php
@@ -25,12 +26,42 @@ if (isset($customHeaders))
 	<li><a href=".">Home</a></li>
 	<li><a href="?id=docs">Docs</a></li>
 	<li><a href="examples">Samples</a></li>
-	<li><a href="blog">Blog</a></li>
+	<li><a href="http://php-ext.quimera-solutions.com/blog">Blog</a></li>
 	<li><a href="?id=download">Download</a></li>
 </ul>
 </div>
- 
+<div id="topbanner">
+<script type="text/javascript"><!--
+google_ad_client = "pub-1364424610077556";
+/* PHP-Ext TopBanner */
+google_ad_slot = "0256386108";
+google_ad_width = 468;
+google_ad_height = 60;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div> 
 </div>
+
+<div id="topbox">
+ <div>
+ <div id="search">
+ <form action="http://www.google.com/cse" id="cse-search-box" target="_blank">
+  <div>
+    <input type="hidden" name="cx" value="014474110800446348332:gtlstfizwuu" />
+    <input type="hidden" name="ie" value="UTF-8" />
+    <input type="text" name="q" size="31" />
+    <input type="submit" name="sa" value="Search" />
+  </div>
+ </form>
+ <script type="text/javascript" src="http://www.google.com/coop/cse/brand?form=cse-search-box&lang=en"></script>
+ </div>
+ </div>
+  
+</div>
+<div class="x-box-bc"></div>
 
 <div class="content">
 <?php

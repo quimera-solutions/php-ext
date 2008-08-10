@@ -14,26 +14,82 @@
 	Feel free to download the src and samples to try it out and don't forget to write back your comments and suggestions.
 	</p>
 	
-	<h3 style="margin-bottom:5px;">Latest News</h3>
-	<p><a href="http://php-ext.quimera-solutions.com/?id=download">0.8.2 Released - Download</a></p>
+	<div class="columns_container">		
+		<div class="column">
+			<div class="infobox">
+				<span class="title">Download<a href="?id=download"><img src="images/import2.png" /></a></span>				
+				<div>
+					<ul>
+					<li class="star"><a href="?id=download">Download 0.8.3</a></li>					
+					<li><a href="?id=download">Older Versions</a></li>
+					<li><a href="?id=docs">Offline Documentation</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="infobox">
+				<span class="title">Explore<img src="images/view.png" /></span>
+				<div>
+					<ul>
+					<li class="star"><a href="examples">Live Samples</a></li>
+					<li class="star"><a href="docs/api">API Documentation</a></li>
+					<li><a href="http://code.google.com/p/php-ext/source/browse/">Browse Source (SVN Repository)</a></li>
+					<li><a href="http://code.google.com/p/php-ext/issues/list">Issue Tracker</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<div class="column">
+			<div class="infobox">
+				<span class="title">Blog<a href="http://php-ext.quimera-solutions.com/blog/feeds/"><img src="images/xml.gif" /></a></span>
+				<div>
+					<ul>
+<?php
+
+if (function_exists('simplexml_load_file')) {
+	// Show top 5 entries on the Blog
+	$feedxml = "http://php-ext.quimera-solutions.com/blog/feeds/rss2.xml";
+	$feed = simplexml_load_file($feedxml); 
+	$count = 0;
+	foreach($feed->channel->item as $item) {
+	    $star = $count == 0 ? 'class="star"' : '';
+	    echo '<li '.$star.'><a href="'.$item->link.'">'.$item->title.'</a></li>';
+	    
+	    if (++$count == 5)
+	        break;
+	} 
+} else {
+    echo '<li class="star"><a href="http://php-ext.quimera-solutions.com/blog">View entries</a></li>'; 
+}
+
+?>
+					<li class="syndicate"><a href="http://php-ext.quimera-solutions.com/blog/feeds">Syndicate</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="infobox">
+				<table border=0 style="background-color: #fff; padding: 5px;" cellspacing=0>
+				  <tr><td>
+				  <img src="http://groups.google.com/groups/img/3nb/groups_bar.gif"
+				         height=26 width=132 alt="Google Groups">
+				  </td></tr>
+				  <tr><td style="padding-left: 5px">
+				  Send comments and questions.  Share ideas and opinions.<br>
+				  <b>Subscribe to PHP-Ext Discussion Group</b>
+				  </td></tr>
+				  <form action="http://groups.google.com/group/php-ext/boxsubscribe">
+				  <tr><td style="padding-left: 5px;">
+				  Email: <input type=text name=email>
+				  <input type=submit name="sub" value="Subscribe">
+				  </td></tr>
+				</form>
+				<tr><td align=right>
+				  <a href="http://groups.google.com/group/php-ext">Visit this group</a>
+				</td></tr>
+				</table>
+			</div>
+		</div>
 		
-	<hr>
-	<table border=0 style="background-color: #fff; padding: 5px;" cellspacing=0>
-  <tr><td>
-  <img src="http://groups.google.com/groups/img/3nb/groups_bar.gif"
-         height=26 width=132 alt="Google Groups">
-  </td></tr>
-  <tr><td style="padding-left: 5px">
-  <b>Subscribe to PHP-Ext</b>
-  </td></tr>
-  <form action="http://groups.google.com/group/php-ext/boxsubscribe">
-  <tr><td style="padding-left: 5px;">
-  Email: <input type=text name=email>
-  <input type=submit name="sub" value="Subscribe">
-  </td></tr>
-</form>
-<tr><td align=right>
-  <a href="http://groups.google.com/group/php-ext">Visit this group</a>
-</td></tr>
-</table>
+	</div>
+				
+	
 	
