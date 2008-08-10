@@ -3,6 +3,7 @@
 ==0.8.3==
 2008-10-08
 ---------------------------------------
+- Code to parse changelog file fixed by initializing log variable
 - Updating changelog for version 0.83
 - Adding website images
 - Updating api documentation.  Documentation redesigned (no frames) to help search engines
